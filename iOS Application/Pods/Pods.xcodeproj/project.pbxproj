@@ -1,0 +1,1007 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08972CD4A9F170AE29578E5F856FAB92 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599F63FF124D944076AC5E06B0BDD7F /* ColorPickerView.swift */; };
+		25B0BA5969F9A794297009FD023083AC /* Slope-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773AD0C02093ABBC6D3C59760BE3391D /* Slope-dummy.m */; };
+		39EEABA946849C7E407FC965FDFF1C8F /* HapticButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C326F5747DAA8A94D50B2212E754903 /* HapticButton-dummy.m */; };
+		3DB304D93BB06963C34BC499F9C5F6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		476CE251892E04C1FA480431C36782AB /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E71E40749376886D50F5E0CCAA9AF /* Gradient.swift */; };
+		4A278B8619460C89A4C0AB7ACCFC9CDA /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9E4C427F13ED1E714E1F689D181A6 /* HSB.swift */; };
+		4C43A0C45345B6F3FAB9F6E2B06EFCE2 /* ColorSpaceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC282CB2F59D1711A9227DB7B00618 /* ColorSpaceConverter.swift */; };
+		58EED2FEF17B3B7998E9A1338CADB723 /* PercentageGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609CD064271A9A314AC064F93507A0C /* PercentageGradient.swift */; };
+		62928A1A1F6F24E9A67113EB70A6F509 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4457064A43384FAC1B4300D8045C0EC /* GradientView.swift */; };
+		7EFBE8BCCB44681A1D4A6508DA0CCCA1 /* Pods-Smarter Bulb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BA0277F184FBB59CDFECC6CCEDAB1E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		9512FB6B6412702C1346337676DBF3FF /* CULColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 859FB29550309982E36AB3F00CCDC2B0 /* CULColorPicker-dummy.m */; };
+		98C82E47FE876048F391CB8C551DB598 /* UniformGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B230E54B27C161EFEED56B9120C14A4 /* UniformGradient.swift */; };
+		B731A1403131EBF19038AD85A109C5A3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F3463879D2C7874152356E08C5989E /* UIColorExtension.swift */; };
+		B88E815499AF3CD4EAA567C5D042F7C7 /* Slope-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 645E7886A0CE76EABFD7C9DA4B2F8D03 /* Slope-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA31BD6EEA9E71AB289E90466FB2504A /* CULColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E77BF8475B5834ED8B66D8AF2826B7 /* CULColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDF7371FE536CBE9FF5141D5013A6CB0 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D226226B304B0BEF5EC6EF7406653 /* RGB.swift */; };
+		C24CFA6C125BC07AD374E003E158B9B3 /* Pods-Smarter Bulb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */; };
+		CDF46B32FFF6924FBA6578E5476E81DC /* ColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8BB766730FF96EF42BE354D6A2EC4B /* ColorPickerViewDelegate.swift */; };
+		CF964E2940144C155418667F41F703DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		D36A2FF76A9837E873BCE9AFCF5B2A85 /* HapticButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E25412ECA3B8881E27280A071CB222 /* HapticButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8FB9138FDC997AFD1B8A73AC93D6D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		F57E87B0F258364A862F2C3834C10848 /* HapticButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211DD15B79F17924959BF89B4D8C3FB /* HapticButton.swift */; };
+		FDF936204BBABBCB925A5F0F9DE0D977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15A16942AFA8211E53243372926ABB22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41F2AC6E39F4AEC714165E1FE3746D55;
+			remoteInfo = CULColorPicker;
+		};
+		5E08A32470339A9D3CB8E1B97469FCFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B40C293EECA6EB4A4E6FEA6A70ED5E;
+			remoteInfo = Slope;
+		};
+		81689D8CB945C855FB7D00A0613AB6D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 275762EA4E7DAF6C9D246FAD532D358D;
+			remoteInfo = HapticButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E9E4C427F13ED1E714E1F689D181A6 /* HSB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSB.swift; path = ColorPicker/HSB.swift; sourceTree = "<group>"; };
+		04104D9C34977FEB65E9D2E5CAACE860 /* HapticButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HapticButton.framework; path = HapticButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B5E71E40749376886D50F5E0CCAA9AF /* Gradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = Source/Gradient.swift; sourceTree = "<group>"; };
+		11578A4EC89457A80C5E9CD108FBC543 /* HapticButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HapticButton.xcconfig; sourceTree = "<group>"; };
+		12A648C882D18370E340EA91566EEADC /* Pods-Smarter Bulb-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smarter Bulb-frameworks.sh"; sourceTree = "<group>"; };
+		152C816C6AF80FC23CA04D4650FF881B /* Pods-Smarter Bulb-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smarter Bulb-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1A9AA61D4F990729CD5D2AF2236A228D /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Smarter_Bulb.framework; path = "Pods-Smarter Bulb.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28228BE35E08DC3FAE7DF9A37DDA1EB4 /* Slope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Slope.framework; path = Slope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F3463879D2C7874152356E08C5989E /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = ColorPicker/UIColorExtension.swift; sourceTree = "<group>"; };
+		31799B56417FEC9E937FBAD458ACEE75 /* Slope.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Slope.modulemap; sourceTree = "<group>"; };
+		31B2DBBE85F5209D0731FD02E8E1F99B /* Pods-Smarter Bulb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smarter Bulb-Info.plist"; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4211DD15B79F17924959BF89B4D8C3FB /* HapticButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticButton.swift; path = HapticButton/Classes/HapticButton.swift; sourceTree = "<group>"; };
+		463EEE26BBB8B3A582F9A064FD9AD536 /* Pods-Smarter Bulb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Smarter Bulb.modulemap"; sourceTree = "<group>"; };
+		489A01564D809736F2EE80EB400749A9 /* Pods-Smarter Bulb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smarter Bulb.debug.xcconfig"; sourceTree = "<group>"; };
+		48E77BF8475B5834ED8B66D8AF2826B7 /* CULColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		4C326F5747DAA8A94D50B2212E754903 /* HapticButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HapticButton-dummy.m"; sourceTree = "<group>"; };
+		504D226226B304B0BEF5EC6EF7406653 /* RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGB.swift; path = ColorPicker/RGB.swift; sourceTree = "<group>"; };
+		50EAA5567FDE668BCE084BF80CD5EA62 /* Slope.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Slope.xcconfig; sourceTree = "<group>"; };
+		54E25412ECA3B8881E27280A071CB222 /* HapticButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-umbrella.h"; sourceTree = "<group>"; };
+		5FD977A02794C6F1A307164BEA7D8C44 /* Slope-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-prefix.pch"; sourceTree = "<group>"; };
+		63F83180244D08328B0B9801EBC25D4C /* CULColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CULColorPicker.framework; path = CULColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		645E7886A0CE76EABFD7C9DA4B2F8D03 /* Slope-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-umbrella.h"; sourceTree = "<group>"; };
+		6D01D8F822558EC099DE8EF725D9FB23 /* CULColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CULColorPicker.xcconfig; sourceTree = "<group>"; };
+		773AD0C02093ABBC6D3C59760BE3391D /* Slope-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Slope-dummy.m"; sourceTree = "<group>"; };
+		79967AA49EB1211D7CAC04015B621675 /* Pods-Smarter Bulb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smarter Bulb.release.xcconfig"; sourceTree = "<group>"; };
+		7B230E54B27C161EFEED56B9120C14A4 /* UniformGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniformGradient.swift; path = Source/UniformGradient.swift; sourceTree = "<group>"; };
+		859FB29550309982E36AB3F00CCDC2B0 /* CULColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CULColorPicker-dummy.m"; sourceTree = "<group>"; };
+		8B6A550F98E6B8AA665E07A6B2578E06 /* Slope-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Slope-Info.plist"; sourceTree = "<group>"; };
+		8E8BB766730FF96EF42BE354D6A2EC4B /* ColorPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewDelegate.swift; path = ColorPicker/ColorPickerViewDelegate.swift; sourceTree = "<group>"; };
+		9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smarter Bulb-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4457064A43384FAC1B4300D8045C0EC /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Source/GradientView.swift; sourceTree = "<group>"; };
+		A609CD064271A9A314AC064F93507A0C /* PercentageGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PercentageGradient.swift; path = Source/PercentageGradient.swift; sourceTree = "<group>"; };
+		B1B64CE740A013DB298A8B3AADD3FCFD /* Pods-Smarter Bulb-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smarter Bulb-acknowledgements.plist"; sourceTree = "<group>"; };
+		B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smarter Bulb-umbrella.h"; sourceTree = "<group>"; };
+		C0AE785A78458BEC713A58A33BD77A3F /* HapticButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HapticButton-Info.plist"; sourceTree = "<group>"; };
+		C31ACE4CD73CE06A919DAA4367CC8E6D /* CULColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		C51F53ECE3E38C2BD32AA7E6D66FC11B /* HapticButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-prefix.pch"; sourceTree = "<group>"; };
+		C599F63FF124D944076AC5E06B0BDD7F /* ColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = ColorPicker/ColorPickerView.swift; sourceTree = "<group>"; };
+		D09B9D1E2F6E7F2C1AB30B412C7B871B /* HapticButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HapticButton.modulemap; sourceTree = "<group>"; };
+		D5E62EF7541CFD5C36A2C0DDB4D0C57E /* CULColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CULColorPicker.modulemap; sourceTree = "<group>"; };
+		DC0A5CD37E995967FF2F7A697455972A /* CULColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CULColorPicker-Info.plist"; sourceTree = "<group>"; };
+		E3BC282CB2F59D1711A9227DB7B00618 /* ColorSpaceConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorSpaceConverter.swift; path = ColorPicker/ColorSpaceConverter.swift; sourceTree = "<group>"; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AAFA94158DB7FBAD445A0054A48722A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF964E2940144C155418667F41F703DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ECF52BE895C001A0D2CC905EA6F36B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FB9138FDC997AFD1B8A73AC93D6D73 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7CC741E5CE8447D9A5A9C6F9E5ED9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB304D93BB06963C34BC499F9C5F6B9 /* Foundation.framework in Frameworks */,
+				8BA0277F184FBB59CDFECC6CCEDAB1E1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB1F159BAD5ACDACA66E82F7076CC0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF936204BBABBCB925A5F0F9DE0D977 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E8BE2474AF90AE8333597C8ACC007D2 /* CULColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				C599F63FF124D944076AC5E06B0BDD7F /* ColorPickerView.swift */,
+				8E8BB766730FF96EF42BE354D6A2EC4B /* ColorPickerViewDelegate.swift */,
+				E3BC282CB2F59D1711A9227DB7B00618 /* ColorSpaceConverter.swift */,
+				00E9E4C427F13ED1E714E1F689D181A6 /* HSB.swift */,
+				504D226226B304B0BEF5EC6EF7406653 /* RGB.swift */,
+				29F3463879D2C7874152356E08C5989E /* UIColorExtension.swift */,
+				A3EE3C6C72A9BB64F9F99797FF8A2995 /* Support Files */,
+			);
+			name = CULColorPicker;
+			path = CULColorPicker;
+			sourceTree = "<group>";
+		};
+		3D9236E6FE18E3DE88D5DF0EFF27B10D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D09B9D1E2F6E7F2C1AB30B412C7B871B /* HapticButton.modulemap */,
+				11578A4EC89457A80C5E9CD108FBC543 /* HapticButton.xcconfig */,
+				4C326F5747DAA8A94D50B2212E754903 /* HapticButton-dummy.m */,
+				C0AE785A78458BEC713A58A33BD77A3F /* HapticButton-Info.plist */,
+				C51F53ECE3E38C2BD32AA7E6D66FC11B /* HapticButton-prefix.pch */,
+				54E25412ECA3B8881E27280A071CB222 /* HapticButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HapticButton";
+			sourceTree = "<group>";
+		};
+		45BA7C6EA6B16E5E761F8869EF1A0450 /* Pods-Smarter Bulb */ = {
+			isa = PBXGroup;
+			children = (
+				463EEE26BBB8B3A582F9A064FD9AD536 /* Pods-Smarter Bulb.modulemap */,
+				152C816C6AF80FC23CA04D4650FF881B /* Pods-Smarter Bulb-acknowledgements.markdown */,
+				B1B64CE740A013DB298A8B3AADD3FCFD /* Pods-Smarter Bulb-acknowledgements.plist */,
+				9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */,
+				12A648C882D18370E340EA91566EEADC /* Pods-Smarter Bulb-frameworks.sh */,
+				31B2DBBE85F5209D0731FD02E8E1F99B /* Pods-Smarter Bulb-Info.plist */,
+				B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */,
+				489A01564D809736F2EE80EB400749A9 /* Pods-Smarter Bulb.debug.xcconfig */,
+				79967AA49EB1211D7CAC04015B621675 /* Pods-Smarter Bulb.release.xcconfig */,
+			);
+			name = "Pods-Smarter Bulb";
+			path = "Target Support Files/Pods-Smarter Bulb";
+			sourceTree = "<group>";
+		};
+		649A8896118FFBC26768719C57F11509 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45BA7C6EA6B16E5E761F8869EF1A0450 /* Pods-Smarter Bulb */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		696D33C2AC3D27E9647D1B44E5A3FB18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63F83180244D08328B0B9801EBC25D4C /* CULColorPicker.framework */,
+				04104D9C34977FEB65E9D2E5CAACE860 /* HapticButton.framework */,
+				1A9AA61D4F990729CD5D2AF2236A228D /* Pods_Smarter_Bulb.framework */,
+				28228BE35E08DC3FAE7DF9A37DDA1EB4 /* Slope.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D4106E3C71E0547E3742DBE4A75DC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E8BE2474AF90AE8333597C8ACC007D2 /* CULColorPicker */,
+				ABA5387F52EFDD092936CB4C3D36EF6D /* HapticButton */,
+				C619D086B9680F0686491F64348D35BD /* Slope */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3EE3C6C72A9BB64F9F99797FF8A2995 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5E62EF7541CFD5C36A2C0DDB4D0C57E /* CULColorPicker.modulemap */,
+				6D01D8F822558EC099DE8EF725D9FB23 /* CULColorPicker.xcconfig */,
+				859FB29550309982E36AB3F00CCDC2B0 /* CULColorPicker-dummy.m */,
+				DC0A5CD37E995967FF2F7A697455972A /* CULColorPicker-Info.plist */,
+				C31ACE4CD73CE06A919DAA4367CC8E6D /* CULColorPicker-prefix.pch */,
+				48E77BF8475B5834ED8B66D8AF2826B7 /* CULColorPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CULColorPicker";
+			sourceTree = "<group>";
+		};
+		ABA5387F52EFDD092936CB4C3D36EF6D /* HapticButton */ = {
+			isa = PBXGroup;
+			children = (
+				4211DD15B79F17924959BF89B4D8C3FB /* HapticButton.swift */,
+				3D9236E6FE18E3DE88D5DF0EFF27B10D /* Support Files */,
+			);
+			name = HapticButton;
+			path = HapticButton;
+			sourceTree = "<group>";
+		};
+		C619D086B9680F0686491F64348D35BD /* Slope */ = {
+			isa = PBXGroup;
+			children = (
+				0B5E71E40749376886D50F5E0CCAA9AF /* Gradient.swift */,
+				A4457064A43384FAC1B4300D8045C0EC /* GradientView.swift */,
+				A609CD064271A9A314AC064F93507A0C /* PercentageGradient.swift */,
+				7B230E54B27C161EFEED56B9120C14A4 /* UniformGradient.swift */,
+				DD95E377A0BC2E36E978AB932819F4D4 /* Support Files */,
+			);
+			name = Slope;
+			path = Slope;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				77D4106E3C71E0547E3742DBE4A75DC5 /* Pods */,
+				696D33C2AC3D27E9647D1B44E5A3FB18 /* Products */,
+				649A8896118FFBC26768719C57F11509 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DD95E377A0BC2E36E978AB932819F4D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31799B56417FEC9E937FBAD458ACEE75 /* Slope.modulemap */,
+				50EAA5567FDE668BCE084BF80CD5EA62 /* Slope.xcconfig */,
+				773AD0C02093ABBC6D3C59760BE3391D /* Slope-dummy.m */,
+				8B6A550F98E6B8AA665E07A6B2578E06 /* Slope-Info.plist */,
+				5FD977A02794C6F1A307164BEA7D8C44 /* Slope-prefix.pch */,
+				645E7886A0CE76EABFD7C9DA4B2F8D03 /* Slope-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Slope";
+			sourceTree = "<group>";
+		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79E4109EE1CAE0A5573087E8B34EB6E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA31BD6EEA9E71AB289E90466FB2504A /* CULColorPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		956AD3A35C16A80B78D27C769F7A2EDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B88E815499AF3CD4EAA567C5D042F7C7 /* Slope-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9ED4AFC8C2685C1654A90D51A9026E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36A2FF76A9837E873BCE9AFCF5B2A85 /* HapticButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0B51D216AB8833595AB4E25D78CAF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EFBE8BCCB44681A1D4A6508DA0CCCA1 /* Pods-Smarter Bulb-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		19B40C293EECA6EB4A4E6FEA6A70ED5E /* Slope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3BF65E5FD6DBEF3A81CEACE4B4B89E4 /* Build configuration list for PBXNativeTarget "Slope" */;
+			buildPhases = (
+				956AD3A35C16A80B78D27C769F7A2EDE /* Headers */,
+				8B5FEB0F1339DDABA9F30E1C317CF6DF /* Sources */,
+				D7CC741E5CE8447D9A5A9C6F9E5ED9F4 /* Frameworks */,
+				2E5AAACA7EF33D26BC5F802C0CB0B4B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Slope;
+			productName = Slope;
+			productReference = 28228BE35E08DC3FAE7DF9A37DDA1EB4 /* Slope.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E55BF12803EFC1D43C53968971C5007 /* Build configuration list for PBXNativeTarget "HapticButton" */;
+			buildPhases = (
+				AA9ED4AFC8C2685C1654A90D51A9026E /* Headers */,
+				98417C10193436B554545E1A7B515D1C /* Sources */,
+				6ECF52BE895C001A0D2CC905EA6F36B8 /* Frameworks */,
+				D473F7B1A60F71909876AFD039F777A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HapticButton;
+			productName = HapticButton;
+			productReference = 04104D9C34977FEB65E9D2E5CAACE860 /* HapticButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 779C2DB49CEAC9E90C7A24404EDAFEA9 /* Build configuration list for PBXNativeTarget "CULColorPicker" */;
+			buildPhases = (
+				79E4109EE1CAE0A5573087E8B34EB6E1 /* Headers */,
+				F7A75FBACC4EA82DC2303856D178FC37 /* Sources */,
+				DDB1F159BAD5ACDACA66E82F7076CC0C /* Frameworks */,
+				D12A72E0423A259EFA01685B366C96D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CULColorPicker;
+			productName = CULColorPicker;
+			productReference = 63F83180244D08328B0B9801EBC25D4C /* CULColorPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E4F5AF5816BC6840E34FB32E10D75A78 /* Pods-Smarter Bulb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CBB428A6C19D2E7245683ED6B69C789 /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */;
+			buildPhases = (
+				AB0B51D216AB8833595AB4E25D78CAF4 /* Headers */,
+				6732F319467881FBEC1C7F4651C55BC3 /* Sources */,
+				2AAFA94158DB7FBAD445A0054A48722A /* Frameworks */,
+				1FCFF241A00EA14D595D263F23D2A69E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				751D200715FF76E98F2600BEE60F7A57 /* PBXTargetDependency */,
+				966B86CBE5DE851059C4DBE323C76ACF /* PBXTargetDependency */,
+				E495BB06603A19ED249636F615AEDEEC /* PBXTargetDependency */,
+			);
+			name = "Pods-Smarter Bulb";
+			productName = "Pods-Smarter Bulb";
+			productReference = 1A9AA61D4F990729CD5D2AF2236A228D /* Pods_Smarter_Bulb.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 696D33C2AC3D27E9647D1B44E5A3FB18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */,
+				275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */,
+				E4F5AF5816BC6840E34FB32E10D75A78 /* Pods-Smarter Bulb */,
+				19B40C293EECA6EB4A4E6FEA6A70ED5E /* Slope */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FCFF241A00EA14D595D263F23D2A69E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5AAACA7EF33D26BC5F802C0CB0B4B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12A72E0423A259EFA01685B366C96D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D473F7B1A60F71909876AFD039F777A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6732F319467881FBEC1C7F4651C55BC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24CFA6C125BC07AD374E003E158B9B3 /* Pods-Smarter Bulb-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B5FEB0F1339DDABA9F30E1C317CF6DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				476CE251892E04C1FA480431C36782AB /* Gradient.swift in Sources */,
+				62928A1A1F6F24E9A67113EB70A6F509 /* GradientView.swift in Sources */,
+				58EED2FEF17B3B7998E9A1338CADB723 /* PercentageGradient.swift in Sources */,
+				25B0BA5969F9A794297009FD023083AC /* Slope-dummy.m in Sources */,
+				98C82E47FE876048F391CB8C551DB598 /* UniformGradient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98417C10193436B554545E1A7B515D1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39EEABA946849C7E407FC965FDFF1C8F /* HapticButton-dummy.m in Sources */,
+				F57E87B0F258364A862F2C3834C10848 /* HapticButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A75FBACC4EA82DC2303856D178FC37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08972CD4A9F170AE29578E5F856FAB92 /* ColorPickerView.swift in Sources */,
+				CDF46B32FFF6924FBA6578E5476E81DC /* ColorPickerViewDelegate.swift in Sources */,
+				4C43A0C45345B6F3FAB9F6E2B06EFCE2 /* ColorSpaceConverter.swift in Sources */,
+				9512FB6B6412702C1346337676DBF3FF /* CULColorPicker-dummy.m in Sources */,
+				4A278B8619460C89A4C0AB7ACCFC9CDA /* HSB.swift in Sources */,
+				BDF7371FE536CBE9FF5141D5013A6CB0 /* RGB.swift in Sources */,
+				B731A1403131EBF19038AD85A109C5A3 /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		751D200715FF76E98F2600BEE60F7A57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CULColorPicker;
+			target = 41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */;
+			targetProxy = 15A16942AFA8211E53243372926ABB22 /* PBXContainerItemProxy */;
+		};
+		966B86CBE5DE851059C4DBE323C76ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HapticButton;
+			target = 275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */;
+			targetProxy = 81689D8CB945C855FB7D00A0613AB6D1 /* PBXContainerItemProxy */;
+		};
+		E495BB06603A19ED249636F615AEDEEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Slope;
+			target = 19B40C293EECA6EB4A4E6FEA6A70ED5E /* Slope */;
+			targetProxy = 5E08A32470339A9D3CB8E1B97469FCFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0817D06788205417D56DAB248BD6FFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50EAA5567FDE668BCE084BF80CD5EA62 /* Slope.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
+				PRODUCT_MODULE_NAME = Slope;
+				PRODUCT_NAME = Slope;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0AA87BCBB28CBE28EE6521CE687F5BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11578A4EC89457A80C5E9CD108FBC543 /* HapticButton.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HapticButton/HapticButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HapticButton/HapticButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HapticButton/HapticButton.modulemap";
+				PRODUCT_MODULE_NAME = HapticButton;
+				PRODUCT_NAME = HapticButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A7473CB98D2D0D5254F66C7B8885B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D01D8F822558EC099DE8EF725D9FB23 /* CULColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CULColorPicker/CULColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CULColorPicker/CULColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CULColorPicker/CULColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = CULColorPicker;
+				PRODUCT_NAME = CULColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4657D3CFC438CFE0286CB255669B4C21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11578A4EC89457A80C5E9CD108FBC543 /* HapticButton.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HapticButton/HapticButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HapticButton/HapticButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HapticButton/HapticButton.modulemap";
+				PRODUCT_MODULE_NAME = HapticButton;
+				PRODUCT_NAME = HapticButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		98AFA945DF581C5FBDCDE6F0AE00DBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D01D8F822558EC099DE8EF725D9FB23 /* CULColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CULColorPicker/CULColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CULColorPicker/CULColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CULColorPicker/CULColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = CULColorPicker;
+				PRODUCT_NAME = CULColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5E05DB1721B3B991F404EA8A0CB2598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79967AA49EB1211D7CAC04015B621675 /* Pods-Smarter Bulb.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B739FC0C3AD2694A7B43030B54A46F11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489A01564D809736F2EE80EB400749A9 /* Pods-Smarter Bulb.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9CCAFCB375138399986E6FE1EC9D402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50EAA5567FDE668BCE084BF80CD5EA62 /* Slope.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
+				PRODUCT_MODULE_NAME = Slope;
+				PRODUCT_NAME = Slope;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFA1578582149B7E24AD55CBA30F07A /* Debug */,
+				4CE281642D6EE9FAB113046B4B6328A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		779C2DB49CEAC9E90C7A24404EDAFEA9 /* Build configuration list for PBXNativeTarget "CULColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7473CB98D2D0D5254F66C7B8885B14 /* Debug */,
+				98AFA945DF581C5FBDCDE6F0AE00DBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CBB428A6C19D2E7245683ED6B69C789 /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B739FC0C3AD2694A7B43030B54A46F11 /* Debug */,
+				A5E05DB1721B3B991F404EA8A0CB2598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E55BF12803EFC1D43C53968971C5007 /* Build configuration list for PBXNativeTarget "HapticButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA87BCBB28CBE28EE6521CE687F5BF5 /* Debug */,
+				4657D3CFC438CFE0286CB255669B4C21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3BF65E5FD6DBEF3A81CEACE4B4B89E4 /* Build configuration list for PBXNativeTarget "Slope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0817D06788205417D56DAB248BD6FFEE /* Debug */,
+				C9CCAFCB375138399986E6FE1EC9D402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
