@@ -1,0 +1,6 @@
+framework module CULColorPicker {
+  umbrella header "CULColorPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
