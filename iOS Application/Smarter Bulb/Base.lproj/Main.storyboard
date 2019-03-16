@@ -83,7 +83,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-aa-6E3">
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-aa-6E3">
                                 <rect key="frame" x="0.0" y="629" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,6 +130,7 @@
                         <outlet property="quickChoice1" destination="Xo5-ME-BwT" id="Y3x-zN-vQy"/>
                         <outlet property="quickChoice2" destination="9dP-Eo-MV8" id="0lA-rw-rKE"/>
                         <outlet property="quickChoice3" destination="DbT-Qu-3Un" id="y5X-s6-wsv"/>
+                        <outlet property="smartBulbLabel" destination="PAq-nV-ZBJ" id="cEA-gP-mZp"/>
                         <outlet property="wave" destination="d6d-ez-gUk" id="gzl-IP-b47"/>
                     </connections>
                 </viewController>

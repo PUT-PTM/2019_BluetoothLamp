@@ -30,7 +30,7 @@ open class HapticButton: UIControl {
     public var onPressed: Callback?
 
     /// The minium pressure that the button press has to receive in order to trigger the related haptic feedback. The value has to be between 0 and 1 and the default is 0.25.
-    public var feedbackThreshold = 0.25
+    public var feedbackThreshold = 0.15
 
     /// If the button is in mode `label`, this `UILabel` is part of the button hierarchy. Modify this object directly for more customizations on the displayed text.
     public lazy var textLabel: UILabel = {

@@ -14,8 +14,8 @@ import Slope
 class ViewController: UIViewController {
     
     @IBOutlet weak var wave: UIView!
+    @IBOutlet weak var smartBulbLabel: UILabel!
     @IBOutlet weak var informationAboutLamp: UILabel!
-    @IBOutlet weak var powerSwitch: UISwitch!
     @IBOutlet weak var changeMode1: HapticButton!
     @IBOutlet weak var changeMode2: HapticButton!
     @IBOutlet weak var changeMode3: HapticButton!
@@ -65,7 +65,6 @@ class ViewController: UIViewController {
     func initButtons() {
         
         changeMode1.mode = .image(image: #imageLiteral(resourceName: "bulb"))
-        changeMode1.textLabel.textColor = .white
         changeMode1.addBlurView(style: .extraLight)
         changeMode1.layer.borderWidth = 1
         changeMode1.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
@@ -75,18 +74,19 @@ class ViewController: UIViewController {
                 self.writeValue(value: "off")
                 self.waveView.stopWave()
                 self.setBackgroundColor(Color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+                self.changeMode1.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
                 self.isBulbTurnedOn = false
-            } else {
+            } else if self.isMyPeripheralConected {
                 print("Lamp is turned on")
                 self.writeValue(value: "on")
                 self.waveView.startWave()
                 self.setBackgroundColor(Color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
+                self.changeMode1.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
                 self.isBulbTurnedOn = true
             }
         }
         
         changeMode2.mode = .image(image: #imageLiteral(resourceName: "palete"))
-        changeMode2.textLabel.textColor = .white
         changeMode2.addBlurView(style: .extraLight)
         changeMode2.layer.borderWidth = 1
         changeMode2.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
@@ -96,7 +96,6 @@ class ViewController: UIViewController {
         }
         
         changeMode3.mode = .image(image: #imageLiteral(resourceName: "nature"))
-        changeMode3.textLabel.textColor = .white
         changeMode3.addBlurView(style: .extraLight)
         changeMode3.layer.borderWidth = 1
         changeMode3.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
@@ -124,7 +123,7 @@ class ViewController: UIViewController {
         quickChoice1.layer.cornerRadius = 20
         
         quickChoice2.mode = .label(text: "")
-        quickChoice2.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Alarm")
+        quickChoice2.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Option 2")
         quickChoice2.textLabel.textAlignment = .left
         quickChoice2.textLabel.textColor = .gray
         quickChoice2.layer.borderWidth = 1
@@ -137,7 +136,7 @@ class ViewController: UIViewController {
         quickChoice2.layer.cornerRadius = 20
         
         quickChoice3.mode = .label(text: "")
-        quickChoice3.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Alarm")
+        quickChoice3.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Option 3")
         quickChoice3.textLabel.textAlignment = .left
         quickChoice3.textLabel.textColor = .gray
         quickChoice3.layer.borderWidth = 1
@@ -152,11 +151,17 @@ class ViewController: UIViewController {
     
     func setBackgroundColor(Color: UIColor) {
         backgroundGradient.gradient = PercentageGradient(baseColor: Color, angle: .vertical, percentage: 0.2)
-        informationAboutLamp.textColor = Color.isDarkColor == true ? .white : .black
+        
+        if Color.isDarkColor {
+            informationAboutLamp.textColor = .white
+            smartBulbLabel.textColor = .lightGray
+        } else {
+            informationAboutLamp.textColor = .black
+            smartBulbLabel.textColor = .darkGray
+        }
     }
     
     func addIconWithTextToLabel(image: String, text: String) -> NSAttributedString {
-        
         let attachment = NSTextAttachment()
         attachment.image = UIImage(named: image)
         attachment.bounds = CGRect(x: 0, y: -5, width: 25, height: 25)
@@ -188,13 +193,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.button.onPressed = {
             print("1 blur button pressed.")
             self.setBackgroundColor(Color: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
-            
         }
-        
         return cell
     }
-    
-    
 }
 
 extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
