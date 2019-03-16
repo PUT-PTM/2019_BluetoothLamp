@@ -8,5 +8,6 @@ target 'Smarter Bulb' do
     pod "HapticButton"
     pod "Slope"
     pod "CULColorPicker"
+    pod "NotchyAlert"
 
 end

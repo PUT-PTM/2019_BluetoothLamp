@@ -184,6 +184,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CULColorPicker/CULColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/HapticButton/HapticButton.framework",
+				"${BUILT_PRODUCTS_DIR}/NotchyAlert/NotchyAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/Slope/Slope.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -192,6 +193,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CULColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HapticButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotchyAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Slope.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

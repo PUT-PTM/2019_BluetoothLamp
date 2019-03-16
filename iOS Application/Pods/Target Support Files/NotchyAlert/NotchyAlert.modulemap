@@ -1,0 +1,6 @@
+framework module NotchyAlert {
+  umbrella header "NotchyAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

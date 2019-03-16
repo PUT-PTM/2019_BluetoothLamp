@@ -10,6 +10,7 @@ import UIKit
 import CoreBluetooth
 import HapticButton
 import Slope
+import NotchyAlert
 
 class ViewController: UIViewController {
     
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     
     var backgroundGradient: GradientView!
     var isBulbTurnedOn = false
+    var notchy: NotchyAlert!
     
     private lazy var waveView: LCWaveView = {
         let waveView = LCWaveView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200), color: .white)
@@ -40,7 +42,6 @@ class ViewController: UIViewController {
         return waveView
     }()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
@@ -83,6 +84,9 @@ class ViewController: UIViewController {
                 self.setBackgroundColor(Color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
                 self.changeMode1.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
                 self.isBulbTurnedOn = true
+            } else {
+                self.notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
+                self.notchy.presentNotchy(in: self.view, duration: 3)
             }
         }
         

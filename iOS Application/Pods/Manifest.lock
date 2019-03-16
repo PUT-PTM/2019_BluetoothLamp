@@ -1,24 +1,28 @@
 PODS:
   - CULColorPicker (0.1.0)
   - HapticButton (0.1)
+  - NotchyAlert (1.0)
   - Slope (1.2)
 
 DEPENDENCIES:
   - CULColorPicker
   - HapticButton
+  - NotchyAlert
   - Slope
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CULColorPicker
     - HapticButton
+    - NotchyAlert
     - Slope
 
 SPEC CHECKSUMS:
   CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
   HapticButton: 7f244fb23421c2a7d2245457e745a809aab65c77
+  NotchyAlert: 2e5f0acfeff794c673f14538c2a0b01095145d72
   Slope: b1c2c869ca7428b2b76799da4bc29d67907eaa93
 
-PODFILE CHECKSUM: 1d22250cbd255cbeb81629436c2c80372fd4e803
+PODFILE CHECKSUM: 6d19df622fb6221a6f494636edf1258304723b24
 
 COCOAPODS: 1.6.1
