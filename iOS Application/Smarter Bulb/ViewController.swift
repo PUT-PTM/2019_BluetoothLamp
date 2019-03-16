@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     var isMyPeripheralConected = false
     
     var backgroundGradient: GradientView!
+    var isBulbTurnedOn = false
     
     private lazy var waveView: LCWaveView = {
         let waveView = LCWaveView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200), color: .white)
@@ -69,12 +70,22 @@ class ViewController: UIViewController {
         changeMode1.layer.borderWidth = 1
         changeMode1.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         changeMode1.onPressed = {
-            print("1 blur button pressed.")
-            self.setBackgroundColor(Color: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
-            
+            if self.isBulbTurnedOn {
+                print("Lamp is turned off")
+                self.writeValue(value: "off")
+                self.waveView.stopWave()
+                self.setBackgroundColor(Color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+                self.isBulbTurnedOn = false
+            } else {
+                print("Lamp is turned on")
+                self.writeValue(value: "on")
+                self.waveView.startWave()
+                self.setBackgroundColor(Color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
+                self.isBulbTurnedOn = true
+            }
         }
         
-        changeMode2.mode = .image(image: #imageLiteral(resourceName: "fire"))
+        changeMode2.mode = .image(image: #imageLiteral(resourceName: "palete"))
         changeMode2.textLabel.textColor = .white
         changeMode2.addBlurView(style: .extraLight)
         changeMode2.layer.borderWidth = 1
@@ -158,26 +169,33 @@ class ViewController: UIViewController {
         return myString
     }
     
-    @IBAction func turnOnOffBulb(_ sender: Any) {
-        
-        if powerSwitch.isOn {
-            print("Turn lamp on")
-            writeValue(value: "on")
-            waveView.startWave()
-            setBackgroundColor(Color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
-            
-        } else {
-            print("Turn lamp off")
-            writeValue(value: "off")
-            waveView.stopWave()
-            setBackgroundColor(Color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
-        }
-    }
-    
 }
 
 
-
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ModeCollectionViewCell", for: indexPath) as! ModeCollectionViewCell
+        
+        cell.button.mode = .image(image: #imageLiteral(resourceName: "bulb"))
+        cell.button.textLabel.textColor = .white
+        cell.button.addBlurView(style: .extraLight)
+        cell.button.layer.borderWidth = 1
+        cell.button.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        cell.button.onPressed = {
+            print("1 blur button pressed.")
+            self.setBackgroundColor(Color: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
+            
+        }
+        
+        return cell
+    }
+    
+    
+}
 
 extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     
