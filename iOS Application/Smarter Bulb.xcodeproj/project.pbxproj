@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7AE9A6A2E6051F10A6E77144 /* Pods_Smarter_Bulb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BDD9EA30DF335B8DD6D0DE /* Pods_Smarter_Bulb.framework */; };
-		B1398638223D34B600D70AED /* ModeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1398637223D34B600D70AED /* ModeCollectionViewCell.swift */; };
+		B139863A223D94CE00D70AED /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1398639223D94CE00D70AED /* ColorPickerViewController.swift */; };
+		B1398640223DCBE300D70AED /* ColorPickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139863F223DCBE300D70AED /* ColorPickerViewController.storyboard */; };
 		E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CDF22306424007E0CBB /* AppDelegate.swift */; };
 		E14B6CE222306424007E0CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CE122306424007E0CBB /* ViewController.swift */; };
 		E14B6CE522306424007E0CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE322306424007E0CBB /* Main.storyboard */; };
@@ -19,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		82A683DC0A4DCBDD9FEFB4AC /* Pods-Smarter Bulb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smarter Bulb.debug.xcconfig"; path = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.debug.xcconfig"; sourceTree = "<group>"; };
-		B1398637223D34B600D70AED /* ModeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1398639223D94CE00D70AED /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		B139863F223DCBE300D70AED /* ColorPickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPickerViewController.storyboard; sourceTree = "<group>"; };
 		E14B6CDC22306424007E0CBB /* Smarter Bulb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smarter Bulb.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14B6CDF22306424007E0CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14B6CE122306424007E0CBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +88,9 @@
 				E183619D2239A22900AFC04F /* Smarter Bulb.entitlements */,
 				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E14B6CE122306424007E0CBB /* ViewController.swift */,
-				B1398637223D34B600D70AED /* ModeCollectionViewCell.swift */,
+				B1398639223D94CE00D70AED /* ColorPickerViewController.swift */,
 				E14B6CF322306502007E0CBB /* LCWaveView.swift */,
+				B139863F223DCBE300D70AED /* ColorPickerViewController.storyboard */,
 				E14B6CE322306424007E0CBB /* Main.storyboard */,
 				E14B6CE622306426007E0CBB /* Assets.xcassets */,
 				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1398640223DCBE300D70AED /* ColorPickerViewController.storyboard in Resources */,
 				E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */,
 				E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */,
 				E14B6CE522306424007E0CBB /* Main.storyboard in Resources */,
@@ -230,10 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B139863A223D94CE00D70AED /* ColorPickerViewController.swift in Sources */,
 				E14B6CE222306424007E0CBB /* ViewController.swift in Sources */,
 				E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */,
 				E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */,
-				B1398638223D34B600D70AED /* ModeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
