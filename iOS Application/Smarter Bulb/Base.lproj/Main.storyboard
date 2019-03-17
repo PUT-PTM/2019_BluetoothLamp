@@ -74,6 +74,9 @@
                                 <rect key="frame" x="16" y="421" width="164" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="quickChoice1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ge6-05-qpy"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dP-Eo-MV8" customClass="HapticButton" customModule="HapticButton">
                                 <rect key="frame" x="195" y="421" width="164" height="50"/>

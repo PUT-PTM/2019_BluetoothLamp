@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     var backgroundGradient: GradientView!
     var isBulbTurnedOn = false
     var notchy: NotchyAlert!
+    var currentColor: UIColor!
+    var isAlarmSet = false
     
     private lazy var waveView: LCWaveView = {
         let waveView = LCWaveView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200), color: .white)
@@ -58,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     func initGradientBackground() {
-        setBackgroundColor(color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+        setBackgroundColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         self.backgroundGradient.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(backgroundGradient, at: 0)
     }
@@ -87,15 +89,6 @@ class ViewController: UIViewController {
         quickChoice1.layer.borderWidth = 1
         quickChoice1.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         quickChoice1.addBlurView(style: .regular)
-        quickChoice1.onPressed = {
-            print("1 choice button pressed.")
-            self.setBackgroundColor(color: #colorLiteral(red: 0.2039215686, green: 0.5960784314, blue: 0.8588235294, alpha: 1))
-            
-            self.quickChoice1.backgroundColor = .red
-            self.quickChoice1.textLabel.textColor = .white
-            self.quickChoice1.textLabel.attributedText = self.addIconWithTextToLabel(image: "alarm_clock_on", text: "   Alarm")
-            
-        }
         quickChoice1.layer.cornerRadius = 20
         
         quickChoice2.mode = .label(text: "")
@@ -126,6 +119,8 @@ class ViewController: UIViewController {
     }
     
     func setBackgroundColor(color: UIColor) {
+        currentColor = color
+        
         backgroundGradient.gradient = PercentageGradient(baseColor: color, angle: .vertical, percentage: 0.2)
         
         if color.isDarkColor {
@@ -134,6 +129,28 @@ class ViewController: UIViewController {
         } else {
             informationAboutLamp.textColor = .black
             smartBulbLabel.textColor = .darkGray
+        }
+        
+        updateButtonsColor(newColor: color)
+    }
+    func updateButtonsColor(newColor: UIColor) {
+        if isAlarmSet {
+            if newColor != #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) {
+                quickChoice1.backgroundColor = newColor
+            } else {
+                quickChoice1.backgroundColor = .lightGray
+            }
+            if currentColor.isDarkColor {
+                quickChoice1.textLabel.textColor = .white
+                quickChoice1.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_on", text: "   Alarm")
+            } else {
+                quickChoice1.textLabel.textColor = .darkGray
+                quickChoice1.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Alarm")
+            }
+        } else {
+            quickChoice1.backgroundColor = .white
+            quickChoice1.textLabel.textColor = .gray
+            quickChoice1.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Alarm")
         }
     }
     
@@ -155,20 +172,22 @@ class ViewController: UIViewController {
             print("Lamp is turned off")
             writeValue(value: "off")
             waveView.stopWave()
-            setBackgroundColor(color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+            setBackgroundColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
             changeMode1.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             isBulbTurnedOn = false
-        } else if isMyPeripheralConected {
+        } else {
             print("Lamp is turned on")
             writeValue(value: "on")
             waveView.startWave()
             setBackgroundColor(color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
             changeMode1.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             isBulbTurnedOn = true
-        } else {
+        }
+        
+        /*else {
             notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
             notchy.presentNotchy(in: self.view, duration: 3)
-        }
+        } */
     }
     
     @IBAction func changeMode2(_ sender: Any) {
@@ -184,15 +203,29 @@ class ViewController: UIViewController {
         print("3 blur button pressed.")
         setBackgroundColor(color: #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1))
     }
+    
+    @IBAction func quickChoice1(_ sender: Any) {
+        print("Alarm choice button pressed.")
+        
+        if isAlarmSet {
+            isAlarmSet = false
+        } else {
+            isAlarmSet = true
+        }
+        updateButtonsColor(newColor: currentColor)
+        
+    }
+    
 
 }
+
 
 extension ViewController: PopupDelegate {
     func pickedColor(newColor: UIColor) {
         setBackgroundColor(color: newColor)
     }
-    
 }
+
 
 extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     
