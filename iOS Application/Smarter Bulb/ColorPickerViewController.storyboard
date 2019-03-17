@@ -53,6 +53,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="colorPicker" destination="4tR-fw-jC2" id="42b-Cz-s3I"/>
+                        <outlet property="hexValue" destination="IIv-HH-93E" id="AGW-ca-nMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

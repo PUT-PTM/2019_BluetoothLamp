@@ -12,6 +12,7 @@ import CULColorPicker
 class ColorPickerViewController: UIViewController {
     
     weak var delegate: PopupDelegate?
+    @IBOutlet weak var hexValue: UILabel!
     
     @IBOutlet weak var colorPicker: ColorPickerView!
     
@@ -34,7 +35,7 @@ extension ColorPickerViewController: ColorPickerViewDelegate {
     }
     
     func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {
-        
+        hexValue.textColor = colorPicker.selectedColor
     }
     
     func colorPickerDidEndDagging(_ colorPicker: ColorPickerView) {
