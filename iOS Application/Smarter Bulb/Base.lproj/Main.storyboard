@@ -121,7 +121,7 @@
                 <viewControllerPlaceholder storyboardName="ColorPickerViewController" id="nz9-H9-yj3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQ5-LV-9Jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="8"/>
+            <point key="canvasLocation" x="759" y="7"/>
         </scene>
     </scenes>
 </document>

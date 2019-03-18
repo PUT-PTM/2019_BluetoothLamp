@@ -9,5 +9,6 @@ target 'Smarter Bulb' do
     pod "Slope"
     pod "CULColorPicker"
     pod "NotchyAlert"
+    pod "IGColorPicker"
 
 end

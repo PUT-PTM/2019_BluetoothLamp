@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ColorPickerView: UIView {
+public class CULColorPickerView: UIView {
 
     /// The selected color information in a HSB colorspace.
     private var selectedHSB = UIColor.white.hsb
@@ -19,7 +19,7 @@ public class ColorPickerView: UIView {
     }
 
     /// The object that acts as the delegate of the color picker.
-    public weak var delegate: ColorPickerViewDelegate?
+    public weak var delegate: CULColorPickerViewDelegate?
 
     @IBInspectable public var isIndicatorHidden: Bool = false {
         didSet {
@@ -122,7 +122,7 @@ public class ColorPickerView: UIView {
 }
 
 // MARK: - Touch Action
-extension ColorPickerView {
+extension CULColorPickerView {
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -192,7 +192,7 @@ extension ColorPickerView {
 }
 
 // MARK: - Helpers
-extension ColorPickerView {
+extension CULColorPickerView {
 
     private func createHSColorWheelImage(size: CGSize) -> CGImage {
         // Create a bitmap of the Hue Saturation colorWheel
