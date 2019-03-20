@@ -11,6 +11,7 @@ import CoreBluetooth
 import HapticButton
 import Slope
 import NotchyAlert
+import SPStorkController
 
 class ViewController: UIViewController {
     
@@ -191,12 +192,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeMode2(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "ColorPickerViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as! ColorPickerViewController
-        vc.delegate = self
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true)
+        //let storyboard = UIStoryboard(name: "ColorPickerViewController", bundle: nil)
+        //let vc = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as! ColorPickerViewController
+        //vc.delegate = self
+        //vc.modalPresentationStyle = .overCurrentContext
+        //vc.modalTransitionStyle = .crossDissolve
+        //present(vc, animated: true)
+        
+        let controller = NewColorPickerViewController()
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        controller.transitioningDelegate = transitionDelegate
+        controller.modalPresentationStyle = .custom
+        controller.modalPresentationCapturesStatusBarAppearance = true
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
     @IBAction func changeMode3(_ sender: Any) {

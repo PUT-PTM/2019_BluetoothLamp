@@ -10,5 +10,6 @@ target 'Smarter Bulb' do
     pod "CULColorPicker"
     pod "NotchyAlert"
     pod "IGColorPicker"
+    pod 'SPStorkController'
 
 end

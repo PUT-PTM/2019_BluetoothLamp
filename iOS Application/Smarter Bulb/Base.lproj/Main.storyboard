@@ -115,13 +115,5 @@
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="27.339901477832512"/>
         </scene>
-        <!--ColorPickerViewController-->
-        <scene sceneID="RkJ-iO-OvD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ColorPickerViewController" id="nz9-H9-yj3" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kQ5-LV-9Jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="759" y="7"/>
-        </scene>
     </scenes>
 </document>

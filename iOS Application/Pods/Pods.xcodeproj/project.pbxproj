@@ -3,73 +3,83 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		026DA5D2E990790035D72F939937E261 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54DFC17E121865799858A88520CEC1 /* DefaultValues.swift */; };
-		08972CD4A9F170AE29578E5F856FAB92 /* CULColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E4CE702BB8B65B4B3A7EE9AF594079 /* CULColorPickerView.swift */; };
-		09B97EC206066850ED149A4C98DE1570 /* IGColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECB6481822C15320E8B92F3908118AF /* IGColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		107CB51489BDC1C46375AB272C193C05 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C6F058FAFEAD5711A5AA6E4167DA9 /* UIColor+Extension.swift */; };
-		111B1DD11BDC4E0AD41D4C5A51F2D0D7 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489154A5592C14AA622F202DF09F5CF8 /* M13CheckboxFadeController.swift */; };
-		1E52793FA21D5F9F4CF41FA526E2B973 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA700A62126E9CDCACAC5DF22328AEF5 /* M13CheckboxController.swift */; };
+		026DA5D2E990790035D72F939937E261 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58081A393D1EC7416AF3A9BBB9B4540 /* DefaultValues.swift */; };
+		03A92FC3052BA7393E13C6E0EA24696C /* SPStorkController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5F361AC65198CCBE7B29D9E05B221C /* SPStorkController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04957A26C4968CA495A1676A03C6E0EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E677E691F2AAD51088746CC4673EA1 /* GradientView.swift */; };
+		060270DEA7B4911D82ECA2CF865816E6 /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB112697E4857D10453611CD51AEFBD6 /* SPStorkTransitioningDelegate.swift */; };
+		09B97EC206066850ED149A4C98DE1570 /* IGColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5B219F02B1602327CF64A4CA87BDFF /* IGColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2A1E5FCEFC8AE62B0CDF963F249BAC /* Pods-Smarter Bulb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */; };
+		107CB51489BDC1C46375AB272C193C05 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E0821BEBACFBD133C932AB8C9DCC4 /* UIColor+Extension.swift */; };
+		111B1DD11BDC4E0AD41D4C5A51F2D0D7 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D1BB61E30F21EA4A8824944CF356 /* M13CheckboxFadeController.swift */; };
+		17090AFEACD337C122BDC929AFCE1411 /* CULColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C1930CC9C7E5D140C2E108FF7A0BDB /* CULColorPicker-dummy.m */; };
+		1BEA90D257B956CD5C171AA8393E92F1 /* PercentageGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B6BDFE4A16403BFE3FF1CCDC09E06 /* PercentageGradient.swift */; };
+		1E52793FA21D5F9F4CF41FA526E2B973 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B14A5CD70732BCB62419FC4153D13 /* M13CheckboxController.swift */; };
 		1EB09AFC3D3F2C87A87E11324153BC75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
-		1FCF59ADD5F9078F47EFC428AFAF2C3A /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720868279B7D4933BDAFFFAFEFF31EE /* M13CheckboxRadioPathGenerator.swift */; };
-		2CB292DF8B6C40ACFDE718D30CB59722 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72562763A4A8E8642F5974C27621A554 /* M13CheckboxStrokeController.swift */; };
-		2DCEAC7C418A3FD9E8CB29E1D6330AFE /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBBC4BE2CF93630598B2E09CB03994D /* M13CheckboxDisclosurePathGenerator.swift */; };
-		395DCA516AA276915BA4AFCDF8D04D75 /* Pods-Smarter Bulb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39EEABA946849C7E407FC965FDFF1C8F /* HapticButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EFA1A95EFA23579F6A361F24EC83F /* HapticButton-dummy.m */; };
-		3BF1B2D17F29C698A861186D2924904D /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F9F3535EBDDE8995AFC0F24E8C590 /* M13CheckboxExpandController.swift */; };
-		3FB55263D3C3E390820D2B344975B6FD /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672AC52262330625B123C57E0B35C91 /* M13Checkbox-dummy.m */; };
-		464DBBACAF6F7FA5E67F5112AF1A07ED /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7FAB76AE30D9671367AD7DB1E645F /* ColorPickerView.swift */; };
-		4A278B8619460C89A4C0AB7ACCFC9CDA /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7DCA3EB25F7A8F5BD14183B9F2322A /* HSB.swift */; };
-		4C43A0C45345B6F3FAB9F6E2B06EFCE2 /* ColorSpaceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AB2EF0F0D25C4951850EDE22E16BD /* ColorSpaceConverter.swift */; };
-		4C576EDE4EEB40AD39E7CC1414471FFE /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3617C86D963CA0A751B12CE9FABD771 /* M13CheckboxCheckPathGenerator.swift */; };
-		4F675A69C94789C43B23EFB61BF2343D /* NotchyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB657239A3C500646784496D0AC0683 /* NotchyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54CC3260A5CDA2B6ACF3BCE942F954BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
-		5C50C5641E7D68E9D91643BB67749B61 /* Pods-Smarter Bulb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */; };
-		5E22A30B7B4EF9CA57DD9AC9043A6D7F /* ColorPickerViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E04EF8F7B1C6AE39DAED5006E1190 /* ColorPickerViewDelegateFlowLayout.swift */; };
-		5E8F89512CE4928E64C366B237B4F7D8 /* NotchyAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2866A08CCA33B2A72C4890902F124B43 /* NotchyAlert-dummy.m */; };
-		624E17AE35E8B69B4154913B89DCB95E /* IGColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82773A10E5563AA24A45E5896EAE0198 /* IGColorPicker-dummy.m */; };
-		7240ACB3D29E9A1CFE5C196A3B895D31 /* Slope-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD9760A479B88CE80C6CF896019B0E /* Slope-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78075B936776ABADEC4DC2722C2F9D0C /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FCEF15DE133C8959D49A897834EECB /* M13CheckboxAnimationGenerator.swift */; };
-		7916ACD652575EEB1AB45226E3E0AD63 /* Slope-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15490E196451C8D9808B278752FEBB42 /* Slope-dummy.m */; };
-		799828CD3FAE24C1BEDCD58852C99F96 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF3E324FE14130129C40CA58FA4BF34 /* M13CheckboxGestureRecognizer.swift */; };
-		7B9416893E184CE97AFC4156ACFE8927 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F78A04522529B2D1D06A4C28F68258 /* M13CheckboxFlatController.swift */; };
-		7CCFCE6C806565D0E9DB6EAC5B27F7CB /* NotchyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BFC9372A82244BC613BAC1224C3004 /* NotchyAlert.swift */; };
-		7F8EC3DC52BA3870565DB8EAC2DE1955 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A2CE7A9DCECF47B0698EF1C6A649D /* M13CheckboxPathGenerator.swift */; };
-		7FB4D19935245E35826C7FE53A00734C /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219675D710D329600033457B7C94E9 /* M13CheckboxAddRemovePathGenerator.swift */; };
-		8698AE03A99987C6BE22BCCC8619F3AA /* UniformGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AEB8B1C94BA6158854DF13F3CF83E /* UniformGradient.swift */; };
-		89B3AA084E8C9605FF5FB2CEA34CEF66 /* ColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C279B5A20EABDA0C97051DFDCD8CD99 /* ColorPickerViewDelegate.swift */; };
-		9512FB6B6412702C1346337676DBF3FF /* CULColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1123068B40ACAEBDAC5E9F498AB63832 /* CULColorPicker-dummy.m */; };
+		1FCF59ADD5F9078F47EFC428AFAF2C3A /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BAE8E1613536DE89B529630843D26 /* M13CheckboxRadioPathGenerator.swift */; };
+		212263037D61A7358D8F96CF0D9439FE /* Slope-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 487F7AD7BE1BEB4504BC9809DBC88318 /* Slope-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AB0FA61B1BDB2578C2FB74CD45B161B /* Slope-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6CE15ABDC3133B8AE3663CEECB4799 /* Slope-dummy.m */; };
+		2CB292DF8B6C40ACFDE718D30CB59722 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FC5EA3BA665D94D7365EC643D054E /* M13CheckboxStrokeController.swift */; };
+		2DCEAC7C418A3FD9E8CB29E1D6330AFE /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32856A730D658822E1A59E28D0D0D1B /* M13CheckboxDisclosurePathGenerator.swift */; };
+		39EEABA946849C7E407FC965FDFF1C8F /* HapticButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D14991656FD232555844137F36979C3 /* HapticButton-dummy.m */; };
+		3BF1B2D17F29C698A861186D2924904D /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3E98F09C1BFE4B389FADD44DD5253 /* M13CheckboxExpandController.swift */; };
+		3F86FEB63F01A21BE2C931F36CA1707E /* UniformGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36581E18FA210EF2E319C02851F44FE /* UniformGradient.swift */; };
+		3FB55263D3C3E390820D2B344975B6FD /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4866F435D14C8282A0F596F39C13BB1 /* M13Checkbox-dummy.m */; };
+		40CB5DD0475AB701BB238F0481E63FC7 /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729CC5D0302170C08D5060A003A8B54 /* SPStorkPresentationController.swift */; };
+		464DBBACAF6F7FA5E67F5112AF1A07ED /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821EBAD823D2D48B1329E7D9F23B317 /* ColorPickerView.swift */; };
+		46DDC0DC3A49A019085D31407B607DE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
+		4C576EDE4EEB40AD39E7CC1414471FFE /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D479ABF2642D6641AEEB0BC8B1C818 /* M13CheckboxCheckPathGenerator.swift */; };
+		4F675A69C94789C43B23EFB61BF2343D /* NotchyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F159D72ED0542B380FF82EF4892F99C1 /* NotchyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51B54EDC5AA5E8E0E7DD261CF70AA0A0 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA31269E99C793DF30D57E4CE832131 /* Gradient.swift */; };
+		51F47F3B5F831B330204F6801D45B0CB /* CULColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEF8C0C60FD3D28D6266B173375E6F /* CULColorPickerView.swift */; };
+		5325005ACC32BFD245DCB042383DC06F /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D70B6156DB3003ABC89E10A885739E /* HSB.swift */; };
+		56C2AAB3113BDF0293AA60BE63075A8B /* SPStorkController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE347E12F01E288F3176F4D7CACC61 /* SPStorkController-dummy.m */; };
+		5E22A30B7B4EF9CA57DD9AC9043A6D7F /* ColorPickerViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C729A5CCB44BF73DAE2F36559D4 /* ColorPickerViewDelegateFlowLayout.swift */; };
+		5E8F89512CE4928E64C366B237B4F7D8 /* NotchyAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 809EE21F578D722C15EC1F7362E4CBB1 /* NotchyAlert-dummy.m */; };
+		624E17AE35E8B69B4154913B89DCB95E /* IGColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C884CE608C60148235659A6405DEAA6 /* IGColorPicker-dummy.m */; };
+		6C786F0656D79AB43ECD183DC058C80B /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FFD8A5BE06A637625509312641A91 /* SPStorkIndicatorView.swift */; };
+		6D1BB1D47DE32C180445EF74F9971C55 /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73969A38BAA37BDFADA2CC44FB39E7B /* SPStorkController.swift */; };
+		6F217C3B54635AEC6D6050F8EAB5B2BB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43368FB556EE8B4CBF06D309C3FB4D60 /* UIColorExtension.swift */; };
+		7610E4B821FB2C665D00205170DD5993 /* CULColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CA3AF8401336448B0CFCA83A13C43 /* CULColorPickerViewDelegate.swift */; };
+		78075B936776ABADEC4DC2722C2F9D0C /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA35D3E5A2E1976C91F917C178FF70E /* M13CheckboxAnimationGenerator.swift */; };
+		799828CD3FAE24C1BEDCD58852C99F96 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2FFFAEA47B9B3BF01D343F75453F95 /* M13CheckboxGestureRecognizer.swift */; };
+		7B9416893E184CE97AFC4156ACFE8927 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EC159F673F6148A1622E0BAFA999B /* M13CheckboxFlatController.swift */; };
+		7CCFCE6C806565D0E9DB6EAC5B27F7CB /* NotchyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D23F7C0AAF979AAE17C0F414D88B8 /* NotchyAlert.swift */; };
+		7E991ECC13A33EF73831DBC81BE912CE /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970862D4F476F4FF675818BA35A98F2E /* SPStorkViewControllerExtenshion.swift */; };
+		7F8EC3DC52BA3870565DB8EAC2DE1955 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EE714BC3A9ACBB052107E5DB7E823D /* M13CheckboxPathGenerator.swift */; };
+		7FB4D19935245E35826C7FE53A00734C /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D21CD3099F338B86795A3F4FCCB60 /* M13CheckboxAddRemovePathGenerator.swift */; };
+		89B3AA084E8C9605FF5FB2CEA34CEF66 /* ColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA15ECEB6E325A990582DEF3F50321E6 /* ColorPickerViewDelegate.swift */; };
+		90BBDD396060DA250F18BB49B91D1E25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADDC82EF1310F021A26C3083AE4FCCD /* UIKit.framework */; };
 		97EDACED25F2212BC055CA62E33C01E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C203E6440337D78D8BD8218C9C35B83 /* CoreGraphics.framework */; };
-		A0198B371B11FD8C9E9F2070C7E59599 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A34896E4D60F445368DB0E674505594 /* GradientView.swift */; };
-		A28F731CC7EE8269303067A7CF84569B /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21432147ED13914C474F3C9DD2356E36 /* M13CheckboxSpiralController.swift */; };
-		A4E8E606DE3A50892D6695C45F35943E /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E52BA13A385964AFD8C4A97288F78 /* DefaultValues.swift */; };
-		A5565CACFA45C36DBEFB6F77991A2B99 /* PercentageGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89815BE172FEE4F56BC5DE6E95D238D9 /* PercentageGradient.swift */; };
-		A677989B0747DF3F4CC185E59FD4B6BB /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B795AFBC24D2CA7B09F7672120BEA91 /* Gradient.swift */; };
+		A28F731CC7EE8269303067A7CF84569B /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D01C53581CCC8D93A213AD746EA7E2 /* M13CheckboxSpiralController.swift */; };
+		A4E8E606DE3A50892D6695C45F35943E /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7876CB848B2D14463F3BF626B84741B /* DefaultValues.swift */; };
 		A937C9C8D7B538372A12A1E1F949D0BD /* M13Checkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFB28710FB3E3F3A5F4EC011516B40B /* M13Checkbox.framework */; };
-		AA8EFF84CBD894842B4350A3A377B49C /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3222296DCF0B55B8E06BCC8DCD55E /* M13Checkbox+IB.swift */; };
-		B731A1403131EBF19038AD85A109C5A3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A6FCA62BEDA905588132E8D87C2C5 /* UIColorExtension.swift */; };
-		BA31BD6EEA9E71AB289E90466FB2504A /* CULColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD8622B315DFC0BE1E639A8650805B2 /* CULColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDF7371FE536CBE9FF5141D5013A6CB0 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE48CBBC5C7705585B644CBC92780F /* RGB.swift */; };
+		AA8EFF84CBD894842B4350A3A377B49C /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BE8D4EC0B8D2507E5AC55441827ACA /* M13Checkbox+IB.swift */; };
+		AEE643B52B7A3AB986E4EFC69B319F7C /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039C90ECAADF7790AAEE261FA99A563 /* RGB.swift */; };
+		BA31BD6EEA9E71AB289E90466FB2504A /* CULColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DFF6DD9B3C0774C7B742DEBD0EA6DAA /* CULColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEDE0185BFB30CF840576DD5AF787EC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
-		C0A42A4449D7AAC2EC5A2CCD94C19C0A /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 153D3F5E08C2ED1DFD7F378E1B9A8BCB /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4CDCE94A97CC480CAD73B6C8EE1A6D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
-		C8851E64958706554CD610E8603C968D /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CEDBA38343083293463BB538C91A22 /* M13CheckboxBounceController.swift */; };
-		CA5F22569986C53B06A269ABB562DEED /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448665B318946F6C80530C8DF6E66BD3 /* M13CheckboxFillController.swift */; };
-		CDF46B32FFF6924FBA6578E5476E81DC /* CULColorPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D05B468CC22A9575D2BD4E7245E06 /* CULColorPickerViewDelegate.swift */; };
-		D36A2FF76A9837E873BCE9AFCF5B2A85 /* HapticButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B171BC3A585D2E2EFD2A7BAB14098994 /* HapticButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0A42A4449D7AAC2EC5A2CCD94C19C0A /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8D949AE4615840070B1BA9A0599B4E /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C44FFEDB83BEAA92E4C69ADBFF48D55C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
+		C8851E64958706554CD610E8603C968D /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D19EE62C3D8735AA3A2918CEFC4C9 /* M13CheckboxBounceController.swift */; };
+		CA5F22569986C53B06A269ABB562DEED /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04F907FDE873AE820415509F6106E2E /* M13CheckboxFillController.swift */; };
+		D36A2FF76A9837E873BCE9AFCF5B2A85 /* HapticButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E8B40D66EFD5E8C55D8B95943158563 /* HapticButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3A1F31A2DC968A739BA55B933F49A03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
 		D4361FA8CF70DBDDF84951A402D267BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADDC82EF1310F021A26C3083AE4FCCD /* UIKit.framework */; };
+		D6DA290A1A0EF945FACDE49713A713AD /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50414752624579BAE6FAAE70CBF2B0C /* SPStorkDismissingAnimationController.swift */; };
 		D8FB9138FDC997AFD1B8A73AC93D6D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
 		DF7067223EA09BD0B9BB4072C43526DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADDC82EF1310F021A26C3083AE4FCCD /* UIKit.framework */; };
-		E353D75EBB518D8A76C589375A0D433A /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E161AF68FE806808EEA5900A9641787 /* M13Checkbox.swift */; };
-		E9C954BBEDEE841570E36918758D6214 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADDC82EF1310F021A26C3083AE4FCCD /* UIKit.framework */; };
-		F15CF27894A0D006327874C9C72C0E2E /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939131098C02203B817E72644772BEF /* ColorPickerCell.swift */; };
-		F57E87B0F258364A862F2C3834C10848 /* HapticButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE95B7D05E360B3C57700F17ADC1247 /* HapticButton.swift */; };
-		F5A10D3F068ABA87CDA8ACBC26774A21 /* NotchyAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FED996313BED33BD449CAAB17513505 /* NotchyAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9A27CCBC8547F3FCF7FE9CB2C1FE3CE /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759BBE274B7C26E39873FAFB9B8CA83 /* M13CheckboxDotController.swift */; };
+		E353D75EBB518D8A76C589375A0D433A /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5EF818ABC17064EC553FE473ADFEED /* M13Checkbox.swift */; };
+		EEBA4818DE9C2951D6FD3D26906FA470 /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91042F01CF6BC14CEE12C4E7F3F1B151 /* SPStorkPresentingAnimationController.swift */; };
+		F15CF27894A0D006327874C9C72C0E2E /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7026F8092BBB22836F835B21FDF1E /* ColorPickerCell.swift */; };
+		F195C0A30DE2512FA6C4031160C2C438 /* ColorSpaceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D004555DAE10575A0CED59C0B2AD9 /* ColorSpaceConverter.swift */; };
+		F57E87B0F258364A862F2C3834C10848 /* HapticButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7B6522AC1305A4F5E3619027749CDC /* HapticButton.swift */; };
+		F5A10D3F068ABA87CDA8ACBC26774A21 /* NotchyAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FC9B63D4612D6353B6244B5D58B6FA /* NotchyAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F711DF25BA9B048E7500FCBE10CEE777 /* Pods-Smarter Bulb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7363565E2222527C413C5F023657532 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
+		F9A27CCBC8547F3FCF7FE9CB2C1FE3CE /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868A393BD7CB211CEB4BEAB00F1981A6 /* M13CheckboxDotController.swift */; };
 		FDF936204BBABBCB925A5F0F9DE0D977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,149 +91,178 @@
 			remoteGlobalIDString = BC8C632180F916408E8148C88AAA1AA4;
 			remoteInfo = M13Checkbox;
 		};
-		67127EBD9747BC9E2B403349E5F410E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 275762EA4E7DAF6C9D246FAD532D358D;
-			remoteInfo = HapticButton;
-		};
-		6D46B35044C675E8C3781A5F8078D3F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41F2AC6E39F4AEC714165E1FE3746D55;
-			remoteInfo = CULColorPicker;
-		};
-		8F1AA34EC705B12421EAF6506E22ACBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9107F64D38F74A4B5FF03016BE8AC81A;
-			remoteInfo = NotchyAlert;
-		};
-		D42C60E4E4E2AF782027F1A9D39C2ABD /* PBXContainerItemProxy */ = {
+		16FC294EF0DC6B337F72C71AB212100B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0300A584FE46007F3A4B677E52454D98;
 			remoteInfo = IGColorPicker;
 		};
-		D641777E740E61C52F2163B1C93DC3B8 /* PBXContainerItemProxy */ = {
+		2D6097B727D6BCAF34ACC29798DAED58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9107F64D38F74A4B5FF03016BE8AC81A;
+			remoteInfo = NotchyAlert;
+		};
+		348CD1DD518BF925D7459D9CB3C9AEFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BC8C632180F916408E8148C88AAA1AA4;
 			remoteInfo = M13Checkbox;
 		};
-		F8F56291A4D069D1105EEA14A1E5F2E3 /* PBXContainerItemProxy */ = {
+		3C1D64E16A5141CA5CD85AC4160C05C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DC30EBE035F23D2C72366B05EBAAB2C7;
+			remoteGlobalIDString = 41F2AC6E39F4AEC714165E1FE3746D55;
+			remoteInfo = CULColorPicker;
+		};
+		497B35985A8E5CEA63A13761DD627301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 980A5C60E2F059D4BC513B28C20B98B7;
+			remoteInfo = SPStorkController;
+		};
+		744FE1D4D0E7BE1CF880E82B19567146 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 275762EA4E7DAF6C9D246FAD532D358D;
+			remoteInfo = HapticButton;
+		};
+		CF6F0F8E6AC9E59CF8D3EC203879AD03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4793A459116ECBCAB5545338A205B63A;
 			remoteInfo = Slope;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		018A2CE7A9DCECF47B0698EF1C6A649D /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
-		0672AC52262330625B123C57E0B35C91 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
 		0ADDC82EF1310F021A26C3083AE4FCCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		0C13860AE0CB68D35C765A0A7366C0B3 /* NotchyAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotchyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1123068B40ACAEBDAC5E9F498AB63832 /* CULColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CULColorPicker-dummy.m"; sourceTree = "<group>"; };
+		0C5B6BDFE4A16403BFE3FF1CCDC09E06 /* PercentageGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PercentageGradient.swift; path = Source/PercentageGradient.swift; sourceTree = "<group>"; };
+		124FC5EA3BA665D94D7365EC643D054E /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
 		12A648C882D18370E340EA91566EEADC /* Pods-Smarter Bulb-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smarter Bulb-frameworks.sh"; sourceTree = "<group>"; };
-		13BFC9372A82244BC613BAC1224C3004 /* NotchyAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotchyAlert.swift; path = NotchyAlert/NotchyAlert.swift; sourceTree = "<group>"; };
 		152C816C6AF80FC23CA04D4650FF881B /* Pods-Smarter Bulb-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smarter Bulb-acknowledgements.markdown"; sourceTree = "<group>"; };
-		153D3F5E08C2ED1DFD7F378E1B9A8BCB /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
-		15490E196451C8D9808B278752FEBB42 /* Slope-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Slope-dummy.m"; sourceTree = "<group>"; };
-		1B795AFBC24D2CA7B09F7672120BEA91 /* Gradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = Source/Gradient.swift; sourceTree = "<group>"; };
-		1BEE48CBBC5C7705585B644CBC92780F /* RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGB.swift; path = ColorPicker/RGB.swift; sourceTree = "<group>"; };
-		1DF7FAB76AE30D9671367AD7DB1E645F /* ColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = IGColorPicker/Classes/View/ColorPickerView.swift; sourceTree = "<group>"; };
-		1E0EFA1A95EFA23579F6A361F24EC83F /* HapticButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HapticButton-dummy.m"; sourceTree = "<group>"; };
-		1EB657239A3C500646784496D0AC0683 /* NotchyAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NotchyAlert.h; path = NotchyAlert/NotchyAlert.h; sourceTree = "<group>"; };
-		21432147ED13914C474F3C9DD2356E36 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
-		222AEB8B1C94BA6158854DF13F3CF83E /* UniformGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniformGradient.swift; path = Source/UniformGradient.swift; sourceTree = "<group>"; };
-		23E25E0AD6D8362D99416F6C6FE74CFA /* HapticButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HapticButton-Info.plist"; sourceTree = "<group>"; };
-		25CEDBA38343083293463BB538C91A22 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
-		2866A08CCA33B2A72C4890902F124B43 /* NotchyAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NotchyAlert-dummy.m"; sourceTree = "<group>"; };
-		2E2959814CA84D477C74F3F30799FE54 /* Slope.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Slope.xcconfig; sourceTree = "<group>"; };
-		2E7DCA3EB25F7A8F5BD14183B9F2322A /* HSB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSB.swift; path = ColorPicker/HSB.swift; sourceTree = "<group>"; };
+		165A0C08EE29CCE0E830364025EA4C1E /* SPStorkController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPStorkController-prefix.pch"; sourceTree = "<group>"; };
+		1821EBAD823D2D48B1329E7D9F23B317 /* ColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = IGColorPicker/Classes/View/ColorPickerView.swift; sourceTree = "<group>"; };
+		185D8C729A5CCB44BF73DAE2F36559D4 /* ColorPickerViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewDelegateFlowLayout.swift; path = IGColorPicker/Classes/Protocol/ColorPickerViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
+		1A39D1BB61E30F21EA4A8824944CF356 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		1CACC0D3B8BF1374468BB27D1B55E87A /* NotchyAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotchyAlert-prefix.pch"; sourceTree = "<group>"; };
+		1E14391E5BA07C4FC1A225E9C4398A6D /* Slope-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-prefix.pch"; sourceTree = "<group>"; };
+		1EA35D3E5A2E1976C91F917C178FF70E /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		1EE74ED77A53948164934D67081F084D /* SPStorkController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPStorkController-Info.plist"; sourceTree = "<group>"; };
+		20BB94956E9BD6C2A1BD71E196614D40 /* HapticButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HapticButton.framework; path = HapticButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		225E0821BEBACFBD133C932AB8C9DCC4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "IGColorPicker/Classes/Extension/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		244CA3AF8401336448B0CFCA83A13C43 /* CULColorPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CULColorPickerViewDelegate.swift; path = ColorPicker/CULColorPickerViewDelegate.swift; sourceTree = "<group>"; };
+		2590739A7BA8B2D3CDDA3728913DA651 /* HapticButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HapticButton.modulemap; sourceTree = "<group>"; };
 		31B2DBBE85F5209D0731FD02E8E1F99B /* Pods-Smarter Bulb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smarter Bulb-Info.plist"; sourceTree = "<group>"; };
-		320E04EF8F7B1C6AE39DAED5006E1190 /* ColorPickerViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewDelegateFlowLayout.swift; path = IGColorPicker/Classes/Protocol/ColorPickerViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
-		347AB2EF0F0D25C4951850EDE22E16BD /* ColorSpaceConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorSpaceConverter.swift; path = ColorPicker/ColorSpaceConverter.swift; sourceTree = "<group>"; };
-		34BB6BF9A9B7693E38F24C12F6A5C3AE /* IGColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IGColorPicker-Info.plist"; sourceTree = "<group>"; };
-		34F9669BEA48D3ABC80D95E296C5A8C6 /* CULColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CULColorPicker.xcconfig; sourceTree = "<group>"; };
-		381EA598946149CAF347FD88FD824042 /* NotchyAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotchyAlert-prefix.pch"; sourceTree = "<group>"; };
-		3D6110CD1F69EC9C45DA25035641E88F /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
-		3EF3E324FE14130129C40CA58FA4BF34 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
-		448665B318946F6C80530C8DF6E66BD3 /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		3A6CE15ABDC3133B8AE3663CEECB4799 /* Slope-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Slope-dummy.m"; sourceTree = "<group>"; };
+		3C884CE608C60148235659A6405DEAA6 /* IGColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IGColorPicker-dummy.m"; sourceTree = "<group>"; };
+		4039C90ECAADF7790AAEE261FA99A563 /* RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGB.swift; path = ColorPicker/RGB.swift; sourceTree = "<group>"; };
+		43368FB556EE8B4CBF06D309C3FB4D60 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = ColorPicker/UIColorExtension.swift; sourceTree = "<group>"; };
 		463EEE26BBB8B3A582F9A064FD9AD536 /* Pods-Smarter Bulb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Smarter Bulb.modulemap"; sourceTree = "<group>"; };
-		464F614DCF35428901465DE234402F0F /* Slope-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Slope-Info.plist"; sourceTree = "<group>"; };
-		4759BBE274B7C26E39873FAFB9B8CA83 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
-		48634C88FACA20551847D3E24EFE78D5 /* HapticButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HapticButton.xcconfig; sourceTree = "<group>"; };
-		489154A5592C14AA622F202DF09F5CF8 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		487F7AD7BE1BEB4504BC9809DBC88318 /* Slope-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-umbrella.h"; sourceTree = "<group>"; };
 		489A01564D809736F2EE80EB400749A9 /* Pods-Smarter Bulb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smarter Bulb.debug.xcconfig"; sourceTree = "<group>"; };
-		48FCEF15DE133C8959D49A897834EECB /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
-		4A34896E4D60F445368DB0E674505594 /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Source/GradientView.swift; sourceTree = "<group>"; };
+		4919924BB5C0E68B7FB6602AC2C66C79 /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
+		49F3E98F09C1BFE4B389FADD44DD5253 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
 		4AFB28710FB3E3F3A5F4EC011516B40B /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E161AF68FE806808EEA5900A9641787 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
-		51F68A1A5004A0A68714BC7A3878C53F /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smarter_Bulb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56916A82E9F91FBDCDE9F1B8FB7186AB /* NotchyAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NotchyAlert-Info.plist"; sourceTree = "<group>"; };
-		5977B30CA4158A0C00D996328CEE1687 /* IGColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IGColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61B4B0BDD75232058C8EAA898AF339F2 /* CULColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CULColorPicker-Info.plist"; sourceTree = "<group>"; };
-		695C4A951AC8753FE655F8DD620118D6 /* CULColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-prefix.pch"; sourceTree = "<group>"; };
-		6C279B5A20EABDA0C97051DFDCD8CD99 /* ColorPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewDelegate.swift; path = IGColorPicker/Classes/Protocol/ColorPickerViewDelegate.swift; sourceTree = "<group>"; };
-		6C7D24EAD8BCC4CAA6C9826D10BC5BCC /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
-		6E39653B01CF6374F9C6A979D9F36CBE /* HapticButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-prefix.pch"; sourceTree = "<group>"; };
-		702D05B468CC22A9575D2BD4E7245E06 /* CULColorPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CULColorPickerViewDelegate.swift; path = ColorPicker/CULColorPickerViewDelegate.swift; sourceTree = "<group>"; };
-		71E4CE702BB8B65B4B3A7EE9AF594079 /* CULColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CULColorPickerView.swift; path = ColorPicker/CULColorPickerView.swift; sourceTree = "<group>"; };
-		72562763A4A8E8642F5974C27621A554 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
-		77AD9760A479B88CE80C6CF896019B0E /* Slope-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-umbrella.h"; sourceTree = "<group>"; };
-		7939131098C02203B817E72644772BEF /* ColorPickerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerCell.swift; path = IGColorPicker/Classes/View/ColorPickerCell.swift; sourceTree = "<group>"; };
+		4BAF4FAE3A90B8B97F5E29F4C8FC5FCA /* SPStorkController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPStorkController.modulemap; sourceTree = "<group>"; };
+		4BE947BAAF89A6352C4536712AE03A6A /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Smarter_Bulb.framework; path = "Pods-Smarter Bulb.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D14991656FD232555844137F36979C3 /* HapticButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HapticButton-dummy.m"; sourceTree = "<group>"; };
+		4DC6C9652770CB1144F988720CA09E4B /* CULColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CULColorPicker.xcconfig; sourceTree = "<group>"; };
+		4F5EC159F673F6148A1622E0BAFA999B /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		5729CC5D0302170C08D5060A003A8B54 /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkPresentationController.swift; path = Source/SPStorkController/SPStorkPresentationController.swift; sourceTree = "<group>"; };
+		5E8B40D66EFD5E8C55D8B95943158563 /* HapticButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-umbrella.h"; sourceTree = "<group>"; };
+		618EF0D661A4BADD6032BC6F03959C11 /* SPStorkController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPStorkController.xcconfig; sourceTree = "<group>"; };
+		61D479ABF2642D6641AEEB0BC8B1C818 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		66D70B6156DB3003ABC89E10A885739E /* HSB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSB.swift; path = ColorPicker/HSB.swift; sourceTree = "<group>"; };
+		716BF0CF804D3066213578FE8A5F0183 /* IGColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGColorPicker.framework; path = IGColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742D004555DAE10575A0CED59C0B2AD9 /* ColorSpaceConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorSpaceConverter.swift; path = ColorPicker/ColorSpaceConverter.swift; sourceTree = "<group>"; };
 		79967AA49EB1211D7CAC04015B621675 /* Pods-Smarter Bulb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smarter Bulb.release.xcconfig"; sourceTree = "<group>"; };
-		7DD8622B315DFC0BE1E639A8650805B2 /* CULColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		7DFF6DD9B3C0774C7B742DEBD0EA6DAA /* CULColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-umbrella.h"; sourceTree = "<group>"; };
 		7EB1DDB68D354179615BB8BE79F41E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7FB76232D167C87C863C7E82EF362A18 /* IGColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IGColorPicker.modulemap; sourceTree = "<group>"; };
-		82773A10E5563AA24A45E5896EAE0198 /* IGColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IGColorPicker-dummy.m"; sourceTree = "<group>"; };
-		86446549D9F49EF17B47F34116B75F0C /* IGColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGColorPicker-prefix.pch"; sourceTree = "<group>"; };
-		89815BE172FEE4F56BC5DE6E95D238D9 /* PercentageGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PercentageGradient.swift; path = Source/PercentageGradient.swift; sourceTree = "<group>"; };
+		809EE21F578D722C15EC1F7362E4CBB1 /* NotchyAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NotchyAlert-dummy.m"; sourceTree = "<group>"; };
+		841D21CD3099F338B86795A3F4FCCB60 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		868A393BD7CB211CEB4BEAB00F1981A6 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		87EE714BC3A9ACBB052107E5DB7E823D /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		89D01C53581CCC8D93A213AD746EA7E2 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		8A5B219F02B1602327CF64A4CA87BDFF /* IGColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		8A76284696CF2A063EC26A5A995D51F2 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
 		8C203E6440337D78D8BD8218C9C35B83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		8FED996313BED33BD449CAAB17513505 /* NotchyAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotchyAlert-umbrella.h"; sourceTree = "<group>"; };
-		95D3222296DCF0B55B8E06BCC8DCD55E /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		8E44689307B19D670F591D36FC441F0C /* CULColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CULColorPicker-Info.plist"; sourceTree = "<group>"; };
+		91042F01CF6BC14CEE12C4E7F3F1B151 /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkPresentingAnimationController.swift; path = Source/SPStorkController/SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
+		970862D4F476F4FF675818BA35A98F2E /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkViewControllerExtenshion.swift; path = Source/SPStorkController/SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
+		98DEF8C0C60FD3D28D6266B173375E6F /* CULColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CULColorPickerView.swift; path = ColorPicker/CULColorPickerView.swift; sourceTree = "<group>"; };
+		992DF7E7BFE1E1360132BD77CA6DD161 /* IGColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IGColorPicker.modulemap; sourceTree = "<group>"; };
 		9A66FD2DBF40B05FC82871B390725A01 /* Pods-Smarter Bulb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smarter Bulb-dummy.m"; sourceTree = "<group>"; };
-		9AABD2BC71354441D999C5763701FD5D /* Slope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Slope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B9A6FCA62BEDA905588132E8D87C2C5 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = ColorPicker/UIColorExtension.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9ECB6481822C15320E8B92F3908118AF /* IGColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGColorPicker-umbrella.h"; sourceTree = "<group>"; };
-		A4269C2DE6B339247BA8EA00E0D282D5 /* CULColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CULColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A96E2D607309E010C27F75E3C0B47194 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
-		AA700A62126E9CDCACAC5DF22328AEF5 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
-		B03C6F058FAFEAD5711A5AA6E4167DA9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "IGColorPicker/Classes/Extension/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		B171BC3A585D2E2EFD2A7BAB14098994 /* HapticButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-umbrella.h"; sourceTree = "<group>"; };
-		B19A8C6F3A048B8636A9AC840953671C /* CULColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CULColorPicker.modulemap; sourceTree = "<group>"; };
+		9CDEF04DADFAFB7513F0A7ED970A6F4D /* CULColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CULColorPicker.framework; path = CULColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2AE347E12F01E288F3176F4D7CACC61 /* SPStorkController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPStorkController-dummy.m"; sourceTree = "<group>"; };
+		A3054D3A81C3F93828FCEFCEBC1D280E /* NotchyAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NotchyAlert-Info.plist"; sourceTree = "<group>"; };
+		A4866F435D14C8282A0F596F39C13BB1 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
+		A50414752624579BAE6FAAE70CBF2B0C /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkDismissingAnimationController.swift; path = Source/SPStorkController/SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
+		A740408F1F6F5453B73937273831A424 /* HapticButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HapticButton.xcconfig; sourceTree = "<group>"; };
+		AA15ECEB6E325A990582DEF3F50321E6 /* ColorPickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerViewDelegate.swift; path = IGColorPicker/Classes/Protocol/ColorPickerViewDelegate.swift; sourceTree = "<group>"; };
+		AB112697E4857D10453611CD51AEFBD6 /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkTransitioningDelegate.swift; path = Source/SPStorkController/SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
+		ABBE8A428BCDF29F628C02FB726D9CFC /* NotchyAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NotchyAlert.xcconfig; sourceTree = "<group>"; };
+		AC5EF818ABC17064EC553FE473ADFEED /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		AC5F361AC65198CCBE7B29D9E05B221C /* SPStorkController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPStorkController-umbrella.h"; sourceTree = "<group>"; };
+		AE4B14A5CD70732BCB62419FC4153D13 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		AF3011BA1352EBB549DC4B85BA00E690 /* CULColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CULColorPicker.modulemap; sourceTree = "<group>"; };
 		B1B64CE740A013DB298A8B3AADD3FCFD /* Pods-Smarter Bulb-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smarter Bulb-acknowledgements.plist"; sourceTree = "<group>"; };
-		B257A994A1A4554F2C1B247FEAF787E4 /* NotchyAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NotchyAlert.modulemap; sourceTree = "<group>"; };
+		B2A1D381BE53443AB6EC7088403BB559 /* HapticButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HapticButton-Info.plist"; sourceTree = "<group>"; };
+		B36581E18FA210EF2E319C02851F44FE /* UniformGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniformGradient.swift; path = Source/UniformGradient.swift; sourceTree = "<group>"; };
+		B4BE8D4EC0B8D2507E5AC55441827ACA /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
 		B75EE8ABFB90F15301B2517A7BBC69C0 /* Pods-Smarter Bulb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smarter Bulb-umbrella.h"; sourceTree = "<group>"; };
-		B7D2C5E4376422E38D163A8A9AF53620 /* HapticButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HapticButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF54DFC17E121865799858A88520CEC1 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
-		BFBBC4BE2CF93630598B2E09CB03994D /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
-		C0DAAFC65CBE261F4EF9E04770D8323D /* HapticButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HapticButton.modulemap; sourceTree = "<group>"; };
-		C2219675D710D329600033457B7C94E9 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
-		C32E52BA13A385964AFD8C4A97288F78 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = IGColorPicker/Classes/DefaultValues.swift; sourceTree = "<group>"; };
-		C3617C86D963CA0A751B12CE9FABD771 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
-		C720868279B7D4933BDAFFFAFEFF31EE /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
-		D3EAE4FC3929608CA5291A9923765668 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3F78A04522529B2D1D06A4C28F68258 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
-		D5EDE5D3A8B9D8BA0C93EF698BC59019 /* Slope.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Slope.modulemap; sourceTree = "<group>"; };
-		D703FE67F1E17734B200D499B6AFC980 /* Slope-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Slope-prefix.pch"; sourceTree = "<group>"; };
-		D7A5746BFF17877883EED7429370DA5C /* NotchyAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NotchyAlert.xcconfig; sourceTree = "<group>"; };
-		E67184645C319A27DF90F177275002F5 /* IGColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGColorPicker.xcconfig; sourceTree = "<group>"; };
-		E68BFB9418A4A38F6803EAB9A5464C5A /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
-		E92F9F3535EBDDE8995AFC0F24E8C590 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
-		FCE95B7D05E360B3C57700F17ADC1247 /* HapticButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticButton.swift; path = HapticButton/Classes/HapticButton.swift; sourceTree = "<group>"; };
+		BAC9AB808CC39D94E97AFD018D539754 /* Slope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Slope.framework; path = Slope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F7026F8092BBB22836F835B21FDF1E /* ColorPickerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPickerCell.swift; path = IGColorPicker/Classes/View/ColorPickerCell.swift; sourceTree = "<group>"; };
+		C46BC5D929DEF93ECFE7E452A4A24314 /* CULColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CULColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		C58081A393D1EC7416AF3A9BBB9B4540 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
+		C5C8998DF0097A695BFCF83EBB50DCED /* HapticButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HapticButton-prefix.pch"; sourceTree = "<group>"; };
+		C5FC9B63D4612D6353B6244B5D58B6FA /* NotchyAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotchyAlert-umbrella.h"; sourceTree = "<group>"; };
+		C86D23F7C0AAF979AAE17C0F414D88B8 /* NotchyAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotchyAlert.swift; path = NotchyAlert/NotchyAlert.swift; sourceTree = "<group>"; };
+		CB8F969AB68F313BE01B6357894BA19D /* Slope-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Slope-Info.plist"; sourceTree = "<group>"; };
+		CC2C5AC92E46A68B23FE9587620A3930 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA31269E99C793DF30D57E4CE832131 /* Gradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = Source/Gradient.swift; sourceTree = "<group>"; };
+		D0C1930CC9C7E5D140C2E108FF7A0BDB /* CULColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CULColorPicker-dummy.m"; sourceTree = "<group>"; };
+		D0E677E691F2AAD51088746CC4673EA1 /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Source/GradientView.swift; sourceTree = "<group>"; };
+		D28C3B41F04AE1D40843D13B2CCAA1C3 /* Slope.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Slope.modulemap; sourceTree = "<group>"; };
+		D4469F1F7823EB149A2D4829AA3E3884 /* NotchyAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NotchyAlert.framework; path = NotchyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50383D563778EF092D479ECE0AE9A79 /* Slope.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Slope.xcconfig; sourceTree = "<group>"; };
+		D73969A38BAA37BDFADA2CC44FB39E7B /* SPStorkController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkController.swift; path = Source/SPStorkController/SPStorkController.swift; sourceTree = "<group>"; };
+		D7876CB848B2D14463F3BF626B84741B /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = IGColorPicker/Classes/DefaultValues.swift; sourceTree = "<group>"; };
+		DB7B6522AC1305A4F5E3619027749CDC /* HapticButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticButton.swift; path = HapticButton/Classes/HapticButton.swift; sourceTree = "<group>"; };
+		DC4F722A41099320A7103A1EA5D237EC /* IGColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IGColorPicker-Info.plist"; sourceTree = "<group>"; };
+		DE9BAE8E1613536DE89B529630843D26 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		E04F907FDE873AE820415509F6106E2E /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		E32856A730D658822E1A59E28D0D0D1B /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		E38345D0FDF3EDE29D05D6C1087C1AEE /* IGColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		E4B57F10EA370ED04F9C16368B84F1DC /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPStorkController.framework; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50FE5A02CF67E5E1538957AB860B33A /* NotchyAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NotchyAlert.modulemap; sourceTree = "<group>"; };
+		E6E5D06F89ED02A2E2552573D9ACD46F /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		E75D19EE62C3D8735AA3A2918CEFC4C9 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		EC2FFFAEA47B9B3BF01D343F75453F95 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		EC8D949AE4615840070B1BA9A0599B4E /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		EE9B61F587508BEEBE5486A965F2EEF0 /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
+		F159D72ED0542B380FF82EF4892F99C1 /* NotchyAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NotchyAlert.h; path = NotchyAlert/NotchyAlert.h; sourceTree = "<group>"; };
+		FA0FFD8A5BE06A637625509312641A91 /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkIndicatorView.swift; path = Source/SPStorkController/SPStorkIndicatorView.swift; sourceTree = "<group>"; };
+		FD1BEE76078A3DF7CFCFBDE7A1C18AB3 /* IGColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGColorPicker.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		08B09E9EE3E3F3525047100092838BD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7363565E2222527C413C5F023657532 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2163C94D7BECF4DE84CC5193B050CD74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +291,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		535BD56F9721BF271FB2F985372DBABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C44FFEDB83BEAA92E4C69ADBFF48D55C /* Foundation.framework in Frameworks */,
+				90BBDD396060DA250F18BB49B91D1E25 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6ECF52BE895C001A0D2CC905EA6F36B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,11 +308,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		750D517AEB59DE1C65FA39639B20AC7E /* Frameworks */ = {
+		C07D92363C34FFD05EBB072B79C33774 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CC3260A5CDA2B6ACF3BCE942F954BC /* Foundation.framework in Frameworks */,
+				46DDC0DC3A49A019085D31407B607DE5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,71 +324,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC384B65BBB4F1E4ACEA9CAF45B4EC20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4CDCE94A97CC480CAD73B6C8EE1A6D8 /* Foundation.framework in Frameworks */,
-				E9C954BBEDEE841570E36918758D6214 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18DE9367F5CE2AAAA1B322BE3883D083 /* Support Files */ = {
+		2AC79B882AC9770DBBCFEB6339B77CF3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6C7D24EAD8BCC4CAA6C9826D10BC5BCC /* M13Checkbox.modulemap */,
-				E68BFB9418A4A38F6803EAB9A5464C5A /* M13Checkbox.xcconfig */,
-				0672AC52262330625B123C57E0B35C91 /* M13Checkbox-dummy.m */,
-				3D6110CD1F69EC9C45DA25035641E88F /* M13Checkbox-Info.plist */,
-				A96E2D607309E010C27F75E3C0B47194 /* M13Checkbox-prefix.pch */,
-				153D3F5E08C2ED1DFD7F378E1B9A8BCB /* M13Checkbox-umbrella.h */,
+				E50FE5A02CF67E5E1538957AB860B33A /* NotchyAlert.modulemap */,
+				ABBE8A428BCDF29F628C02FB726D9CFC /* NotchyAlert.xcconfig */,
+				809EE21F578D722C15EC1F7362E4CBB1 /* NotchyAlert-dummy.m */,
+				A3054D3A81C3F93828FCEFCEBC1D280E /* NotchyAlert-Info.plist */,
+				1CACC0D3B8BF1374468BB27D1B55E87A /* NotchyAlert-prefix.pch */,
+				C5FC9B63D4612D6353B6244B5D58B6FA /* NotchyAlert-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/M13Checkbox";
+			path = "../Target Support Files/NotchyAlert";
 			sourceTree = "<group>";
 		};
-		19B9D543F63893C9F8301F6B1DC04B6D /* M13Checkbox */ = {
+		321B74295200B5D9291F692C88653818 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF54DFC17E121865799858A88520CEC1 /* DefaultValues.swift */,
-				4E161AF68FE806808EEA5900A9641787 /* M13Checkbox.swift */,
-				95D3222296DCF0B55B8E06BCC8DCD55E /* M13Checkbox+IB.swift */,
-				C2219675D710D329600033457B7C94E9 /* M13CheckboxAddRemovePathGenerator.swift */,
-				48FCEF15DE133C8959D49A897834EECB /* M13CheckboxAnimationGenerator.swift */,
-				25CEDBA38343083293463BB538C91A22 /* M13CheckboxBounceController.swift */,
-				C3617C86D963CA0A751B12CE9FABD771 /* M13CheckboxCheckPathGenerator.swift */,
-				AA700A62126E9CDCACAC5DF22328AEF5 /* M13CheckboxController.swift */,
-				BFBBC4BE2CF93630598B2E09CB03994D /* M13CheckboxDisclosurePathGenerator.swift */,
-				4759BBE274B7C26E39873FAFB9B8CA83 /* M13CheckboxDotController.swift */,
-				E92F9F3535EBDDE8995AFC0F24E8C590 /* M13CheckboxExpandController.swift */,
-				489154A5592C14AA622F202DF09F5CF8 /* M13CheckboxFadeController.swift */,
-				448665B318946F6C80530C8DF6E66BD3 /* M13CheckboxFillController.swift */,
-				D3F78A04522529B2D1D06A4C28F68258 /* M13CheckboxFlatController.swift */,
-				3EF3E324FE14130129C40CA58FA4BF34 /* M13CheckboxGestureRecognizer.swift */,
-				018A2CE7A9DCECF47B0698EF1C6A649D /* M13CheckboxPathGenerator.swift */,
-				C720868279B7D4933BDAFFFAFEFF31EE /* M13CheckboxRadioPathGenerator.swift */,
-				21432147ED13914C474F3C9DD2356E36 /* M13CheckboxSpiralController.swift */,
-				72562763A4A8E8642F5974C27621A554 /* M13CheckboxStrokeController.swift */,
-				18DE9367F5CE2AAAA1B322BE3883D083 /* Support Files */,
-			);
-			path = M13Checkbox;
-			sourceTree = "<group>";
-		};
-		353DA13115B853CBB76D45307413F58B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B19A8C6F3A048B8636A9AC840953671C /* CULColorPicker.modulemap */,
-				34F9669BEA48D3ABC80D95E296C5A8C6 /* CULColorPicker.xcconfig */,
-				1123068B40ACAEBDAC5E9F498AB63832 /* CULColorPicker-dummy.m */,
-				61B4B0BDD75232058C8EAA898AF339F2 /* CULColorPicker-Info.plist */,
-				695C4A951AC8753FE655F8DD620118D6 /* CULColorPicker-prefix.pch */,
-				7DD8622B315DFC0BE1E639A8650805B2 /* CULColorPicker-umbrella.h */,
+				2590739A7BA8B2D3CDDA3728913DA651 /* HapticButton.modulemap */,
+				A740408F1F6F5453B73937273831A424 /* HapticButton.xcconfig */,
+				4D14991656FD232555844137F36979C3 /* HapticButton-dummy.m */,
+				B2A1D381BE53443AB6EC7088403BB559 /* HapticButton-Info.plist */,
+				C5C8998DF0097A695BFCF83EBB50DCED /* HapticButton-prefix.pch */,
+				5E8B40D66EFD5E8C55D8B95943158563 /* HapticButton-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CULColorPicker";
+			path = "../Target Support Files/HapticButton";
 			sourceTree = "<group>";
 		};
 		4308CAB007D649A5F66CF4BB28D4119D /* iOS */ = {
@@ -370,30 +382,6 @@
 			path = "Target Support Files/Pods-Smarter Bulb";
 			sourceTree = "<group>";
 		};
-		54F27D955664B7A83B52EA59065C1944 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C0DAAFC65CBE261F4EF9E04770D8323D /* HapticButton.modulemap */,
-				48634C88FACA20551847D3E24EFE78D5 /* HapticButton.xcconfig */,
-				1E0EFA1A95EFA23579F6A361F24EC83F /* HapticButton-dummy.m */,
-				23E25E0AD6D8362D99416F6C6FE74CFA /* HapticButton-Info.plist */,
-				6E39653B01CF6374F9C6A979D9F36CBE /* HapticButton-prefix.pch */,
-				B171BC3A585D2E2EFD2A7BAB14098994 /* HapticButton-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HapticButton";
-			sourceTree = "<group>";
-		};
-		647FB438B5A6D63B1EB205EF2E589587 /* NotchyAlert */ = {
-			isa = PBXGroup;
-			children = (
-				1EB657239A3C500646784496D0AC0683 /* NotchyAlert.h */,
-				13BFC9372A82244BC613BAC1224C3004 /* NotchyAlert.swift */,
-				AA0E2105BCC46D37DD63FF6D4CBA409E /* Support Files */,
-			);
-			path = NotchyAlert;
-			sourceTree = "<group>";
-		};
 		649A8896118FFBC26768719C57F11509 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,41 +390,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		67AC83BEFBB59C400483C10AE67D32AD /* Products */ = {
+		6E2EC78AFE31DA8E6CFAAF1661FE7602 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A4269C2DE6B339247BA8EA00E0D282D5 /* CULColorPicker.framework */,
-				B7D2C5E4376422E38D163A8A9AF53620 /* HapticButton.framework */,
-				5977B30CA4158A0C00D996328CEE1687 /* IGColorPicker.framework */,
-				D3EAE4FC3929608CA5291A9923765668 /* M13Checkbox.framework */,
-				0C13860AE0CB68D35C765A0A7366C0B3 /* NotchyAlert.framework */,
-				51F68A1A5004A0A68714BC7A3878C53F /* Pods_Smarter_Bulb.framework */,
-				9AABD2BC71354441D999C5763701FD5D /* Slope.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7C60F9986D7F20DF6197AB6200D38941 /* HapticButton */ = {
-			isa = PBXGroup;
-			children = (
-				FCE95B7D05E360B3C57700F17ADC1247 /* HapticButton.swift */,
-				54F27D955664B7A83B52EA59065C1944 /* Support Files */,
-			);
-			path = HapticButton;
-			sourceTree = "<group>";
-		};
-		8550062D7B02C5957D5FC0DDB37E81A0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7FB76232D167C87C863C7E82EF362A18 /* IGColorPicker.modulemap */,
-				E67184645C319A27DF90F177275002F5 /* IGColorPicker.xcconfig */,
-				82773A10E5563AA24A45E5896EAE0198 /* IGColorPicker-dummy.m */,
-				34BB6BF9A9B7693E38F24C12F6A5C3AE /* IGColorPicker-Info.plist */,
-				86446549D9F49EF17B47F34116B75F0C /* IGColorPicker-prefix.pch */,
-				9ECB6481822C15320E8B92F3908118AF /* IGColorPicker-umbrella.h */,
+				992DF7E7BFE1E1360132BD77CA6DD161 /* IGColorPicker.modulemap */,
+				FD1BEE76078A3DF7CFCFBDE7A1C18AB3 /* IGColorPicker.xcconfig */,
+				3C884CE608C60148235659A6405DEAA6 /* IGColorPicker-dummy.m */,
+				DC4F722A41099320A7103A1EA5D237EC /* IGColorPicker-Info.plist */,
+				E38345D0FDF3EDE29D05D6C1087C1AEE /* IGColorPicker-prefix.pch */,
+				8A5B219F02B1602327CF64A4CA87BDFF /* IGColorPicker-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/IGColorPicker";
+			sourceTree = "<group>";
+		};
+		7062898F4217714BD8443E0302057413 /* HapticButton */ = {
+			isa = PBXGroup;
+			children = (
+				DB7B6522AC1305A4F5E3619027749CDC /* HapticButton.swift */,
+				321B74295200B5D9291F692C88653818 /* Support Files */,
+			);
+			name = HapticButton;
+			path = HapticButton;
+			sourceTree = "<group>";
+		};
+		84CA1E3C632A00BEAE4B8C9A9D127500 /* CULColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				742D004555DAE10575A0CED59C0B2AD9 /* ColorSpaceConverter.swift */,
+				98DEF8C0C60FD3D28D6266B173375E6F /* CULColorPickerView.swift */,
+				244CA3AF8401336448B0CFCA83A13C43 /* CULColorPickerViewDelegate.swift */,
+				66D70B6156DB3003ABC89E10A885739E /* HSB.swift */,
+				4039C90ECAADF7790AAEE261FA99A563 /* RGB.swift */,
+				43368FB556EE8B4CBF06D309C3FB4D60 /* UIColorExtension.swift */,
+				AB83337BD1FC647A14F66798BC583556 /* Support Files */,
+			);
+			name = CULColorPicker;
+			path = CULColorPicker;
 			sourceTree = "<group>";
 		};
 		870834DFC16C31880122A149BA42D2A0 /* Frameworks */ = {
@@ -448,57 +438,113 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		88AF5A064268164FC76A747BFC742623 /* Slope */ = {
+		8FAA808966FD1273E6556FCDD5343094 /* M13Checkbox */ = {
 			isa = PBXGroup;
 			children = (
-				1B795AFBC24D2CA7B09F7672120BEA91 /* Gradient.swift */,
-				4A34896E4D60F445368DB0E674505594 /* GradientView.swift */,
-				89815BE172FEE4F56BC5DE6E95D238D9 /* PercentageGradient.swift */,
-				222AEB8B1C94BA6158854DF13F3CF83E /* UniformGradient.swift */,
-				C795DA07632F56ABDC6EFE1B10FC32BE /* Support Files */,
+				C58081A393D1EC7416AF3A9BBB9B4540 /* DefaultValues.swift */,
+				AC5EF818ABC17064EC553FE473ADFEED /* M13Checkbox.swift */,
+				B4BE8D4EC0B8D2507E5AC55441827ACA /* M13Checkbox+IB.swift */,
+				841D21CD3099F338B86795A3F4FCCB60 /* M13CheckboxAddRemovePathGenerator.swift */,
+				1EA35D3E5A2E1976C91F917C178FF70E /* M13CheckboxAnimationGenerator.swift */,
+				E75D19EE62C3D8735AA3A2918CEFC4C9 /* M13CheckboxBounceController.swift */,
+				61D479ABF2642D6641AEEB0BC8B1C818 /* M13CheckboxCheckPathGenerator.swift */,
+				AE4B14A5CD70732BCB62419FC4153D13 /* M13CheckboxController.swift */,
+				E32856A730D658822E1A59E28D0D0D1B /* M13CheckboxDisclosurePathGenerator.swift */,
+				868A393BD7CB211CEB4BEAB00F1981A6 /* M13CheckboxDotController.swift */,
+				49F3E98F09C1BFE4B389FADD44DD5253 /* M13CheckboxExpandController.swift */,
+				1A39D1BB61E30F21EA4A8824944CF356 /* M13CheckboxFadeController.swift */,
+				E04F907FDE873AE820415509F6106E2E /* M13CheckboxFillController.swift */,
+				4F5EC159F673F6148A1622E0BAFA999B /* M13CheckboxFlatController.swift */,
+				EC2FFFAEA47B9B3BF01D343F75453F95 /* M13CheckboxGestureRecognizer.swift */,
+				87EE714BC3A9ACBB052107E5DB7E823D /* M13CheckboxPathGenerator.swift */,
+				DE9BAE8E1613536DE89B529630843D26 /* M13CheckboxRadioPathGenerator.swift */,
+				89D01C53581CCC8D93A213AD746EA7E2 /* M13CheckboxSpiralController.swift */,
+				124FC5EA3BA665D94D7365EC643D054E /* M13CheckboxStrokeController.swift */,
+				AAEF23C97DD357563743BDB69523EA56 /* Support Files */,
 			);
+			name = M13Checkbox;
+			path = M13Checkbox;
+			sourceTree = "<group>";
+		};
+		934E06649909A69D97D3ABBB34A9CFDA /* IGColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				C2F7026F8092BBB22836F835B21FDF1E /* ColorPickerCell.swift */,
+				1821EBAD823D2D48B1329E7D9F23B317 /* ColorPickerView.swift */,
+				AA15ECEB6E325A990582DEF3F50321E6 /* ColorPickerViewDelegate.swift */,
+				185D8C729A5CCB44BF73DAE2F36559D4 /* ColorPickerViewDelegateFlowLayout.swift */,
+				D7876CB848B2D14463F3BF626B84741B /* DefaultValues.swift */,
+				225E0821BEBACFBD133C932AB8C9DCC4 /* UIColor+Extension.swift */,
+				6E2EC78AFE31DA8E6CFAAF1661FE7602 /* Support Files */,
+			);
+			name = IGColorPicker;
+			path = IGColorPicker;
+			sourceTree = "<group>";
+		};
+		A42502C83203795CC10A8227077BD290 /* Slope */ = {
+			isa = PBXGroup;
+			children = (
+				CFA31269E99C793DF30D57E4CE832131 /* Gradient.swift */,
+				D0E677E691F2AAD51088746CC4673EA1 /* GradientView.swift */,
+				0C5B6BDFE4A16403BFE3FF1CCDC09E06 /* PercentageGradient.swift */,
+				B36581E18FA210EF2E319C02851F44FE /* UniformGradient.swift */,
+				FB9AB26608793B8795E912E0A93050F4 /* Support Files */,
+			);
+			name = Slope;
 			path = Slope;
 			sourceTree = "<group>";
 		};
-		AA0E2105BCC46D37DD63FF6D4CBA409E /* Support Files */ = {
+		A5600EB235E1BA59DF3524448C41DFDE /* NotchyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				B257A994A1A4554F2C1B247FEAF787E4 /* NotchyAlert.modulemap */,
-				D7A5746BFF17877883EED7429370DA5C /* NotchyAlert.xcconfig */,
-				2866A08CCA33B2A72C4890902F124B43 /* NotchyAlert-dummy.m */,
-				56916A82E9F91FBDCDE9F1B8FB7186AB /* NotchyAlert-Info.plist */,
-				381EA598946149CAF347FD88FD824042 /* NotchyAlert-prefix.pch */,
-				8FED996313BED33BD449CAAB17513505 /* NotchyAlert-umbrella.h */,
+				F159D72ED0542B380FF82EF4892F99C1 /* NotchyAlert.h */,
+				C86D23F7C0AAF979AAE17C0F414D88B8 /* NotchyAlert.swift */,
+				2AC79B882AC9770DBBCFEB6339B77CF3 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/NotchyAlert";
+			name = NotchyAlert;
+			path = NotchyAlert;
 			sourceTree = "<group>";
 		};
-		BE2BF875ABCC06C1345AD7D634A4C0E4 /* Pods */ = {
+		AAEF23C97DD357563743BDB69523EA56 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E15BE04E9AA0104498218D0EABB2DBBF /* CULColorPicker */,
-				7C60F9986D7F20DF6197AB6200D38941 /* HapticButton */,
-				F18600A8B51A951563D470229D648D8C /* IGColorPicker */,
-				19B9D543F63893C9F8301F6B1DC04B6D /* M13Checkbox */,
-				647FB438B5A6D63B1EB205EF2E589587 /* NotchyAlert */,
-				88AF5A064268164FC76A747BFC742623 /* Slope */,
+				E6E5D06F89ED02A2E2552573D9ACD46F /* M13Checkbox.modulemap */,
+				EE9B61F587508BEEBE5486A965F2EEF0 /* M13Checkbox.xcconfig */,
+				A4866F435D14C8282A0F596F39C13BB1 /* M13Checkbox-dummy.m */,
+				4919924BB5C0E68B7FB6602AC2C66C79 /* M13Checkbox-Info.plist */,
+				8A76284696CF2A063EC26A5A995D51F2 /* M13Checkbox-prefix.pch */,
+				EC8D949AE4615840070B1BA9A0599B4E /* M13Checkbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/M13Checkbox";
+			sourceTree = "<group>";
+		};
+		AB83337BD1FC647A14F66798BC583556 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF3011BA1352EBB549DC4B85BA00E690 /* CULColorPicker.modulemap */,
+				4DC6C9652770CB1144F988720CA09E4B /* CULColorPicker.xcconfig */,
+				D0C1930CC9C7E5D140C2E108FF7A0BDB /* CULColorPicker-dummy.m */,
+				8E44689307B19D670F591D36FC441F0C /* CULColorPicker-Info.plist */,
+				C46BC5D929DEF93ECFE7E452A4A24314 /* CULColorPicker-prefix.pch */,
+				7DFF6DD9B3C0774C7B742DEBD0EA6DAA /* CULColorPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CULColorPicker";
+			sourceTree = "<group>";
+		};
+		C0BE4AABABCB398B0D3473FFB2D7EBC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84CA1E3C632A00BEAE4B8C9A9D127500 /* CULColorPicker */,
+				7062898F4217714BD8443E0302057413 /* HapticButton */,
+				934E06649909A69D97D3ABBB34A9CFDA /* IGColorPicker */,
+				8FAA808966FD1273E6556FCDD5343094 /* M13Checkbox */,
+				A5600EB235E1BA59DF3524448C41DFDE /* NotchyAlert */,
+				A42502C83203795CC10A8227077BD290 /* Slope */,
+				DCC0DC0A26D0D012616EA8CD0D7E99A1 /* SPStorkController */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		C795DA07632F56ABDC6EFE1B10FC32BE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D5EDE5D3A8B9D8BA0C93EF698BC59019 /* Slope.modulemap */,
-				2E2959814CA84D477C74F3F30799FE54 /* Slope.xcconfig */,
-				15490E196451C8D9808B278752FEBB42 /* Slope-dummy.m */,
-				464F614DCF35428901465DE234402F0F /* Slope-Info.plist */,
-				D703FE67F1E17734B200D499B6AFC980 /* Slope-prefix.pch */,
-				77AD9760A479B88CE80C6CF896019B0E /* Slope-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Slope";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -506,38 +552,69 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				870834DFC16C31880122A149BA42D2A0 /* Frameworks */,
-				BE2BF875ABCC06C1345AD7D634A4C0E4 /* Pods */,
-				67AC83BEFBB59C400483C10AE67D32AD /* Products */,
+				C0BE4AABABCB398B0D3473FFB2D7EBC8 /* Pods */,
+				F8204B4448E2D37CE7DBBAF2E0D354BD /* Products */,
 				649A8896118FFBC26768719C57F11509 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E15BE04E9AA0104498218D0EABB2DBBF /* CULColorPicker */ = {
+		DCC0DC0A26D0D012616EA8CD0D7E99A1 /* SPStorkController */ = {
 			isa = PBXGroup;
 			children = (
-				71E4CE702BB8B65B4B3A7EE9AF594079 /* CULColorPickerView.swift */,
-				702D05B468CC22A9575D2BD4E7245E06 /* CULColorPickerViewDelegate.swift */,
-				347AB2EF0F0D25C4951850EDE22E16BD /* ColorSpaceConverter.swift */,
-				2E7DCA3EB25F7A8F5BD14183B9F2322A /* HSB.swift */,
-				1BEE48CBBC5C7705585B644CBC92780F /* RGB.swift */,
-				9B9A6FCA62BEDA905588132E8D87C2C5 /* UIColorExtension.swift */,
-				353DA13115B853CBB76D45307413F58B /* Support Files */,
+				D73969A38BAA37BDFADA2CC44FB39E7B /* SPStorkController.swift */,
+				A50414752624579BAE6FAAE70CBF2B0C /* SPStorkDismissingAnimationController.swift */,
+				FA0FFD8A5BE06A637625509312641A91 /* SPStorkIndicatorView.swift */,
+				5729CC5D0302170C08D5060A003A8B54 /* SPStorkPresentationController.swift */,
+				91042F01CF6BC14CEE12C4E7F3F1B151 /* SPStorkPresentingAnimationController.swift */,
+				AB112697E4857D10453611CD51AEFBD6 /* SPStorkTransitioningDelegate.swift */,
+				970862D4F476F4FF675818BA35A98F2E /* SPStorkViewControllerExtenshion.swift */,
+				DD04A8816F47727DDE63771143FC7FA7 /* Support Files */,
 			);
-			path = CULColorPicker;
+			name = SPStorkController;
+			path = SPStorkController;
 			sourceTree = "<group>";
 		};
-		F18600A8B51A951563D470229D648D8C /* IGColorPicker */ = {
+		DD04A8816F47727DDE63771143FC7FA7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7939131098C02203B817E72644772BEF /* ColorPickerCell.swift */,
-				1DF7FAB76AE30D9671367AD7DB1E645F /* ColorPickerView.swift */,
-				6C279B5A20EABDA0C97051DFDCD8CD99 /* ColorPickerViewDelegate.swift */,
-				320E04EF8F7B1C6AE39DAED5006E1190 /* ColorPickerViewDelegateFlowLayout.swift */,
-				C32E52BA13A385964AFD8C4A97288F78 /* DefaultValues.swift */,
-				B03C6F058FAFEAD5711A5AA6E4167DA9 /* UIColor+Extension.swift */,
-				8550062D7B02C5957D5FC0DDB37E81A0 /* Support Files */,
+				4BAF4FAE3A90B8B97F5E29F4C8FC5FCA /* SPStorkController.modulemap */,
+				618EF0D661A4BADD6032BC6F03959C11 /* SPStorkController.xcconfig */,
+				A2AE347E12F01E288F3176F4D7CACC61 /* SPStorkController-dummy.m */,
+				1EE74ED77A53948164934D67081F084D /* SPStorkController-Info.plist */,
+				165A0C08EE29CCE0E830364025EA4C1E /* SPStorkController-prefix.pch */,
+				AC5F361AC65198CCBE7B29D9E05B221C /* SPStorkController-umbrella.h */,
 			);
-			path = IGColorPicker;
+			name = "Support Files";
+			path = "../Target Support Files/SPStorkController";
+			sourceTree = "<group>";
+		};
+		F8204B4448E2D37CE7DBBAF2E0D354BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CDEF04DADFAFB7513F0A7ED970A6F4D /* CULColorPicker.framework */,
+				20BB94956E9BD6C2A1BD71E196614D40 /* HapticButton.framework */,
+				716BF0CF804D3066213578FE8A5F0183 /* IGColorPicker.framework */,
+				CC2C5AC92E46A68B23FE9587620A3930 /* M13Checkbox.framework */,
+				D4469F1F7823EB149A2D4829AA3E3884 /* NotchyAlert.framework */,
+				4BE947BAAF89A6352C4536712AE03A6A /* Pods_Smarter_Bulb.framework */,
+				BAC9AB808CC39D94E97AFD018D539754 /* Slope.framework */,
+				E4B57F10EA370ED04F9C16368B84F1DC /* SPStorkController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB9AB26608793B8795E912E0A93050F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D28C3B41F04AE1D40843D13B2CCAA1C3 /* Slope.modulemap */,
+				D50383D563778EF092D479ECE0AE9A79 /* Slope.xcconfig */,
+				3A6CE15ABDC3133B8AE3663CEECB4799 /* Slope-dummy.m */,
+				CB8F969AB68F313BE01B6357894BA19D /* Slope-Info.plist */,
+				1E14391E5BA07C4FC1A225E9C4398A6D /* Slope-prefix.pch */,
+				487F7AD7BE1BEB4504BC9809DBC88318 /* Slope-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Slope";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,19 +628,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		360CF86C95F526DBA67B1E8112D5017D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F711DF25BA9B048E7500FCBE10CEE777 /* Pods-Smarter Bulb-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		427243CCB101FDAE369AFB3D689B8FE4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C0A42A4449D7AAC2EC5A2CCD94C19C0A /* M13Checkbox-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430933AF2BE4DE18A4AA59B952689542 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				395DCA516AA276915BA4AFCDF8D04D75 /* Pods-Smarter Bulb-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,11 +669,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E51B4619E50927176892B29A98BAB441 /* Headers */ = {
+		BB15D55D56125B616CBEF8983A469794 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7240ACB3D29E9A1CFE5C196A3B895D31 /* Slope-umbrella.h in Headers */,
+				03A92FC3052BA7393E13C6E0EA24696C /* SPStorkController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D50291CD1BE47DAB85CFA42E0C115B08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212263037D61A7358D8F96CF0D9439FE /* Slope-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +704,7 @@
 			);
 			name = IGColorPicker;
 			productName = IGColorPicker;
-			productReference = 5977B30CA4158A0C00D996328CEE1687 /* IGColorPicker.framework */;
+			productReference = 716BF0CF804D3066213578FE8A5F0183 /* IGColorPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */ = {
@@ -637,7 +722,7 @@
 			);
 			name = HapticButton;
 			productName = HapticButton;
-			productReference = B7D2C5E4376422E38D163A8A9AF53620 /* HapticButton.framework */;
+			productReference = 20BB94956E9BD6C2A1BD71E196614D40 /* HapticButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */ = {
@@ -645,7 +730,7 @@
 			buildConfigurationList = 779C2DB49CEAC9E90C7A24404EDAFEA9 /* Build configuration list for PBXNativeTarget "CULColorPicker" */;
 			buildPhases = (
 				79E4109EE1CAE0A5573087E8B34EB6E1 /* Headers */,
-				F7A75FBACC4EA82DC2303856D178FC37 /* Sources */,
+				8968006E8EFF907BD5040144279CE3E4 /* Sources */,
 				DDB1F159BAD5ACDACA66E82F7076CC0C /* Frameworks */,
 				D12A72E0423A259EFA01685B366C96D7 /* Resources */,
 			);
@@ -655,7 +740,50 @@
 			);
 			name = CULColorPicker;
 			productName = CULColorPicker;
-			productReference = A4269C2DE6B339247BA8EA00E0D282D5 /* CULColorPicker.framework */;
+			productReference = 9CDEF04DADFAFB7513F0A7ED970A6F4D /* CULColorPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4793A459116ECBCAB5545338A205B63A /* Slope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3475F6021B60C5FBD06F2334449945 /* Build configuration list for PBXNativeTarget "Slope" */;
+			buildPhases = (
+				D50291CD1BE47DAB85CFA42E0C115B08 /* Headers */,
+				2EA85BFA16A49E996B5D94E839B2193D /* Sources */,
+				535BD56F9721BF271FB2F985372DBABF /* Frameworks */,
+				4F54AEA086B314F180F2379465B5B09B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Slope;
+			productName = Slope;
+			productReference = BAC9AB808CC39D94E97AFD018D539754 /* Slope.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51004175220FB5B032756364B447CCD0 /* Pods-Smarter Bulb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705B37E3E50A426D71FB95300FEB224C /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */;
+			buildPhases = (
+				360CF86C95F526DBA67B1E8112D5017D /* Headers */,
+				77E4B513AD04069F572453C42B96FEC6 /* Sources */,
+				C07D92363C34FFD05EBB072B79C33774 /* Frameworks */,
+				BA9AD2D792892812D4D24A3E91899D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80743BB767EFBB388A69EA8CCBBE1C9 /* PBXTargetDependency */,
+				997075985BCF233BAFA8100073CDE77F /* PBXTargetDependency */,
+				61B9642BAB60765FEBF37F562C86A4C9 /* PBXTargetDependency */,
+				A6B307F97435DC64BABC1C305DCCD153 /* PBXTargetDependency */,
+				2D88D7086E238E08DA4E73C8834F9492 /* PBXTargetDependency */,
+				3AA89A020349B4A1A69D9A6CBD9B712F /* PBXTargetDependency */,
+				4F7C7E043674319E6449B841923E68E9 /* PBXTargetDependency */,
+			);
+			name = "Pods-Smarter Bulb";
+			productName = "Pods-Smarter Bulb";
+			productReference = 4BE947BAAF89A6352C4536712AE03A6A /* Pods_Smarter_Bulb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9107F64D38F74A4B5FF03016BE8AC81A /* NotchyAlert */ = {
@@ -673,7 +801,25 @@
 			);
 			name = NotchyAlert;
 			productName = NotchyAlert;
-			productReference = 0C13860AE0CB68D35C765A0A7366C0B3 /* NotchyAlert.framework */;
+			productReference = D4469F1F7823EB149A2D4829AA3E3884 /* NotchyAlert.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		980A5C60E2F059D4BC513B28C20B98B7 /* SPStorkController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C2D762E1B019A288AFB16779B330FD4 /* Build configuration list for PBXNativeTarget "SPStorkController" */;
+			buildPhases = (
+				BB15D55D56125B616CBEF8983A469794 /* Headers */,
+				1F84C273D3060FCE8D453701FA2D5D0D /* Sources */,
+				08B09E9EE3E3F3525047100092838BD7 /* Frameworks */,
+				491AFDA98B0232CBD3941D0E95EE5F1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPStorkController;
+			productName = SPStorkController;
+			productReference = E4B57F10EA370ED04F9C16368B84F1DC /* SPStorkController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BC8C632180F916408E8148C88AAA1AA4 /* M13Checkbox */ = {
@@ -691,49 +837,7 @@
 			);
 			name = M13Checkbox;
 			productName = M13Checkbox;
-			productReference = D3EAE4FC3929608CA5291A9923765668 /* M13Checkbox.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DC30EBE035F23D2C72366B05EBAAB2C7 /* Slope */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E209C0C7EC95B4E73ADBDA5A1DE713D /* Build configuration list for PBXNativeTarget "Slope" */;
-			buildPhases = (
-				E51B4619E50927176892B29A98BAB441 /* Headers */,
-				F7D282FFDFE24FCFCC76709B398173CA /* Sources */,
-				FC384B65BBB4F1E4ACEA9CAF45B4EC20 /* Frameworks */,
-				0181C88889CFD095797A9479B2D7B36C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Slope;
-			productName = Slope;
-			productReference = 9AABD2BC71354441D999C5763701FD5D /* Slope.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DC55E1FF83FBC389FBEEF2CB8AAC3DE6 /* Pods-Smarter Bulb */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 987EA450B2749DE47C0FE61A6576B1E7 /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */;
-			buildPhases = (
-				430933AF2BE4DE18A4AA59B952689542 /* Headers */,
-				74955B57516FB82E00E05B9280BC001B /* Sources */,
-				750D517AEB59DE1C65FA39639B20AC7E /* Frameworks */,
-				0842889427885CF51975CAEC9CC3BB72 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5ADB6F93177DC5668100EC3E82AB172E /* PBXTargetDependency */,
-				FC230160E5BF49D2A3BB0D9CDD82723F /* PBXTargetDependency */,
-				522DE912536859C7647C22E23CA4F252 /* PBXTargetDependency */,
-				566CD6D4044C9BCEAF470B7175C1D401 /* PBXTargetDependency */,
-				912F9EF63F1DF209AC5A91DC7FC6C3D4 /* PBXTargetDependency */,
-				C96D7B8201B6A20E5FA3277A118BE4FA /* PBXTargetDependency */,
-			);
-			name = "Pods-Smarter Bulb";
-			productName = "Pods-Smarter Bulb";
-			productReference = 51F68A1A5004A0A68714BC7A3878C53F /* Pods_Smarter_Bulb.framework */;
+			productReference = CC2C5AC92E46A68B23FE9587620A3930 /* M13Checkbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -753,7 +857,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 67AC83BEFBB59C400483C10AE67D32AD /* Products */;
+			productRefGroup = F8204B4448E2D37CE7DBBAF2E0D354BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -762,27 +866,14 @@
 				0300A584FE46007F3A4B677E52454D98 /* IGColorPicker */,
 				BC8C632180F916408E8148C88AAA1AA4 /* M13Checkbox */,
 				9107F64D38F74A4B5FF03016BE8AC81A /* NotchyAlert */,
-				DC55E1FF83FBC389FBEEF2CB8AAC3DE6 /* Pods-Smarter Bulb */,
-				DC30EBE035F23D2C72366B05EBAAB2C7 /* Slope */,
+				51004175220FB5B032756364B447CCD0 /* Pods-Smarter Bulb */,
+				4793A459116ECBCAB5545338A205B63A /* Slope */,
+				980A5C60E2F059D4BC513B28C20B98B7 /* SPStorkController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0181C88889CFD095797A9479B2D7B36C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0842889427885CF51975CAEC9CC3BB72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		323C132C556B5FEAF58C385FDF37B8FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -791,6 +882,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4489C43CF48FC160379C52F79E9F8FF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AFDA98B0232CBD3941D0E95EE5F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F54AEA086B314F180F2379465B5B09B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9AD2D792892812D4D24A3E91899D9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -821,6 +933,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F84C273D3060FCE8D453701FA2D5D0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C2AAB3113BDF0293AA60BE63075A8B /* SPStorkController-dummy.m in Sources */,
+				6D1BB1D47DE32C180445EF74F9971C55 /* SPStorkController.swift in Sources */,
+				D6DA290A1A0EF945FACDE49713A713AD /* SPStorkDismissingAnimationController.swift in Sources */,
+				6C786F0656D79AB43ECD183DC058C80B /* SPStorkIndicatorView.swift in Sources */,
+				40CB5DD0475AB701BB238F0481E63FC7 /* SPStorkPresentationController.swift in Sources */,
+				EEBA4818DE9C2951D6FD3D26906FA470 /* SPStorkPresentingAnimationController.swift in Sources */,
+				060270DEA7B4911D82ECA2CF865816E6 /* SPStorkTransitioningDelegate.swift in Sources */,
+				7E991ECC13A33EF73831DBC81BE912CE /* SPStorkViewControllerExtenshion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EA85BFA16A49E996B5D94E839B2193D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B54EDC5AA5E8E0E7DD261CF70AA0A0 /* Gradient.swift in Sources */,
+				04957A26C4968CA495A1676A03C6E0EB /* GradientView.swift in Sources */,
+				1BEA90D257B956CD5C171AA8393E92F1 /* PercentageGradient.swift in Sources */,
+				2AB0FA61B1BDB2578C2FB74CD45B161B /* Slope-dummy.m in Sources */,
+				3F86FEB63F01A21BE2C931F36CA1707E /* UniformGradient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		445AD9C35FC16DEB2BA4714624CDA13D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,11 +987,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74955B57516FB82E00E05B9280BC001B /* Sources */ = {
+		77E4B513AD04069F572453C42B96FEC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C50C5641E7D68E9D91643BB67749B61 /* Pods-Smarter Bulb-dummy.m in Sources */,
+				0B2A1E5FCEFC8AE62B0CDF963F249BAC /* Pods-Smarter Bulb-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +1001,20 @@
 			files = (
 				5E8F89512CE4928E64C366B237B4F7D8 /* NotchyAlert-dummy.m in Sources */,
 				7CCFCE6C806565D0E9DB6EAC5B27F7CB /* NotchyAlert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8968006E8EFF907BD5040144279CE3E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F195C0A30DE2512FA6C4031160C2C438 /* ColorSpaceConverter.swift in Sources */,
+				17090AFEACD337C122BDC929AFCE1411 /* CULColorPicker-dummy.m in Sources */,
+				51F47F3B5F831B330204F6801D45B0CB /* CULColorPickerView.swift in Sources */,
+				7610E4B821FB2C665D00205170DD5993 /* CULColorPickerViewDelegate.swift in Sources */,
+				5325005ACC32BFD245DCB042383DC06F /* HSB.swift in Sources */,
+				AEE643B52B7A3AB986E4EFC69B319F7C /* RGB.swift in Sources */,
+				6F217C3B54635AEC6D6050F8EAB5B2BB /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,58 +1041,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7A75FBACC4EA82DC2303856D178FC37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08972CD4A9F170AE29578E5F856FAB92 /* CULColorPickerView.swift in Sources */,
-				CDF46B32FFF6924FBA6578E5476E81DC /* CULColorPickerViewDelegate.swift in Sources */,
-				4C43A0C45345B6F3FAB9F6E2B06EFCE2 /* ColorSpaceConverter.swift in Sources */,
-				9512FB6B6412702C1346337676DBF3FF /* CULColorPicker-dummy.m in Sources */,
-				4A278B8619460C89A4C0AB7ACCFC9CDA /* HSB.swift in Sources */,
-				BDF7371FE536CBE9FF5141D5013A6CB0 /* RGB.swift in Sources */,
-				B731A1403131EBF19038AD85A109C5A3 /* UIColorExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7D282FFDFE24FCFCC76709B398173CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A677989B0747DF3F4CC185E59FD4B6BB /* Gradient.swift in Sources */,
-				A0198B371B11FD8C9E9F2070C7E59599 /* GradientView.swift in Sources */,
-				A5565CACFA45C36DBEFB6F77991A2B99 /* PercentageGradient.swift in Sources */,
-				7916ACD652575EEB1AB45226E3E0AD63 /* Slope-dummy.m in Sources */,
-				8698AE03A99987C6BE22BCCC8619F3AA /* UniformGradient.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		522DE912536859C7647C22E23CA4F252 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IGColorPicker;
-			target = 0300A584FE46007F3A4B677E52454D98 /* IGColorPicker */;
-			targetProxy = D42C60E4E4E2AF782027F1A9D39C2ABD /* PBXContainerItemProxy */;
-		};
-		566CD6D4044C9BCEAF470B7175C1D401 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = M13Checkbox;
-			target = BC8C632180F916408E8148C88AAA1AA4 /* M13Checkbox */;
-			targetProxy = D641777E740E61C52F2163B1C93DC3B8 /* PBXContainerItemProxy */;
-		};
-		5ADB6F93177DC5668100EC3E82AB172E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CULColorPicker;
-			target = 41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */;
-			targetProxy = 6D46B35044C675E8C3781A5F8078D3F6 /* PBXContainerItemProxy */;
-		};
-		912F9EF63F1DF209AC5A91DC7FC6C3D4 /* PBXTargetDependency */ = {
+		2D88D7086E238E08DA4E73C8834F9492 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NotchyAlert;
 			target = 9107F64D38F74A4B5FF03016BE8AC81A /* NotchyAlert */;
-			targetProxy = 8F1AA34EC705B12421EAF6506E22ACBC /* PBXContainerItemProxy */;
+			targetProxy = 2D6097B727D6BCAF34ACC29798DAED58 /* PBXContainerItemProxy */;
+		};
+		3AA89A020349B4A1A69D9A6CBD9B712F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPStorkController;
+			target = 980A5C60E2F059D4BC513B28C20B98B7 /* SPStorkController */;
+			targetProxy = 497B35985A8E5CEA63A13761DD627301 /* PBXContainerItemProxy */;
+		};
+		4F7C7E043674319E6449B841923E68E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Slope;
+			target = 4793A459116ECBCAB5545338A205B63A /* Slope */;
+			targetProxy = CF6F0F8E6AC9E59CF8D3EC203879AD03 /* PBXContainerItemProxy */;
+		};
+		61B9642BAB60765FEBF37F562C86A4C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IGColorPicker;
+			target = 0300A584FE46007F3A4B677E52454D98 /* IGColorPicker */;
+			targetProxy = 16FC294EF0DC6B337F72C71AB212100B /* PBXContainerItemProxy */;
+		};
+		997075985BCF233BAFA8100073CDE77F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HapticButton;
+			target = 275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */;
+			targetProxy = 744FE1D4D0E7BE1CF880E82B19567146 /* PBXContainerItemProxy */;
+		};
+		A6B307F97435DC64BABC1C305DCCD153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = M13Checkbox;
+			target = BC8C632180F916408E8148C88AAA1AA4 /* M13Checkbox */;
+			targetProxy = 348CD1DD518BF925D7459D9CB3C9AEFA /* PBXContainerItemProxy */;
 		};
 		AA4CC3E8B8BDB45B9CF0965C7F8799CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -947,24 +1086,18 @@
 			target = BC8C632180F916408E8148C88AAA1AA4 /* M13Checkbox */;
 			targetProxy = 0C590F1EA7D207A7BC7F14BE847BFF1A /* PBXContainerItemProxy */;
 		};
-		C96D7B8201B6A20E5FA3277A118BE4FA /* PBXTargetDependency */ = {
+		F80743BB767EFBB388A69EA8CCBBE1C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Slope;
-			target = DC30EBE035F23D2C72366B05EBAAB2C7 /* Slope */;
-			targetProxy = F8F56291A4D069D1105EEA14A1E5F2E3 /* PBXContainerItemProxy */;
-		};
-		FC230160E5BF49D2A3BB0D9CDD82723F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HapticButton;
-			target = 275762EA4E7DAF6C9D246FAD532D358D /* HapticButton */;
-			targetProxy = 67127EBD9747BC9E2B403349E5F410E5 /* PBXContainerItemProxy */;
+			name = CULColorPicker;
+			target = 41F2AC6E39F4AEC714165E1FE3746D55 /* CULColorPicker */;
+			targetProxy = 3C1D64E16A5141CA5CD85AC4160C05C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0825A021ED57B3D0EE9C75AE3A4298F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E67184645C319A27DF90F177275002F5 /* IGColorPicker.xcconfig */;
+			baseConfigurationReference = FD1BEE76078A3DF7CFCFBDE7A1C18AB3 /* IGColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -979,7 +1112,11 @@
 				INFOPLIST_FILE = "Target Support Files/IGColorPicker/IGColorPicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/IGColorPicker/IGColorPicker.modulemap";
 				PRODUCT_MODULE_NAME = IGColorPicker;
 				PRODUCT_NAME = IGColorPicker;
@@ -995,7 +1132,7 @@
 		};
 		0AA87BCBB28CBE28EE6521CE687F5BF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48634C88FACA20551847D3E24EFE78D5 /* HapticButton.xcconfig */;
+			baseConfigurationReference = A740408F1F6F5453B73937273831A424 /* HapticButton.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1011,7 +1148,11 @@
 				INFOPLIST_FILE = "Target Support Files/HapticButton/HapticButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/HapticButton/HapticButton.modulemap";
 				PRODUCT_MODULE_NAME = HapticButton;
 				PRODUCT_NAME = HapticButton;
@@ -1027,7 +1168,7 @@
 		};
 		3A7473CB98D2D0D5254F66C7B8885B14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34F9669BEA48D3ABC80D95E296C5A8C6 /* CULColorPicker.xcconfig */;
+			baseConfigurationReference = 4DC6C9652770CB1144F988720CA09E4B /* CULColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1042,7 +1183,11 @@
 				INFOPLIST_FILE = "Target Support Files/CULColorPicker/CULColorPicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/CULColorPicker/CULColorPicker.modulemap";
 				PRODUCT_MODULE_NAME = CULColorPicker;
 				PRODUCT_NAME = CULColorPicker;
@@ -1056,41 +1201,9 @@
 			};
 			name = Debug;
 		};
-		3C3D5A0D6CB4A437FCFCA70BA1493B5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E2959814CA84D477C74F3F30799FE54 /* Slope.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
-				PRODUCT_MODULE_NAME = Slope;
-				PRODUCT_NAME = Slope;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		4657D3CFC438CFE0286CB255669B4C21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48634C88FACA20551847D3E24EFE78D5 /* HapticButton.xcconfig */;
+			baseConfigurationReference = A740408F1F6F5453B73937273831A424 /* HapticButton.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1106,7 +1219,11 @@
 				INFOPLIST_FILE = "Target Support Files/HapticButton/HapticButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/HapticButton/HapticButton.modulemap";
 				PRODUCT_MODULE_NAME = HapticButton;
 				PRODUCT_NAME = HapticButton;
@@ -1174,7 +1291,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1182,7 +1300,7 @@
 		};
 		6641D43013611B02F274DC8C6D90F454 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7A5746BFF17877883EED7429370DA5C /* NotchyAlert.xcconfig */;
+			baseConfigurationReference = ABBE8A428BCDF29F628C02FB726D9CFC /* NotchyAlert.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1198,7 +1316,11 @@
 				INFOPLIST_FILE = "Target Support Files/NotchyAlert/NotchyAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/NotchyAlert/NotchyAlert.modulemap";
 				PRODUCT_MODULE_NAME = NotchyAlert;
 				PRODUCT_NAME = NotchyAlert;
@@ -1212,6 +1334,78 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		6D693055473B6565B6FA4FE68A1DABDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50383D563778EF092D479ECE0AE9A79 /* Slope.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
+				PRODUCT_MODULE_NAME = Slope;
+				PRODUCT_NAME = Slope;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6DE863F23261FFA9CBD8191BABD008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618EF0D661A4BADD6032BC6F03959C11 /* SPStorkController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPStorkController/SPStorkController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPStorkController/SPStorkController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPStorkController/SPStorkController.modulemap";
+				PRODUCT_MODULE_NAME = SPStorkController;
+				PRODUCT_NAME = SPStorkController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1279,7 +1473,7 @@
 		};
 		7C78ED5EE5100A4AE3DCACBF9F441509 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E68BFB9418A4A38F6803EAB9A5464C5A /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = EE9B61F587508BEEBE5486A965F2EEF0 /* M13Checkbox.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1294,7 +1488,11 @@
 				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
 				PRODUCT_MODULE_NAME = M13Checkbox;
 				PRODUCT_NAME = M13Checkbox;
@@ -1309,9 +1507,46 @@
 			};
 			name = Release;
 		};
+		8A14D62E994B9F9B9783A435FBCD3C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618EF0D661A4BADD6032BC6F03959C11 /* SPStorkController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPStorkController/SPStorkController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPStorkController/SPStorkController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPStorkController/SPStorkController.modulemap";
+				PRODUCT_MODULE_NAME = SPStorkController;
+				PRODUCT_NAME = SPStorkController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8E8244B8BB3F6448C6B0517479AE55C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7A5746BFF17877883EED7429370DA5C /* NotchyAlert.xcconfig */;
+			baseConfigurationReference = ABBE8A428BCDF29F628C02FB726D9CFC /* NotchyAlert.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1327,7 +1562,11 @@
 				INFOPLIST_FILE = "Target Support Files/NotchyAlert/NotchyAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/NotchyAlert/NotchyAlert.modulemap";
 				PRODUCT_MODULE_NAME = NotchyAlert;
 				PRODUCT_NAME = NotchyAlert;
@@ -1341,70 +1580,7 @@
 			};
 			name = Debug;
 		};
-		98AFA945DF581C5FBDCDE6F0AE00DBBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34F9669BEA48D3ABC80D95E296C5A8C6 /* CULColorPicker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CULColorPicker/CULColorPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CULColorPicker/CULColorPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CULColorPicker/CULColorPicker.modulemap";
-				PRODUCT_MODULE_NAME = CULColorPicker;
-				PRODUCT_NAME = CULColorPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9DACE4D347770D8DE155D0767B1B45C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E68BFB9418A4A38F6803EAB9A5464C5A /* M13Checkbox.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
-				PRODUCT_MODULE_NAME = M13Checkbox;
-				PRODUCT_NAME = M13Checkbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B6342FA92BDB93E1C6827B8EEBC0028D /* Release */ = {
+		94410170C4907D603DBC82E074975105 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79967AA49EB1211D7CAC04015B621675 /* Pods-Smarter Bulb.release.xcconfig */;
 			buildSettings = {
@@ -1422,7 +1598,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1439,9 +1619,9 @@
 			};
 			name = Release;
 		};
-		DDCF130ECA19233F7ACD319302662C61 /* Debug */ = {
+		98AFA945DF581C5FBDCDE6F0AE00DBBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E2959814CA84D477C74F3F30799FE54 /* Slope.xcconfig */;
+			baseConfigurationReference = 4DC6C9652770CB1144F988720CA09E4B /* CULColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1452,14 +1632,54 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CULColorPicker/CULColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CULColorPicker/CULColorPicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
-				PRODUCT_MODULE_NAME = Slope;
-				PRODUCT_NAME = Slope;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CULColorPicker/CULColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = CULColorPicker;
+				PRODUCT_NAME = CULColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9DACE4D347770D8DE155D0767B1B45C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE9B61F587508BEEBE5486A965F2EEF0 /* M13Checkbox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
+				PRODUCT_MODULE_NAME = M13Checkbox;
+				PRODUCT_NAME = M13Checkbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1470,7 +1690,7 @@
 			};
 			name = Debug;
 		};
-		DE446F19ED4D18FF24062CEDE4090910 /* Debug */ = {
+		A20F24AD18E6A030ABDA6DAC1D2F8C04 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 489A01564D809736F2EE80EB400749A9 /* Pods-Smarter Bulb.debug.xcconfig */;
 			buildSettings = {
@@ -1488,7 +1708,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1504,9 +1728,44 @@
 			};
 			name = Debug;
 		};
+		E9140E64B8952161DAE7DFE60677FB62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50383D563778EF092D479ECE0AE9A79 /* Slope.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Slope/Slope-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Slope/Slope-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Slope/Slope.modulemap";
+				PRODUCT_MODULE_NAME = Slope;
+				PRODUCT_NAME = Slope;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FB8223013BF40C6ED6A5EEEEEDC053BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E67184645C319A27DF90F177275002F5 /* IGColorPicker.xcconfig */;
+			baseConfigurationReference = FD1BEE76078A3DF7CFCFBDE7A1C18AB3 /* IGColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1521,7 +1780,11 @@
 				INFOPLIST_FILE = "Target Support Files/IGColorPicker/IGColorPicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/IGColorPicker/IGColorPicker.modulemap";
 				PRODUCT_MODULE_NAME = IGColorPicker;
 				PRODUCT_NAME = IGColorPicker;
@@ -1539,11 +1802,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E209C0C7EC95B4E73ADBDA5A1DE713D /* Build configuration list for PBXNativeTarget "Slope" */ = {
+		1C2D762E1B019A288AFB16779B330FD4 /* Build configuration list for PBXNativeTarget "SPStorkController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDCF130ECA19233F7ACD319302662C61 /* Debug */,
-				3C3D5A0D6CB4A437FCFCA70BA1493B5C /* Release */,
+				6DE863F23261FFA9CBD8191BABD008B3 /* Debug */,
+				8A14D62E994B9F9B9783A435FBCD3C54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1566,20 +1829,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5D3475F6021B60C5FBD06F2334449945 /* Build configuration list for PBXNativeTarget "Slope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9140E64B8952161DAE7DFE60677FB62 /* Debug */,
+				6D693055473B6565B6FA4FE68A1DABDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705B37E3E50A426D71FB95300FEB224C /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A20F24AD18E6A030ABDA6DAC1D2F8C04 /* Debug */,
+				94410170C4907D603DBC82E074975105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		779C2DB49CEAC9E90C7A24404EDAFEA9 /* Build configuration list for PBXNativeTarget "CULColorPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A7473CB98D2D0D5254F66C7B8885B14 /* Debug */,
 				98AFA945DF581C5FBDCDE6F0AE00DBBA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		987EA450B2749DE47C0FE61A6576B1E7 /* Build configuration list for PBXNativeTarget "Pods-Smarter Bulb" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE446F19ED4D18FF24062CEDE4090910 /* Debug */,
-				B6342FA92BDB93E1C6827B8EEBC0028D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

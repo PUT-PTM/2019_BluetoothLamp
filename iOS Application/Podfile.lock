@@ -6,6 +6,7 @@ PODS:
   - M13Checkbox (3.2.2)
   - NotchyAlert (1.0)
   - Slope (1.2)
+  - SPStorkController (1.5.4)
 
 DEPENDENCIES:
   - CULColorPicker
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - IGColorPicker
   - NotchyAlert
   - Slope
+  - SPStorkController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - M13Checkbox
     - NotchyAlert
     - Slope
+    - SPStorkController
 
 SPEC CHECKSUMS:
   CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
   NotchyAlert: 2e5f0acfeff794c673f14538c2a0b01095145d72
   Slope: b1c2c869ca7428b2b76799da4bc29d67907eaa93
+  SPStorkController: 6c34a0375ef1254299e460784886ff4e929b82ed
 
-PODFILE CHECKSUM: 3ed25abdcc2e2f9f47ade4aa80085f67b1b120e8
+PODFILE CHECKSUM: a1b91f5ac8435d42aacd05578b1f3715e8eb0cf9
 
 COCOAPODS: 1.6.1
