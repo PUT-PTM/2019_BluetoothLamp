@@ -9,6 +9,7 @@
 import UIKit
 import CULColorPicker
 import IGColorPicker
+import HapticButton
 
 class NewColorPickerViewController: UIViewController {
 
@@ -27,13 +28,13 @@ class NewColorPickerViewController: UIViewController {
         self.modalPresentationCapturesStatusBarAppearance = true
         self.view.backgroundColor = .white
         
-        let colorPickerLabel = UILabel(frame: CGRect(x: 39, y: 54, width: 299, height: 52))
+        let colorPickerLabel = UILabel(frame: CGRect(x: 38, y: 54, width: 299, height: 52))
         colorPickerLabel.textAlignment = .left
         colorPickerLabel.text = "Color Picker"
         colorPickerLabel.font = UIFont(name: "AvenirNext-Medium", size: 38)
         self.view.addSubview(colorPickerLabel)
         
-        let selectColorLabel = UILabel(frame: CGRect(x: 39, y: 99, width: 299, height: 35))
+        let selectColorLabel = UILabel(frame: CGRect(x: 38, y: 99, width: 299, height: 35))
         selectColorLabel.textAlignment = .left
         selectColorLabel.text = "Select a color"
         selectColorLabel.font = UIFont(name: "AvenirNext-Regular", size: 20)
@@ -43,17 +44,19 @@ class NewColorPickerViewController: UIViewController {
         self.view.addSubview(colorPicker)
         colorPicker.delegate = self
         
-        hexValue = UILabel(frame: CGRect(x: 39, y: 457, width: 92, height: 28))
+        hexValue = UILabel(frame: CGRect(x: 38, y: 457, width: 92, height: 28))
         hexValue.textAlignment = .center
         hexValue.text = "#FFFFFF"
-        hexValue.font = UIFont.systemFont(ofSize: 17)
+        hexValue.font = UIFont(name: "AvenirNext-Medium", size: 17)
         self.view.addSubview(hexValue)
         
-        let button = UIButton(frame: CGRect(x: 209, y: 457, width: 92, height: 28))
-        button.backgroundColor = .green
-        button.setTitle("Test Button", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(button)
+        let addColorToPalette = HapticButton(frame: CGRect(x:250, y:457, width: 35, height: 35))
+        addColorToPalette.mode = .label(text: "+")
+        addColorToPalette.addBlurView(style: .extraLight)
+        addColorToPalette.layer.borderWidth = 1
+        addColorToPalette.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        addColorToPalette.layer.cornerRadius = 15
+        view.addSubview(addColorToPalette)
         
         circleColorPalette = ColorPickerView(frame: CGRect(x:38, y:520, width: 300, height: 195))
         self.view.addSubview(circleColorPalette)

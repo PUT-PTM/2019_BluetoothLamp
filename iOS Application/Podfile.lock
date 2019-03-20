@@ -1,5 +1,6 @@
 PODS:
   - CULColorPicker (0.1.0)
+  - FaveButton (3.2.0)
   - HapticButton (0.1)
   - IGColorPicker (0.4.2):
     - M13Checkbox (~> 3.2.0)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - CULColorPicker
+  - FaveButton
   - HapticButton
   - IGColorPicker
   - NotchyAlert
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CULColorPicker
+    - FaveButton
     - HapticButton
     - IGColorPicker
     - M13Checkbox
@@ -28,6 +31,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
+  FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   HapticButton: 7f244fb23421c2a7d2245457e745a809aab65c77
   IGColorPicker: c6d43aa386a9fdc8f958f3bd4e5ab85905242c8a
   M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
@@ -35,6 +39,6 @@ SPEC CHECKSUMS:
   Slope: b1c2c869ca7428b2b76799da4bc29d67907eaa93
   SPStorkController: 6c34a0375ef1254299e460784886ff4e929b82ed
 
-PODFILE CHECKSUM: a1b91f5ac8435d42aacd05578b1f3715e8eb0cf9
+PODFILE CHECKSUM: 0c5e3d56f523503391a8120bb53a911466845d00
 
 COCOAPODS: 1.6.1

@@ -11,5 +11,6 @@ target 'Smarter Bulb' do
     pod "NotchyAlert"
     pod "IGColorPicker"
     pod 'SPStorkController'
+    pod 'FaveButton'
 
 end
