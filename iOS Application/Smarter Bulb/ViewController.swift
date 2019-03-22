@@ -201,7 +201,7 @@ class ViewController: UIViewController {
         //vc.modalTransitionStyle = .crossDissolve
         //present(vc, animated: true)
         
-        let controller = NewColorPickerViewController()
+        let controller = ColorPickerViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
         controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom

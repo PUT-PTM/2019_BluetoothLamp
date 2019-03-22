@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-paint-palette-filled-100.png",
+      "filename" : "icons8-color-palette-100.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-color-palette-100.png",
       "scale" : "2x"
     },
     {
