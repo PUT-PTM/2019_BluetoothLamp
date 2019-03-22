@@ -12,5 +12,14 @@ target 'Smarter Bulb' do
     pod "IGColorPicker"
     pod 'SPStorkController'
     pod 'FaveButton'
+    pod 'Cards', :git => 'https://github.com/PaoloCuscela/Cards.git'
 
+    post_install do |installer|
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = [
+        '$(FRAMEWORK_SEARCH_PATHS)'
+        ]
+      end
+    end
+    
 end

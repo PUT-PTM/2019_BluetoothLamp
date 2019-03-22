@@ -12,19 +12,21 @@ import HapticButton
 import Slope
 import NotchyAlert
 import SPStorkController
+import Cards
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var wave: UIView!
     @IBOutlet weak var smartBulbLabel: UILabel!
     @IBOutlet weak var informationAboutLamp: UILabel!
-    @IBOutlet weak var changeMode1: HapticButton!
-    @IBOutlet weak var changeMode2: HapticButton!
-    @IBOutlet weak var changeMode3: HapticButton!
+    @IBOutlet weak var turnOnOffButton: HapticButton!
+    @IBOutlet weak var showPaletteButton: HapticButton!
+    @IBOutlet weak var changeBrightnessButton: HapticButton!
     @IBOutlet weak var quickChoice1: HapticButton!
     @IBOutlet weak var quickChoice2: HapticButton!
     @IBOutlet weak var quickChoice3: HapticButton!
     
+    @IBOutlet weak var natureMode: CardHighlight!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
-        backgroundGradient = GradientView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        backgroundGradient = GradientView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 180))
         
         initUI()
     }
@@ -68,20 +70,20 @@ class ViewController: UIViewController {
     
     func initButtons() {
         
-        changeMode1.mode = .image(image: #imageLiteral(resourceName: "bulb"))
-        changeMode1.addBlurView(style: .extraLight)
-        changeMode1.layer.borderWidth = 1
-        changeMode1.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        turnOnOffButton.mode = .image(image: #imageLiteral(resourceName: "bulb"))
+        turnOnOffButton.addBlurView(style: .extraLight)
+        turnOnOffButton.layer.borderWidth = 1
+        turnOnOffButton.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
-        changeMode2.mode = .image(image: #imageLiteral(resourceName: "palete"))
-        changeMode2.addBlurView(style: .extraLight)
-        changeMode2.layer.borderWidth = 1
-        changeMode2.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        showPaletteButton.mode = .image(image: #imageLiteral(resourceName: "palete"))
+        showPaletteButton.addBlurView(style: .extraLight)
+        showPaletteButton.layer.borderWidth = 1
+        showPaletteButton.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
-        changeMode3.mode = .image(image: #imageLiteral(resourceName: "nature"))
-        changeMode3.addBlurView(style: .extraLight)
-        changeMode3.layer.borderWidth = 1
-        changeMode3.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        changeBrightnessButton.mode = .image(image: #imageLiteral(resourceName: "sun"))
+        changeBrightnessButton.addBlurView(style: .extraLight)
+        changeBrightnessButton.layer.borderWidth = 1
+        changeBrightnessButton.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
         quickChoice1.mode = .label(text: "")
         quickChoice1.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Alarm")
@@ -93,7 +95,7 @@ class ViewController: UIViewController {
         quickChoice1.layer.cornerRadius = 20
         
         quickChoice2.mode = .label(text: "")
-        quickChoice2.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Option 2")
+        quickChoice2.textLabel.attributedText = addIconWithTextToLabel(image: "alarm_clock_off", text: "   Music")
         quickChoice2.textLabel.textAlignment = .left
         quickChoice2.textLabel.textColor = .gray
         quickChoice2.layer.borderWidth = 1
@@ -174,14 +176,14 @@ class ViewController: UIViewController {
             writeValue(value: "off")
             waveView.stopWave()
             setBackgroundColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
-            changeMode1.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            turnOnOffButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             isBulbTurnedOn = false
         } else {
             print("Lamp is turned on")
             writeValue(value: "on")
             waveView.startWave()
-            setBackgroundColor(color: #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1))
-            changeMode1.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            setBackgroundColor(color: #colorLiteral(red: 0.9686274529, green: 0.8475579686, blue: 0.07893051368, alpha: 1))
+            turnOnOffButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             isBulbTurnedOn = true
         }
         
