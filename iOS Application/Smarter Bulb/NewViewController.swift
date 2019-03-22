@@ -19,6 +19,7 @@ class NewViewController: UIViewController {
     @IBOutlet weak var showPaletteButton: HapticButton!
     @IBOutlet weak var changeBrightnessButton: HapticButton!
     @IBOutlet weak var alarmButton: UIButton!
+    @IBOutlet weak var musicButton: UIButton!
     
     @IBOutlet weak var natureMode: CardHighlight!
     
@@ -28,6 +29,9 @@ class NewViewController: UIViewController {
     var isMyPeripheralConected = false
     
     var isBulbTurnedOn = false
+    var currentColor: UIColor!
+    var isAlarmSet = false
+    var isMusicModeSet = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +86,7 @@ class NewViewController: UIViewController {
     }
     
     @IBAction func changeBrightness(_ sender: Any) {
-        print("2 blur button pressed.")
+        print("Brightness button pressed.")
     }
     
     @IBAction func openColorPalette(_ sender: Any) {
@@ -93,6 +97,34 @@ class NewViewController: UIViewController {
         controller.modalPresentationCapturesStatusBarAppearance = true
         controller.delegate = self
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func turnOnOffAlarm(_ sender: Any) {
+        print("Alarm button pressed.")
+        
+        if isAlarmSet {
+            isAlarmSet = false
+            alarmButton.backgroundColor = .white
+            alarmButton.tintColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+        } else {
+            isAlarmSet = true
+            alarmButton.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+            alarmButton.tintColor = .white
+        }
+    }
+    
+    @IBAction func turnOnOffMusicMode(_ sender: Any) {
+        print("Music Mode button pressed.")
+        
+        if isMusicModeSet {
+            isMusicModeSet = false
+            musicButton.backgroundColor = .white
+            musicButton.tintColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+        } else {
+            isMusicModeSet = true
+            musicButton.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+            musicButton.tintColor = .white
+        }
     }
     
 }
