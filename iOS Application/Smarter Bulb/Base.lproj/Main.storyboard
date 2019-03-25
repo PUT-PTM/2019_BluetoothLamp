@@ -306,11 +306,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.72549019607843135" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Nature"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rainbow"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="nature"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="unicorn"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -320,6 +320,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_5"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQx-5S-3gx" customClass="CardHighlight" customModule="Cards">
@@ -338,6 +339,7 @@
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Mode for you"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Url-Yo-dgb" customClass="CardHighlight" customModule="Cards">
@@ -356,6 +358,7 @@
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Mode for you"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_3"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUICK CHOICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s90-Re-xwV">
@@ -397,9 +400,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frl-z0-TjK">
                                 <rect key="frame" x="16" y="384" width="160" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.082352941176470587" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                                <color key="tintColor" red="0.99215686274509807" green="0.25098039215686274" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Alarm"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -413,9 +416,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-8t-5n2">
                                 <rect key="frame" x="192" y="384" width="174" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.082352941176470587" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                                <color key="tintColor" red="0.99607843137254903" green="0.24705882352941178" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Music Mode"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -445,7 +448,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="nature_n"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_1"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -456,11 +459,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.081955868160000001" green="0.60245768229999996" blue="0.88552517360000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Other"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Relax"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="water"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="relax"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -479,7 +482,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="fire"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="book"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -515,11 +518,14 @@
     </scenes>
     <resources>
         <image name="book" width="100" height="100"/>
-        <image name="book_n" width="320" height="280"/>
+        <image name="book_n" width="2400" height="2000"/>
         <image name="fire" width="100" height="100"/>
-        <image name="grad_2" width="2400" height="2000"/>
+        <image name="grad_1" width="2400" height="2000"/>
+        <image name="grad_2" width="2000" height="2400"/>
+        <image name="grad_3" width="2400" height="2000"/>
+        <image name="grad_4" width="2000" height="2400"/>
+        <image name="grad_5" width="2400" height="2000"/>
         <image name="nature" width="100" height="100"/>
-        <image name="nature_n" width="320" height="280"/>
         <image name="relax" width="100" height="100"/>
         <image name="unicorn" width="100" height="100"/>
         <image name="water" width="100" height="100"/>

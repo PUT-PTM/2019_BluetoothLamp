@@ -63,6 +63,11 @@ class NewViewController: UIViewController {
         changeBrightnessButton.layer.borderWidth = 1
         changeBrightnessButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
+        alarmButton.layer.borderWidth = 1
+        alarmButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        
+        musicButton.layer.borderWidth = 1
+        musicButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
     }
     
@@ -104,12 +109,10 @@ class NewViewController: UIViewController {
         
         if isAlarmSet {
             isAlarmSet = false
-            alarmButton.backgroundColor = .white
-            alarmButton.tintColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+            alarmButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 1)
         } else {
             isAlarmSet = true
-            alarmButton.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
-            alarmButton.tintColor = .white
+            alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 1)
         }
     }
     
@@ -118,12 +121,10 @@ class NewViewController: UIViewController {
         
         if isMusicModeSet {
             isMusicModeSet = false
-            musicButton.backgroundColor = .white
-            musicButton.tintColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
+            musicButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 1)
         } else {
             isMusicModeSet = true
-            musicButton.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.2470588235, blue: 0.2823529412, alpha: 1)
-            musicButton.tintColor = .white
+            musicButton.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.2352941176, alpha: 1)
         }
     }
     
