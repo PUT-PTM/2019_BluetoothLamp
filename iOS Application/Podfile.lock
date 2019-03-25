@@ -11,6 +11,7 @@ PODS:
   - Player (0.12.0)
   - Slope (1.2)
   - SPStorkController (1.5.4)
+  - WhatsNew (0.4.4)
 
 DEPENDENCIES:
   - Cards (from `https://github.com/PaoloCuscela/Cards.git`)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - NotchyAlert
   - Slope
   - SPStorkController
+  - WhatsNew
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Player
     - Slope
     - SPStorkController
+    - WhatsNew
 
 EXTERNAL SOURCES:
   Cards:
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   Player: b5bf7d5533287e83289bde4809627a02df88142c
   Slope: b1c2c869ca7428b2b76799da4bc29d67907eaa93
   SPStorkController: 6c34a0375ef1254299e460784886ff4e929b82ed
+  WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: fb045d38ddd0e9ca323e5b3095ba6db965744779
+PODFILE CHECKSUM: fc26c8b0041d562d5b4015c52d26b25a5da52e1b
 
 COCOAPODS: 1.6.1
