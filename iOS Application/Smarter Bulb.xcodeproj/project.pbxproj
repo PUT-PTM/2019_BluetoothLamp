@@ -20,6 +20,8 @@
 		E1FDF651224C15EA00F84707 /* flac.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF650224C15EA00F84707 /* flac.m4a */; };
 		E1FDF653224C169500F84707 /* klasyka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF652224C169500F84707 /* klasyka.mp3 */; };
 		E1FDF655224C172600F84707 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF654224C172600F84707 /* 1.mp3 */; };
+		E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF659224C257500F84707 /* UIKitExtensions.swift */; };
+		E1FDF65D224C269000F84707 /* BluetoothExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF65C224C269000F84707 /* BluetoothExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E1FDF650224C15EA00F84707 /* flac.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = flac.m4a; sourceTree = "<group>"; };
 		E1FDF652224C169500F84707 /* klasyka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = klasyka.mp3; sourceTree = "<group>"; };
 		E1FDF654224C172600F84707 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		E1FDF659224C257500F84707 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		E1FDF65C224C269000F84707 /* BluetoothExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothExtension.swift; sourceTree = "<group>"; };
 		F9BDD9EA30DF335B8DD6D0DE /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smarter_Bulb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF08CEB7352B033B2584E2A /* Pods-Smarter Bulb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smarter Bulb.release.xcconfig"; path = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,9 +96,10 @@
 		E14B6CDE22306424007E0CBB /* Smarter Bulb */ = {
 			isa = PBXGroup;
 			children = (
-				E1FDF658224C211F00F84707 /* Storyboards */,
 				E1FDF657224C20C700F84707 /* Music */,
 				E1FDF656224C207900F84707 /* View Controllers */,
+				E1FDF658224C211F00F84707 /* Storyboards */,
+				E1FDF65B224C265000F84707 /* Extensions */,
 				E14B6CE622306426007E0CBB /* Assets.xcassets */,
 				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E14B6CF322306502007E0CBB /* LCWaveView.swift */,
@@ -131,6 +136,15 @@
 				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1FDF65B224C265000F84707 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1FDF659224C257500F84707 /* UIKitExtensions.swift */,
+				E1FDF65C224C269000F84707 /* BluetoothExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,7 @@
 				"${BUILT_PRODUCTS_DIR}/IGColorPicker/IGColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/NotchyAlert/NotchyAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
 				"${BUILT_PRODUCTS_DIR}/Slope/Slope.framework",
@@ -245,6 +260,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotchyAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Slope.framework",
@@ -287,8 +303,10 @@
 				E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */,
 				E14B6CE222306424007E0CBB /* ViewController.swift in Sources */,
 				B1D5933E2242C18400D29E60 /* ColorPickerViewController.swift in Sources */,
+				E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */,
 				B121578C22455C6C00DEAEEC /* NewViewController.swift in Sources */,
 				E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */,
+				E1FDF65D224C269000F84707 /* BluetoothExtension.swift in Sources */,
 				E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

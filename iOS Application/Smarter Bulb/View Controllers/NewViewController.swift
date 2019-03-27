@@ -11,6 +11,7 @@ import HapticButton
 import CoreBluetooth
 import SPStorkController
 import Cards
+import Pastel
 
 class NewViewController: UIViewController {
 
@@ -33,9 +34,11 @@ class NewViewController: UIViewController {
     var isAlarmSet = false
     var isMusicModeSet = false
     
+    lazy var pastelView = PastelView(frame: view.bounds)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.layer.contents = #imageLiteral(resourceName: "powder").cgImage
+        //view.layer.contents = #imageLiteral(resourceName: "powder").cgImage
         
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         
@@ -44,6 +47,23 @@ class NewViewController: UIViewController {
     
     func initUI() {
         initButtons()
+        initGradientBackground()
+    }
+    
+    func initGradientBackground() {
+        
+        // Custom Direction
+        pastelView.startPastelPoint = .bottomLeft
+        pastelView.endPastelPoint = .topRight
+        
+        // Custom Duration
+        pastelView.animationDuration = 2.5
+        
+        // Custom Color
+        pastelView.setPastelGradient(.trueSunset)
+        
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
     }
     
     func initButtons() {
@@ -92,10 +112,10 @@ class NewViewController: UIViewController {
         
         if isAlarmSet {
             isAlarmSet = false
-            alarmButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 1)
+            alarmButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 0.7)
         } else {
             isAlarmSet = true
-            alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 1)
+            alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 0.7)
         }
     }
     
@@ -117,10 +137,10 @@ class NewViewController: UIViewController {
         
         if isMusicModeSet {
             isMusicModeSet = false
-            musicButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 1)
+            musicButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 0.7)
         } else {
             isMusicModeSet = true
-            musicButton.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.2352941176, alpha: 1)
+            musicButton.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.2352941176, alpha: 0.7)
         }
     }
     
@@ -179,109 +199,6 @@ class NewViewController: UIViewController {
 
 extension NewViewController: PopupDelegate {
     func pickedColor(newColor: UIColor) {
-        //setBackgroundColor(color: newColor)
-    }
-}
-
-extension NewViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
-    
-    // Bluetooth
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        
-        var msg: String
-        
-        switch central.state {
-        case .poweredOff:
-            msg = "Bluetooth is Off"
-            informationAboutLamp.text = "Turn on bluetooth"
-        case .poweredOn:
-            msg = "Bluetooth is On"
-            manager.scanForPeripherals(withServices: nil, options: nil)
-            informationAboutLamp.text = "Looking for lamp"
-        case .unsupported:
-            msg = "Not Supported"
-            informationAboutLamp.text = "Your device is not supported"
-        default:
-            msg = ""
-        }
-        
-        print("STATE: " + msg)
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        if peripheral.name == "BT05" {
-            //lblPeripheralName.isHidden = false
-            //lblPeripheralName.text = peripheral.name ?? "Default"
-            
-            self.myBluetoothPeripheral = peripheral     //save peripheral
-            self.myBluetoothPeripheral.delegate = self
-            
-            manager.stopScan()                          //stop scanning for peripherals
-            
-            manager.connect(myBluetoothPeripheral, options: nil) //connect to my peripheral
-            informationAboutLamp.text = "Connected"
-        }
-    }
-    
-    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        isMyPeripheralConected = true //when connected change to true
-        peripheral.delegate = self
-        peripheral.discoverServices(nil)
-        
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        isMyPeripheralConected = false //and to false when disconnected
-        if myBluetoothPeripheral != nil{
-            if myBluetoothPeripheral.delegate != nil {
-                myBluetoothPeripheral.delegate = nil
-            }
-        }
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        if let servicePeripheral = peripheral.services as [CBService]! { //get the services of the perifereal
-            for service in servicePeripheral {
-                
-                //Then look for the characteristics of the services
-                print(service.uuid.uuidString)
-                peripheral.discoverCharacteristics(nil, for: service)
-            }
-        }
-    }
-    
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        if let characterArray = service.characteristics as [CBCharacteristic]! {
-            for cc in characterArray {
-                print(cc.uuid.uuidString)
-                if(cc.uuid.uuidString == "FFE1") { //properties: read, write
-                    
-                    myCharacteristic = cc //saved it to send data in another function.
-                    
-                    //peripheral.readValue(for: cc) //to read the value of the characteristic
-                }
-            }
-        }
-    }
-    
-    /*
-     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-     
-     print(characteristic.uuid.uuidString)
-     if (characteristic.uuid.uuidString == "FFE1") {
-     let readValue = characteristic.value
-     let value = (readValue! as NSData).bytes.bindMemory(to: Int.self, capacity: readValue!.count).pointee //used to read an Int value
-     print (value)
-     }
-     }
-     */
-    
-    func writeValue(value: String) {
-        if isMyPeripheralConected { //check if myPeripheral is connected to send data
-            let dataToSend: Data = value.data(using: String.Encoding.utf8)!
-            myBluetoothPeripheral.writeValue(dataToSend, for: myCharacteristic, type: CBCharacteristicWriteType.withoutResponse)    //Writing the data to the peripheral
-        } else {
-            print("Not connected")
-        }
+        pastelView.setColors([newColor.darker(by: 40)!, newColor, newColor.lighter(by: 40)!])
     }
 }

@@ -18,6 +18,7 @@ target 'Smarter Bulb' do
     pod 'Cards', :git => 'https://github.com/PaoloCuscela/Cards.git'
     pod 'WhatsNew'
     pod 'AudioKit', '=4.6.4.b1'
+    pod 'Pastel'
 
     post_install do |installer|
       installer.pods_project.build_configurations.each do |config|

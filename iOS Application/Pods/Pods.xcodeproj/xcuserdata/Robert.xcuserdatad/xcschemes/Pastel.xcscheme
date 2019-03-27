@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7610F00FABF40E6976C44915DB4133C"
-               BuildableName = "Slope.framework"
-               BlueprintName = "Slope"
+               BlueprintIdentifier = "0DE1F3E05127FC2398181EB9474C41EF"
+               BuildableName = "Pastel.framework"
+               BlueprintName = "Pastel"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
