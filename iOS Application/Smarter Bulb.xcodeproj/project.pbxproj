@@ -16,6 +16,10 @@
 		E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE622306426007E0CBB /* Assets.xcassets */; };
 		E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */; };
 		E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CF322306502007E0CBB /* LCWaveView.swift */; };
+		E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF64E224C137400F84707 /* MusicViewController.swift */; };
+		E1FDF651224C15EA00F84707 /* flac.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF650224C15EA00F84707 /* flac.m4a */; };
+		E1FDF653224C169500F84707 /* klasyka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF652224C169500F84707 /* klasyka.mp3 */; };
+		E1FDF655224C172600F84707 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF654224C172600F84707 /* 1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +34,10 @@
 		E14B6CE922306426007E0CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14B6CEB22306426007E0CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14B6CF322306502007E0CBB /* LCWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCWaveView.swift; sourceTree = "<group>"; };
-		E183619D2239A22900AFC04F /* Smarter Bulb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smarter Bulb.entitlements"; sourceTree = "<group>"; };
+		E1FDF64E224C137400F84707 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E1FDF650224C15EA00F84707 /* flac.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = flac.m4a; sourceTree = "<group>"; };
+		E1FDF652224C169500F84707 /* klasyka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = klasyka.mp3; sourceTree = "<group>"; };
+		E1FDF654224C172600F84707 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		F9BDD9EA30DF335B8DD6D0DE /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smarter_Bulb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF08CEB7352B033B2584E2A /* Pods-Smarter Bulb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smarter Bulb.release.xcconfig"; path = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,18 +92,45 @@
 		E14B6CDE22306424007E0CBB /* Smarter Bulb */ = {
 			isa = PBXGroup;
 			children = (
-				E183619D2239A22900AFC04F /* Smarter Bulb.entitlements */,
-				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
-				E14B6CE122306424007E0CBB /* ViewController.swift */,
-				B121578B22455C6C00DEAEEC /* NewViewController.swift */,
-				B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */,
-				E14B6CE322306424007E0CBB /* Main.storyboard */,
+				E1FDF658224C211F00F84707 /* Storyboards */,
+				E1FDF657224C20C700F84707 /* Music */,
+				E1FDF656224C207900F84707 /* View Controllers */,
 				E14B6CE622306426007E0CBB /* Assets.xcassets */,
-				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
+				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E14B6CF322306502007E0CBB /* LCWaveView.swift */,
 				E14B6CEB22306426007E0CBB /* Info.plist */,
 			);
 			path = "Smarter Bulb";
+			sourceTree = "<group>";
+		};
+		E1FDF656224C207900F84707 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B121578B22455C6C00DEAEEC /* NewViewController.swift */,
+				B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */,
+				E1FDF64E224C137400F84707 /* MusicViewController.swift */,
+				E14B6CE122306424007E0CBB /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1FDF657224C20C700F84707 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				E1FDF654224C172600F84707 /* 1.mp3 */,
+				E1FDF652224C169500F84707 /* klasyka.mp3 */,
+				E1FDF650224C15EA00F84707 /* flac.m4a */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		E1FDF658224C211F00F84707 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E14B6CE322306424007E0CBB /* Main.storyboard */,
+				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +203,10 @@
 			files = (
 				E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */,
 				E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */,
+				E1FDF651224C15EA00F84707 /* flac.m4a in Resources */,
 				E14B6CE522306424007E0CBB /* Main.storyboard in Resources */,
+				E1FDF653224C169500F84707 /* klasyka.mp3 in Resources */,
+				E1FDF655224C172600F84707 /* 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */,
 				E14B6CE222306424007E0CBB /* ViewController.swift in Sources */,
 				B1D5933E2242C18400D29E60 /* ColorPickerViewController.swift in Sources */,
 				B121578C22455C6C00DEAEEC /* NewViewController.swift in Sources */,

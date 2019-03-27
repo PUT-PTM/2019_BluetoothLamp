@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31FFD7104D2D18265A2840B2045A6E89"
+               BlueprintIdentifier = "EA1970B7728B1CD9B306FDA2A26C43B6"
                BuildableName = "SPStorkController.framework"
                BlueprintName = "SPStorkController"
                ReferencedContainer = "container:Pods.xcodeproj">

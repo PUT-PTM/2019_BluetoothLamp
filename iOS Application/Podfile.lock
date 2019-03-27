@@ -1,4 +1,10 @@
 PODS:
+  - AudioKit (4.6.4.b1):
+    - AudioKit/Core (= 4.6.4.b1)
+    - AudioKit/UI (= 4.6.4.b1)
+  - AudioKit/Core (4.6.4.b1)
+  - AudioKit/UI (4.6.4.b1):
+    - AudioKit/Core
   - Cards (1.3.5):
     - Player (= 0.12.0)
   - CULColorPicker (0.1.0)
@@ -14,6 +20,7 @@ PODS:
   - WhatsNew (0.4.4)
 
 DEPENDENCIES:
+  - AudioKit (= 4.6.4.b1)
   - Cards (from `https://github.com/PaoloCuscela/Cards.git`)
   - CULColorPicker
   - FaveButton
@@ -25,6 +32,8 @@ DEPENDENCIES:
   - WhatsNew
 
 SPEC REPOS:
+  https://github.com/AudioKit/Specs.git:
+    - AudioKit
   https://github.com/cocoapods/specs.git:
     - CULColorPicker
     - FaveButton
@@ -47,6 +56,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/PaoloCuscela/Cards.git
 
 SPEC CHECKSUMS:
+  AudioKit: 9243f262760e2de20784520b23ede12b97e7518d
   Cards: 8526a56439b0856cbd1fec4c5716c06502aaedea
   CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
@@ -59,6 +69,6 @@ SPEC CHECKSUMS:
   SPStorkController: 6c34a0375ef1254299e460784886ff4e929b82ed
   WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: fc26c8b0041d562d5b4015c52d26b25a5da52e1b
+PODFILE CHECKSUM: c9a9d90df9dcf13e97d70019eb43da2203bcda03
 
 COCOAPODS: 1.6.1

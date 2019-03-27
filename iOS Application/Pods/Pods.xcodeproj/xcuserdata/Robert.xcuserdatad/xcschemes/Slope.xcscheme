@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654B7C79BDF0AA8C093450B7CB4560DB"
+               BlueprintIdentifier = "7C16E7F42D8FA4C0F81B26E224E40B5F"
                BuildableName = "Slope.framework"
                BlueprintName = "Slope"
                ReferencedContainer = "container:Pods.xcodeproj">
