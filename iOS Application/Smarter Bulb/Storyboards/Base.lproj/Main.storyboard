@@ -304,7 +304,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-tG-QMW" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="16" y="621" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.72549019607843135" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Rainbow"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -326,7 +325,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQx-5S-3gx" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="254" y="621" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.081955868159732173" green="0.60245768229166663" blue="0.88552517361111116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ocean"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -345,7 +343,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Url-Yo-dgb" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="135" y="621" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.16470588235294117" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Fire"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -410,23 +408,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-8t-5n2">
-                                <rect key="frame" x="192" y="384" width="174" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.078431372549019607" green="0.082352941176470587" blue="0.090196078431372548" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Music Mode"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3j-u7-ZoW" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="16" y="495" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.10661407420000001" green="0.71680678929999997" blue="0.17282060020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Nature"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -448,7 +432,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5BK-Hc-j48" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="254" y="495" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.081955868160000001" green="0.60245768229999996" blue="0.88552517360000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Relax"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -467,7 +450,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7XL-zq-bxp" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="135" y="495" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.1647058824" blue="0.050980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Book"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
@@ -483,6 +465,19 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="book_n"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-8t-5n2">
+                                <rect key="frame" x="199" y="384" width="160" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.082352941176470587" blue="0.090196078431372548" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Music Mode"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="NLo-ih-WHJ"/>
@@ -494,10 +489,15 @@
                     </view>
                     <connections>
                         <outlet property="alarmButton" destination="frl-z0-TjK" id="zEI-wM-6OB"/>
+                        <outlet property="bookMode" destination="7XL-zq-bxp" id="BOl-tT-Hig"/>
                         <outlet property="changeBrightnessButton" destination="5bm-go-oCv" id="Kt9-Uj-udy"/>
+                        <outlet property="fireMode" destination="Url-Yo-dgb" id="Ahb-mj-Kxv"/>
                         <outlet property="informationAboutLamp" destination="8S5-jC-en1" id="a72-KH-59Z"/>
                         <outlet property="musicButton" destination="kYF-8t-5n2" id="gcH-UJ-qDk"/>
-                        <outlet property="natureMode" destination="Y3j-u7-ZoW" id="8gj-Wy-Ye1"/>
+                        <outlet property="natureMode" destination="Y3j-u7-ZoW" id="PTZ-40-pJY"/>
+                        <outlet property="oceanMode" destination="IQx-5S-3gx" id="lAZ-w6-6Be"/>
+                        <outlet property="rainbowMode" destination="z8G-tG-QMW" id="f74-EA-0nY"/>
+                        <outlet property="relaxMode" destination="5BK-Hc-j48" id="wj2-9x-sbf"/>
                         <outlet property="showPaletteButton" destination="cON-Nt-ys4" id="8bs-7e-SwC"/>
                         <outlet property="turnOnOffButton" destination="mXg-Xk-hdW" id="PaA-4V-QEj"/>
                     </connections>

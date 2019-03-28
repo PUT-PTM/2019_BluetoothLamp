@@ -12,6 +12,7 @@ import CoreBluetooth
 import SPStorkController
 import Cards
 import Pastel
+import WhatsNew
 
 class NewViewController: UIViewController {
 
@@ -23,6 +24,11 @@ class NewViewController: UIViewController {
     @IBOutlet weak var musicButton: UIButton!
     
     @IBOutlet weak var natureMode: CardHighlight!
+    @IBOutlet weak var bookMode: CardHighlight!
+    @IBOutlet weak var relaxMode: CardHighlight!
+    @IBOutlet weak var rainbowMode: CardHighlight!
+    @IBOutlet weak var fireMode: CardHighlight!
+    @IBOutlet weak var oceanMode: CardHighlight!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -52,15 +58,13 @@ class NewViewController: UIViewController {
     
     func initGradientBackground() {
         
-        // Custom Direction
         pastelView.startPastelPoint = .bottomLeft
         pastelView.endPastelPoint = .topRight
-        
-        // Custom Duration
         pastelView.animationDuration = 2.5
-        
-        // Custom Color
-        pastelView.setPastelGradient(.trueSunset)
+
+        pastelView.setColors([UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1),
+                              UIColor(red: 244/255, green: 88/255, blue: 53/255, alpha: 1),
+                              UIColor(red: 196/255, green: 70/255, blue: 107/255, alpha: 1)])
         
         pastelView.startAnimation()
         view.insertSubview(pastelView, at: 0)
@@ -104,7 +108,51 @@ class NewViewController: UIViewController {
         musicButton.layer.borderWidth = 1
         musicButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
+        let tapGestureNatureMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(natureModeButtonPressed))
+        natureMode.addGestureRecognizer(tapGestureNatureMode)
+        
+        let tapGestureBookMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(bookModeButtonPressed))
+        bookMode.addGestureRecognizer(tapGestureBookMode)
+        
+        let tapGestureRelaxMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(relaxModeButtonPressed))
+        relaxMode.addGestureRecognizer(tapGestureRelaxMode)
+        
+        let tapGestureRainbowMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(rainbowModeButtonPressed))
+        rainbowMode.addGestureRecognizer(tapGestureRainbowMode)
+        
+        let tapGestureFireMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fireModeButtonPressed))
+        fireMode.addGestureRecognizer(tapGestureFireMode)
+        
+        let tapGestureOceanMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oceanModeButtonPressed))
+        oceanMode.addGestureRecognizer(tapGestureOceanMode)
+        
     }
+    
+    @objc func natureModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Nature mode tapped")
+        writeValue(value: "nature")
+    }
+    @objc func bookModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Book mode tapped")
+        writeValue(value: "book")
+    }
+    @objc func relaxModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Relax mode tapped")
+        writeValue(value: "relax")
+    }
+    @objc func rainbowModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Rainbow mode tapped")
+        writeValue(value: "rainbow")
+    }
+    @objc func fireModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Fire mode tapped")
+        writeValue(value: "fire")
+    }
+    @objc func oceanModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Ocean mode tapped")
+        writeValue(value: "ocean")
+    }
+        
     
     @objc func normalTapAlarmOnOff(_ sender: UIGestureRecognizer){
         print("Normal tap")
@@ -128,6 +176,16 @@ class NewViewController: UIViewController {
         else if sender.state == .began {
             print("UIGestureRecognizerStateBegan.")
             //Do Whatever You want on Began of Gesture
+            
+            let welcomMusicScreen = WhatsNewViewController(items: [
+                WhatsNewItem.image(title: "Nice Icons", subtitle: "Completely customize colors, texts and icons.", image: #imageLiteral(resourceName: "nature")),
+                WhatsNewItem.image(title: "Such Easy", subtitle: "Setting this up only takes 2 lines of code, impressive you say?", image: #imageLiteral(resourceName: "fire")),
+                WhatsNewItem.image(title: "Very Sleep", subtitle: "It helps you get more sleep by writing less code.", image: #imageLiteral(resourceName: "unicorn")),
+                WhatsNewItem.text(title: "Text Only", subtitle: "No icons? Just go with plain text."),
+                ])
+            welcomMusicScreen.titleText = "Welcome in Alarm Mode!"
+            welcomMusicScreen.presentationOption = .debug
+            welcomMusicScreen.presentIfNeeded(on: self)
         }
     }
     
@@ -195,6 +253,7 @@ class NewViewController: UIViewController {
         controller.delegate = self
         self.present(controller, animated: true, completion: nil)
     }
+    
 }
 
 extension NewViewController: PopupDelegate {
