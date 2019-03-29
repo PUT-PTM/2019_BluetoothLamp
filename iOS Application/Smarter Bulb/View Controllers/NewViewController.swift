@@ -17,11 +17,14 @@ import WhatsNew
 class NewViewController: UIViewController {
 
     @IBOutlet weak var informationAboutLamp: UILabel!
+    
     @IBOutlet weak var turnOnOffButton: HapticButton!
     @IBOutlet weak var showPaletteButton: HapticButton!
     @IBOutlet weak var changeBrightnessButton: HapticButton!
+    
     @IBOutlet weak var alarmButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     @IBOutlet weak var natureMode: CardHighlight!
     @IBOutlet weak var bookMode: CardHighlight!
@@ -29,6 +32,8 @@ class NewViewController: UIViewController {
     @IBOutlet weak var rainbowMode: CardHighlight!
     @IBOutlet weak var fireMode: CardHighlight!
     @IBOutlet weak var oceanMode: CardHighlight!
+    
+    lazy var pastelView = PastelView(frame: view.bounds)
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -40,7 +45,6 @@ class NewViewController: UIViewController {
     var isAlarmSet = false
     var isMusicModeSet = false
     
-    lazy var pastelView = PastelView(frame: view.bounds)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,17 +58,23 @@ class NewViewController: UIViewController {
     func initUI() {
         initButtons()
         initGradientBackground()
+        initBgForModes()
+    }
+    
+    func initBgForModes() {  
+        let bgForModes = UIView(frame: CGRect(x: 16, y: 480, width: 344, height: 285))
+        bgForModes.layer.cornerRadius = 30
+        bgForModes.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 0.7)
+        view.insertSubview(bgForModes, at: 1)
     }
     
     func initGradientBackground() {
         
-        pastelView.startPastelPoint = .bottomLeft
-        pastelView.endPastelPoint = .topRight
+        pastelView.startPastelPoint = .topRight
+        pastelView.endPastelPoint = .bottomLeft
         pastelView.animationDuration = 2.5
-
-        pastelView.setColors([UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1),
-                              UIColor(red: 244/255, green: 88/255, blue: 53/255, alpha: 1),
-                              UIColor(red: 196/255, green: 70/255, blue: 107/255, alpha: 1)])
+        
+        pastelView.setColors([UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1), .black])
         
         pastelView.startAnimation()
         view.insertSubview(pastelView, at: 0)
@@ -107,6 +117,9 @@ class NewViewController: UIViewController {
         
         musicButton.layer.borderWidth = 1
         musicButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        
+        settingsButton.layer.borderWidth = 1
+        settingsButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
         let tapGestureNatureMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(natureModeButtonPressed))
         natureMode.addGestureRecognizer(tapGestureNatureMode)
@@ -258,6 +271,7 @@ class NewViewController: UIViewController {
 
 extension NewViewController: PopupDelegate {
     func pickedColor(newColor: UIColor) {
-        pastelView.setColors([newColor.darker(by: 40)!, newColor, newColor.lighter(by: 40)!])
+        //pastelView.setColors([newColor.darker(by: 40)!, newColor, newColor.lighter(by: 40)!])
+        pastelView.setColors([newColor, .black])
     }
 }

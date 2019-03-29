@@ -25,7 +25,7 @@ class ColorPickerViewController: UIViewController, FaveButtonDelegate {
         super.viewDidLoad()
         
         self.modalPresentationCapturesStatusBarAppearance = true
-        self.view.backgroundColor = #colorLiteral(red: 0.1764705882, green: 0.2039215686, blue: 0.2117647059, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.1082720235, green: 0.1083889827, blue: 0.1082901582, alpha: 1)
         
         let colorPickerLabel = UILabel(frame: CGRect(x: 38, y: 54, width: 299, height: 52))
         colorPickerLabel.textAlignment = .left
