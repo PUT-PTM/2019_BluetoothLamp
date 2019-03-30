@@ -16,6 +16,10 @@
 		E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE622306426007E0CBB /* Assets.xcassets */; };
 		E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */; };
 		E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CF322306502007E0CBB /* LCWaveView.swift */; };
+		E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */; };
+		E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */; };
+		E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */; };
+		E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E72055224EE76D0092C04D /* AKPickerView.swift */; };
 		E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF64E224C137400F84707 /* MusicViewController.swift */; };
 		E1FDF651224C15EA00F84707 /* flac.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF650224C15EA00F84707 /* flac.m4a */; };
 		E1FDF653224C169500F84707 /* klasyka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF652224C169500F84707 /* klasyka.mp3 */; };
@@ -36,6 +40,10 @@
 		E14B6CE922306426007E0CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14B6CEB22306426007E0CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14B6CF322306502007E0CBB /* LCWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCWaveView.swift; sourceTree = "<group>"; };
+		E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkSegue.swift; sourceTree = "<group>"; };
+		E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		E1E72055224EE76D0092C04D /* AKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		E1FDF64E224C137400F84707 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E1FDF650224C15EA00F84707 /* flac.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = flac.m4a; sourceTree = "<group>"; };
 		E1FDF652224C169500F84707 /* klasyka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = klasyka.mp3; sourceTree = "<group>"; };
@@ -101,8 +109,10 @@
 				E1FDF658224C211F00F84707 /* Storyboards */,
 				E1FDF65B224C265000F84707 /* Extensions */,
 				E14B6CE622306426007E0CBB /* Assets.xcassets */,
+				E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */,
 				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E14B6CF322306502007E0CBB /* LCWaveView.swift */,
+				E1E72055224EE76D0092C04D /* AKPickerView.swift */,
 				E14B6CEB22306426007E0CBB /* Info.plist */,
 			);
 			path = "Smarter Bulb";
@@ -114,6 +124,8 @@
 				B121578B22455C6C00DEAEEC /* NewViewController.swift */,
 				B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */,
 				E1FDF64E224C137400F84707 /* MusicViewController.swift */,
+				E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */,
+				E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */,
 				E14B6CE122306424007E0CBB /* ViewController.swift */,
 			);
 			path = "View Controllers";
@@ -300,9 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */,
 				E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */,
+				E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */,
 				E14B6CE222306424007E0CBB /* ViewController.swift in Sources */,
 				B1D5933E2242C18400D29E60 /* ColorPickerViewController.swift in Sources */,
+				E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */,
+				E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */,
 				E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */,
 				B121578C22455C6C00DEAEEC /* NewViewController.swift in Sources */,
 				E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */,

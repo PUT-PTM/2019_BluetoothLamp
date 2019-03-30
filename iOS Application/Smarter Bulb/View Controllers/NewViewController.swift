@@ -55,6 +55,14 @@ class NewViewController: UIViewController {
         initUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        vc.transitioningDelegate = transitionDelegate
+        vc.modalPresentationStyle = .custom
+        vc.modalPresentationCapturesStatusBarAppearance = true
+    }
+    
     func initUI() {
         initButtons()
         initGradientBackground()
@@ -97,17 +105,10 @@ class NewViewController: UIViewController {
         changeBrightnessButton.layer.borderWidth = 1
         changeBrightnessButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        
-        let tapGestureAlarm = UITapGestureRecognizer(target: self, action: #selector(normalTapAlarmOnOff(_:)))
-        tapGestureAlarm.numberOfTapsRequired = 1
-        alarmButton.addGestureRecognizer(tapGestureAlarm)
-        
+    
         let tapGestureMusic = UITapGestureRecognizer(target: self, action: #selector(normalTapMusicOnOff(_:)))
         tapGestureMusic.numberOfTapsRequired = 1
         musicButton.addGestureRecognizer(tapGestureMusic)
-        
-        let longGestureAlarm = UILongPressGestureRecognizer(target: self, action: #selector(longTapAlarmSettings(_:)))
-        alarmButton.addGestureRecognizer(longGestureAlarm)
         
         let longGestureMusic = UILongPressGestureRecognizer(target: self, action: #selector(longTapMusicSettings(_:)))
         musicButton.addGestureRecognizer(longGestureMusic)
@@ -166,7 +167,23 @@ class NewViewController: UIViewController {
         writeValue(value: "ocean")
     }
         
+    @IBAction func alarmButtonPressed(_ sender: Any) {
+        
+        let welcomMusicScreen = WhatsNewViewController(items: [
+            WhatsNewItem.image(title: "Nice Icons", subtitle: "Completely customize colors, texts and icons.", image: #imageLiteral(resourceName: "nature")),
+            WhatsNewItem.image(title: "Such Easy", subtitle: "Setting this up only takes 2 lines of code, impressive you say?", image: #imageLiteral(resourceName: "fire")),
+            WhatsNewItem.image(title: "Very Sleep", subtitle: "It helps you get more sleep by writing less code.", image: #imageLiteral(resourceName: "unicorn")),
+            WhatsNewItem.text(title: "Text Only", subtitle: "No icons? Just go with plain text."),
+            ])
+        welcomMusicScreen.titleText = "Welcome in Alarm Mode!"
+        welcomMusicScreen.presentationOption = .always
+        welcomMusicScreen.presentIfNeeded(on: self)
+        
+        //TODO when sb click continue show prop viewController
+        
+    }
     
+    //delete
     @objc func normalTapAlarmOnOff(_ sender: UIGestureRecognizer){
         print("Normal tap")
         print("Alarm button pressed.")
@@ -177,28 +194,6 @@ class NewViewController: UIViewController {
         } else {
             isAlarmSet = true
             alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 0.7)
-        }
-    }
-    
-    @objc func longTapAlarmSettings(_ sender: UIGestureRecognizer){
-        print("Long tap")
-        if sender.state == .ended {
-            print("UIGestureRecognizerStateEnded")
-            //Do Whatever You want on End of Gesture
-        }
-        else if sender.state == .began {
-            print("UIGestureRecognizerStateBegan.")
-            //Do Whatever You want on Began of Gesture
-            
-            let welcomMusicScreen = WhatsNewViewController(items: [
-                WhatsNewItem.image(title: "Nice Icons", subtitle: "Completely customize colors, texts and icons.", image: #imageLiteral(resourceName: "nature")),
-                WhatsNewItem.image(title: "Such Easy", subtitle: "Setting this up only takes 2 lines of code, impressive you say?", image: #imageLiteral(resourceName: "fire")),
-                WhatsNewItem.image(title: "Very Sleep", subtitle: "It helps you get more sleep by writing less code.", image: #imageLiteral(resourceName: "unicorn")),
-                WhatsNewItem.text(title: "Text Only", subtitle: "No icons? Just go with plain text."),
-                ])
-            welcomMusicScreen.titleText = "Welcome in Alarm Mode!"
-            welcomMusicScreen.presentationOption = .debug
-            welcomMusicScreen.presentIfNeeded(on: self)
         }
     }
     
