@@ -158,7 +158,7 @@ private class AKCollectionViewLayout: UICollectionViewFlowLayout {
 				transform = CATransform3DRotate(transform, currentAngle, 0, 1, 0);
 				transform = CATransform3DTranslate(transform, 0, 0, self.width);
 				attributes.transform3D = transform;
-				attributes.alpha = fabs(currentAngle) < self.maxAngle ? 1.0 : 0.0;
+				attributes.alpha = abs(currentAngle) < self.maxAngle ? 1.0 : 0.0;
 				return attributes;
 			}
 		}

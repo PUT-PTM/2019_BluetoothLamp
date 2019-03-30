@@ -144,27 +144,33 @@ class NewViewController: UIViewController {
     
     @objc func natureModeButtonPressed(sender: UIGestureRecognizer) {
         print("Nature mode tapped")
-        writeValue(value: "nature")
+        writeValue(value: "2_1")
+        pastelView.setColors([.black, .green])
     }
     @objc func bookModeButtonPressed(sender: UIGestureRecognizer) {
         print("Book mode tapped")
-        writeValue(value: "book")
+        writeValue(value: "2_2")
+        pastelView.setColors([.black, .yellow])
     }
     @objc func relaxModeButtonPressed(sender: UIGestureRecognizer) {
         print("Relax mode tapped")
-        writeValue(value: "relax")
+        writeValue(value: "2_3")
+        pastelView.setPastelGradient(.trueSunset)
     }
     @objc func rainbowModeButtonPressed(sender: UIGestureRecognizer) {
         print("Rainbow mode tapped")
-        writeValue(value: "rainbow")
+        writeValue(value: "2_4")
+        pastelView.setColors([.black, .orange])
     }
     @objc func fireModeButtonPressed(sender: UIGestureRecognizer) {
         print("Fire mode tapped")
-        writeValue(value: "fire")
+        writeValue(value: "2_5")
+        pastelView.setPastelGradient(.youngPassion)
     }
     @objc func oceanModeButtonPressed(sender: UIGestureRecognizer) {
         print("Ocean mode tapped")
-        writeValue(value: "ocean")
+        writeValue(value: "2_6")
+        pastelView.setPastelGradient(.morpheusDen)
     }
         
     @IBAction func alarmButtonPressed(_ sender: Any) {
@@ -232,12 +238,12 @@ class NewViewController: UIViewController {
     @IBAction func turnOnOff(_ sender: Any) {
         if isBulbTurnedOn {
             print("Lamp is turned off")
-            writeValue(value: "off")
+            writeValue(value: "0")
             turnOnOffButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             isBulbTurnedOn = false
         } else {
             print("Lamp is turned on")
-            writeValue(value: "on")
+            writeValue(value: "1")
             turnOnOffButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             isBulbTurnedOn = true
         }

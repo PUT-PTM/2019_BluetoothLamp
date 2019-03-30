@@ -21,6 +21,15 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
         super.viewDidLoad()
 
         initTimePickers()
+        
+    }
+    
+    @IBAction func turnOnAlarm(_ sender: Any) {
+        
+    }
+    
+    @IBAction func turnOffAlarm(_ sender: Any) {
+        
     }
     
     func initTimePickers() {
