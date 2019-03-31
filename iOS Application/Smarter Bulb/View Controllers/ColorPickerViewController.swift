@@ -15,56 +15,21 @@ import FaveButton
 class ColorPickerViewController: UIViewController, FaveButtonDelegate {
 
     weak var delegate: PopupDelegate?
-    var colorPicker: CULColorPickerView!
-    var circleColorPalette: ColorPickerView!
-    var hexValue: UILabel!
-    var faveButton: FaveButton!
+    
+    @IBOutlet weak var colorPicker: CULColorPickerView!
+    @IBOutlet weak var circleColorPalette: ColorPickerView!
+    @IBOutlet weak var hexValue: UILabel!
+    @IBOutlet weak var faveButton: FaveButton!
+    
     var colorsArray = [UIColor(hexString: "#00deff"), UIColor(hexString: "#ff272b"), UIColor(hexString: "#0e43ff"), UIColor(hexString: "#14ff50"), UIColor(hexString: "#ffc0a7"), UIColor(hexString: "#ff7d1d"), UIColor(hexString: "#ff1439"), UIColor(hexString: "#ffffff")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.modalPresentationCapturesStatusBarAppearance = true
-        self.view.backgroundColor = #colorLiteral(red: 0.1082720235, green: 0.1083889827, blue: 0.1082901582, alpha: 1)
-        
-        let colorPickerLabel = UILabel(frame: CGRect(x: 38, y: 54, width: 299, height: 52))
-        colorPickerLabel.textAlignment = .left
-        colorPickerLabel.text = "Color Picker"
-        colorPickerLabel.textColor = .white
-        colorPickerLabel.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        self.view.addSubview(colorPickerLabel)
-        
-        let selectColorLabel = UILabel(frame: CGRect(x: 38, y: 99, width: 299, height: 35))
-        selectColorLabel.textAlignment = .left
-        selectColorLabel.text = "Select a color"
-        selectColorLabel.textColor = .white
-        selectColorLabel.font = UIFont(name: "AvenirNext-Regular", size: 20)
-        self.view.addSubview(selectColorLabel)
-        
-        colorPicker = CULColorPickerView(frame: CGRect(x:38, y:144, width: 300, height: 300))
-        self.view.addSubview(colorPicker)
+
         colorPicker.delegate = self
-        
-        hexValue = UILabel(frame: CGRect(x: 38, y: 457, width: 92, height: 28))
-        hexValue.textAlignment = .center
-        hexValue.textColor = .white
-        hexValue.text = "#FFFFFF"
-        hexValue.font = UIFont(name: "AvenirNext-Medium", size: 18)
-        self.view.addSubview(hexValue)
-        
-        faveButton = FaveButton(
-            frame: CGRect(x:300, y:447, width: 44, height: 44),
-            faveIconNormal: UIImage(named: "heart")
-        )
         faveButton.delegate = self
-        view.addSubview(faveButton)
-        
-        
-        circleColorPalette = ColorPickerView(frame: CGRect(x:38, y:520, width: 300, height: 195))
+
         circleColorPalette.colors = colorsArray as! [UIColor]
-        circleColorPalette.tag = 1
-        view.addSubview(circleColorPalette)
-        
         circleColorPalette.layoutDelegate = self
         circleColorPalette.delegate = self
         

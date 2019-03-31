@@ -259,7 +259,8 @@ class NewViewController: UIViewController {
     }
     
     @IBAction func openColorPalette(_ sender: Any) {
-        let controller = ColorPickerViewController()
+        let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as! ColorPickerViewController
         let transitionDelegate = SPStorkTransitioningDelegate()
         controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom
