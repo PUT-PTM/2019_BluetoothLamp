@@ -51,7 +51,7 @@ class ColorPickerViewController: UIViewController, FaveButtonDelegate {
         }
         
         var circleColorPalette: ColorPickerView!
-        circleColorPalette = ColorPickerView(frame: CGRect(x:38, y:520, width: 300, height: 195))
+        circleColorPalette = ColorPickerView(frame: CGRect(x:37, y:396, width: 300, height: 71))
         circleColorPalette.tag = 1
         
         circleColorPalette.colors = colorsArray as! [UIColor]

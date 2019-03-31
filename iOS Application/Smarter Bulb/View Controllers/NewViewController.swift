@@ -266,6 +266,7 @@ class NewViewController: UIViewController {
         controller.modalPresentationStyle = .custom
         controller.modalPresentationCapturesStatusBarAppearance = true
         controller.delegate = self
+        transitionDelegate.customHeight = 560
         self.present(controller, animated: true, completion: nil)
     }
     
