@@ -34,6 +34,8 @@ class NewViewController: UIViewController {
     @IBOutlet weak var oceanMode: CardHighlight!
     
     lazy var pastelView = PastelView(frame: view.bounds)
+    var musicController: MusicViewController!
+    var colorPickerController: ColorPickerViewController!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -104,11 +106,6 @@ class NewViewController: UIViewController {
         changeBrightnessButton.layer.borderWidth = 1
         changeBrightnessButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-    
-        let tapGestureMusic = UITapGestureRecognizer(target: self, action: #selector(normalTapMusicOnOff(_:)))
-        tapGestureMusic.numberOfTapsRequired = 1
-        musicButton.addGestureRecognizer(tapGestureMusic)
-        
         alarmButton.layer.borderWidth = 1
         alarmButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
@@ -169,7 +166,7 @@ class NewViewController: UIViewController {
         pastelView.setPastelGradient(.morpheusDen)
     }
         
-    @IBAction func alarmButtonPressed(_ sender: Any) {
+    @IBAction func showAlarmViewController(_ sender: Any) {
         
         let welcomMusicScreen = WhatsNewViewController(items: [
             WhatsNewItem.image(title: "Nice Icons", subtitle: "Completely customize colors, texts and icons.", image: #imageLiteral(resourceName: "nature")),
@@ -185,6 +182,21 @@ class NewViewController: UIViewController {
         
     }
     
+    @IBAction func showMusicViewController(_ sender: Any) {
+        print("Music Mode button pressed.")
+        if musicController == nil {
+            let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
+            musicController = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController
+        }
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        musicController.transitioningDelegate = transitionDelegate
+        musicController.modalPresentationStyle = .custom
+        musicController.modalPresentationCapturesStatusBarAppearance = true
+        
+        self.present(musicController, animated: true, completion: nil)
+    }
+    
+    
     //delete
     @objc func normalTapAlarmOnOff(_ sender: UIGestureRecognizer){
         print("Normal tap")
@@ -197,19 +209,6 @@ class NewViewController: UIViewController {
             isAlarmSet = true
             alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 0.7)
         }
-    }
-    
-    @objc func normalTapMusicOnOff(_ sender: UIGestureRecognizer){
-        print("Normal tap")
-        print("Music Mode button pressed.")
-        
-        let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as! MusicViewController
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        controller.transitioningDelegate = transitionDelegate
-        controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-        self.present(controller, animated: true, completion: nil)
     }
     
     
@@ -237,22 +236,25 @@ class NewViewController: UIViewController {
     }
     
     @IBAction func openColorPalette(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as! ColorPickerViewController
+        if colorPickerController == nil {
+            let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
+            colorPickerController = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as? ColorPickerViewController
+        }
+        
         let transitionDelegate = SPStorkTransitioningDelegate()
-        controller.transitioningDelegate = transitionDelegate
-        controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-        controller.delegate = self
+        colorPickerController.transitioningDelegate = transitionDelegate
+        colorPickerController.modalPresentationStyle = .custom
+        colorPickerController.modalPresentationCapturesStatusBarAppearance = true
+        colorPickerController.delegate = self
         transitionDelegate.customHeight = 560
-        self.present(controller, animated: true, completion: nil)
+        
+        self.present(colorPickerController, animated: true, completion: nil)
     }
     
 }
 
 extension NewViewController: PopupDelegate {
     func pickedColor(newColor: UIColor) {
-        //pastelView.setColors([newColor.darker(by: 40)!, newColor, newColor.lighter(by: 40)!])
         pastelView.setColors([newColor, .black])
     }
 }

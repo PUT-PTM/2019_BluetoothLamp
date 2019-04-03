@@ -108,3 +108,28 @@ extension UIColor {
         }
     }
 }
+
+extension UIView {
+    
+    func dropShadow() {
+        
+        var shadowLayer: CAShapeLayer!
+        let cornerRadius: CGFloat = 16.0
+        let fillColor: UIColor = .white
+        
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            shadowLayer.fillColor = fillColor.cgColor
+            
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: -2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 0.8
+            shadowLayer.shadowRadius = 2
+            
+            layer.insertSublayer(shadowLayer, at: 0)
+        }
+    }
+}

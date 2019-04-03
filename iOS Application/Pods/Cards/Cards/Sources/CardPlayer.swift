@@ -204,7 +204,12 @@ import Player
         let move = ( aspect1016 - aspect921 ) * 2
         
         subtitleLbl.transform = isPresenting ? CGAffineTransform(translationX: 0, y: move) : CGAffineTransform.identity
+        let currentHeight = backgroundIV.frame.size.height
         backgroundIV.frame.size.height = originalFrame.height + ( isPresenting ? move/2 : 0 )
+        
+        if backgroundIV.frame.size.height <= 0 {
+            backgroundIV.frame.size.height = currentHeight
+        }
         
         player.view.frame.origin = CGPoint.zero
         player.view.frame.size = CGSize(width: backgroundIV.bounds.width, height: isPresenting ? aspect1016 : aspect921 )

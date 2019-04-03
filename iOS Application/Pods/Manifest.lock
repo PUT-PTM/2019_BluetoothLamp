@@ -1,12 +1,12 @@
 PODS:
-  - AudioKit (4.6.4.b1):
-    - AudioKit/Core (= 4.6.4.b1)
-    - AudioKit/UI (= 4.6.4.b1)
-  - AudioKit/Core (4.6.4.b1)
-  - AudioKit/UI (4.6.4.b1):
+  - AudioKit (4.7):
+    - AudioKit/Core (= 4.7)
+    - AudioKit/UI (= 4.7)
+  - AudioKit/Core (4.7)
+  - AudioKit/UI (4.7):
     - AudioKit/Core
-  - Cards (1.3.5):
-    - Player (= 0.12.0)
+  - Cards (1.4.0):
+    - Player (= 0.13.0)
   - CULColorPicker (0.1.0)
   - FaveButton (3.2.0)
   - HapticButton (0.1)
@@ -15,13 +15,13 @@ PODS:
   - M13Checkbox (3.2.2)
   - NotchyAlert (1.0)
   - Pastel (0.5.1)
-  - Player (0.12.0)
+  - Player (0.13.0)
   - Slope (1.2)
-  - SPStorkController (1.5.4)
+  - SPStorkController (1.6)
   - WhatsNew (0.4.4)
 
 DEPENDENCIES:
-  - AudioKit (= 4.6.4.b1)
+  - AudioKit (~> 4.0)
   - Cards (from `https://github.com/PaoloCuscela/Cards.git`)
   - CULColorPicker
   - FaveButton
@@ -34,9 +34,8 @@ DEPENDENCIES:
   - WhatsNew
 
 SPEC REPOS:
-  https://github.com/AudioKit/Specs.git:
-    - AudioKit
   https://github.com/cocoapods/specs.git:
+    - AudioKit
     - CULColorPicker
     - FaveButton
     - HapticButton
@@ -55,12 +54,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Cards:
-    :commit: bf822df83c374bf0f68a8d6808e58cbdfee23e67
+    :commit: 35b10622ce817cb4c8f4d2989a0b67fd0e2ef54a
     :git: https://github.com/PaoloCuscela/Cards.git
 
 SPEC CHECKSUMS:
-  AudioKit: 9243f262760e2de20784520b23ede12b97e7518d
-  Cards: 8526a56439b0856cbd1fec4c5716c06502aaedea
+  AudioKit: 8b3c883fb6023d1b30764e40372991c9c66aa022
+  Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   HapticButton: 7f244fb23421c2a7d2245457e745a809aab65c77
@@ -68,11 +67,11 @@ SPEC CHECKSUMS:
   M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
   NotchyAlert: 2e5f0acfeff794c673f14538c2a0b01095145d72
   Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
-  Player: b5bf7d5533287e83289bde4809627a02df88142c
+  Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
   Slope: b1c2c869ca7428b2b76799da4bc29d67907eaa93
-  SPStorkController: 6c34a0375ef1254299e460784886ff4e929b82ed
+  SPStorkController: 54293a8a1ca3c691a09eb6274b6e487b602e975a
   WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: 8e4ed6647a14ef98b4ad2d822c6cd1bcf97effab
+PODFILE CHECKSUM: 6a4ec168d0ed7999838e229aa58b19cd62ae4343
 
 COCOAPODS: 1.6.1

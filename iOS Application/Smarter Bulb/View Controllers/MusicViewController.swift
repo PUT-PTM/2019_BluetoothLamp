@@ -14,14 +14,20 @@ import MediaPlayer
 class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     
     @IBOutlet weak var songArt: UIImageView!
+    @IBOutlet weak var songTitle: UILabel!
+    @IBOutlet weak var songArtist: UILabel!
+    @IBOutlet weak var playPauseButton: UIButton!
     
     var player: AKPlayer!
     var tracker: AKFrequencyTracker!
+    var songProperties: MPMediaItem!
     
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         for thisItem in mediaItemCollection.items {
             let itemUrl = thisItem.value(forProperty: MPMediaItemPropertyAssetURL) as? NSURL
             let file = try! AKAudioFile(forReading: itemUrl! as URL)
+            
+            songProperties = thisItem
             
             player = AKPlayer(audioFile: file)
             player.buffering = .always
@@ -34,12 +40,13 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
             UIApplication.shared.beginReceivingRemoteControlEvents()
             becomeFirstResponder()
             
-            updateNowPlayingCenter(song: thisItem)
+            updateNowPlayingCenter()
+            playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             
             AKPlaygroundLoop(every: 0.1) {
                 if self.player.isPlaying {
                     print(self.tracker.amplitude)
-                    self.changeColor(amp: self.tracker.amplitude)
+                    //self.changeColor(amp: self.tracker.amplitude)
                 }
             }
         }
@@ -50,20 +57,23 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func updateNowPlayingCenter(song: MPMediaItem) {
+    func updateNowPlayingCenter() {
 
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: song.title!,
-            MPMediaItemPropertyArtist: song.artist!,
-            MPMediaItemPropertyArtwork: song.artwork!,
-            MPMediaItemPropertyAlbumTitle: song.albumTitle!,
-            MPMediaItemPropertyPlaybackDuration: song.playbackDuration]
+            MPMediaItemPropertyTitle: songProperties.title!,
+            MPMediaItemPropertyArtist: songProperties.artist!,
+            MPMediaItemPropertyArtwork: songProperties.artwork!,
+            MPMediaItemPropertyAlbumTitle: songProperties.albumTitle!,
+            MPMediaItemPropertyPlaybackDuration: songProperties.playbackDuration]
         
-        songArt.image = song.artwork?.image(at: CGSize(width: 300, height: 300))
+        songArt.image = songProperties.artwork?.image(at: CGSize(width: 300, height: 300))
+        songTitle.text = songProperties.title
+        songArtist.text = songProperties.artist
     }
     
     override func viewDidLoad() {
         preparePlayer()
+        player = AKPlayer()
     }
     
     func preparePlayer() {
@@ -72,19 +82,24 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
         try! AKSettings.setSession(category: AKSettings.SessionCategory.playback)
         
         MPRemoteCommandCenter.shared().togglePlayPauseCommand.addTarget(self, action: #selector(playOrPause))
+        
     }
     
-    @IBAction func playOrPause(_ sender: Any) {
-        if player.isPlaying {
-        
-            player.pause()
-            try! AudioKit.stop()
-        
-        } else {
-            
+    @IBAction func playOrPause(_ sender: UIButton) {
+
+        if player.isPaused {
             try! AudioKit.start()
             player.resume()
+            playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             
+        } else if player.isPlaying {
+            player.pause()
+            try! AudioKit.stop()
+            playPauseButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            
+        } else {
+            
+            showSongLibrary(self)
         }
     }
     

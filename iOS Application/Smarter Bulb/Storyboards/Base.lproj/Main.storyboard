@@ -359,7 +359,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="alarmButtonPressed:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="5vB-eD-I32"/>
+                                    <action selector="showAlarmViewController:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="5vB-eD-I32"/>
                                     <segue destination="gss-LS-xUG" kind="show" identifier="alarmSegue" customClass="SPStorkSegue" customModule="Smarter_Bulb" customModuleProvider="target" id="ZVz-jc-D6r"/>
                                 </connections>
                             </button>
@@ -441,6 +441,9 @@
                                         <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showMusicViewController:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="Htv-oY-w2i"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEW MODES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFH-ke-ha3">
                                 <rect key="frame" x="31" y="495" width="145" height="33"/>
