@@ -48,7 +48,6 @@ class NewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.layer.contents = #imageLiteral(resourceName: "powder").cgImage
         
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         
@@ -207,13 +206,13 @@ class NewViewController: UIViewController {
         print("Normal tap")
         print("Music Mode button pressed.")
         
-        if isMusicModeSet {
-            isMusicModeSet = false
-            musicButton.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.08235294118, blue: 0.09019607843, alpha: 0.7)
-        } else {
-            isMusicModeSet = true
-            musicButton.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.2352941176, alpha: 0.7)
-        }
+        let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as! MusicViewController
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        controller.transitioningDelegate = transitionDelegate
+        controller.modalPresentationStyle = .custom
+        controller.modalPresentationCapturesStatusBarAppearance = true
+        self.present(controller, animated: true, completion: nil)
     }
     
     @objc func longTapMusicSettings(_ sender: UIGestureRecognizer){
