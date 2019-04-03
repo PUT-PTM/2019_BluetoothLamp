@@ -13,6 +13,8 @@ import MediaPlayer
 
 class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     
+    @IBOutlet weak var songArt: UIImageView!
+    
     var player: AKPlayer!
     var tracker: AKFrequencyTracker!
     
@@ -26,13 +28,19 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
             tracker = AKFrequencyTracker(player)
             AudioKit.output = tracker
             
-            
             try! AudioKit.start()
             player.play()
             
+            UIApplication.shared.beginReceivingRemoteControlEvents()
+            becomeFirstResponder()
+            
+            updateNowPlayingCenter(song: thisItem)
+            
             AKPlaygroundLoop(every: 0.1) {
-                print(self.tracker.amplitude)
-                self.changeColor(freq: self.tracker.frequency, amp: self.tracker.amplitude)
+                if self.player.isPlaying {
+                    print(self.tracker.amplitude)
+                    self.changeColor(amp: self.tracker.amplitude)
+                }
             }
         }
         dismiss(animated: true, completion: nil)
@@ -42,24 +50,51 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        //super.viewDidLoad()
-        AKSettings.playbackWhileMuted = true
+    func updateNowPlayingCenter(song: MPMediaItem) {
+
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: song.title!,
+            MPMediaItemPropertyArtist: song.artist!,
+            MPMediaItemPropertyArtwork: song.artwork!,
+            MPMediaItemPropertyAlbumTitle: song.albumTitle!,
+            MPMediaItemPropertyPlaybackDuration: song.playbackDuration]
         
+        songArt.image = song.artwork?.image(at: CGSize(width: 300, height: 300))
     }
     
-    @IBAction func play(_ sender: Any) {
+    override func viewDidLoad() {
+        preparePlayer()
+    }
+    
+    func preparePlayer() {
+        AKSettings.playbackWhileMuted = true
+        AKSettings.disableAVAudioSessionCategoryManagement = true
+        try! AKSettings.setSession(category: AKSettings.SessionCategory.playback)
+        
+        MPRemoteCommandCenter.shared().togglePlayPauseCommand.addTarget(self, action: #selector(playOrPause))
+    }
+    
+    @IBAction func playOrPause(_ sender: Any) {
+        if player.isPlaying {
+        
+            player.pause()
+            try! AudioKit.stop()
+        
+        } else {
+            
+            try! AudioKit.start()
+            player.resume()
+            
+        }
+    }
+    
+    @IBAction func showSongLibrary(_ sender: Any) {
         let mediaPicker = MPMediaPickerController(mediaTypes: .music)
         mediaPicker.delegate = self
         present(mediaPicker, animated: true, completion: {})
     }
     
-    @IBAction func pause(_ sender: Any) {
-        player.stop()
-        try! AudioKit.stop()
-    }
-    
-    func changeColor(freq: Double, amp: Double) {
+    func changeColor(amp: Double) {
         setColor(r: 255, g: 0, b: 0, brightness: amp)
     }
     

@@ -109,9 +109,6 @@ class NewViewController: UIViewController {
         tapGestureMusic.numberOfTapsRequired = 1
         musicButton.addGestureRecognizer(tapGestureMusic)
         
-        let longGestureMusic = UILongPressGestureRecognizer(target: self, action: #selector(longTapMusicSettings(_:)))
-        musicButton.addGestureRecognizer(longGestureMusic)
-        
         alarmButton.layer.borderWidth = 1
         alarmButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
@@ -215,24 +212,6 @@ class NewViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    @objc func longTapMusicSettings(_ sender: UIGestureRecognizer){
-        print("Long tap")
-        if sender.state == .ended {
-            print("UIGestureRecognizerStateEnded")
-            //Do Whatever You want on End of Gesture
-        }
-        else if sender.state == .began {
-            print("UIGestureRecognizerStateBegan.")
-            //Do Whatever You want on Began of Gesture
-            let controller = MusicViewController()
-            let transitionDelegate = SPStorkTransitioningDelegate()
-            controller.transitioningDelegate = transitionDelegate
-            controller.modalPresentationStyle = .custom
-            controller.modalPresentationCapturesStatusBarAppearance = true
-            //controller.delegate = self
-            self.present(controller, animated: true, completion: nil)
-        }
-    }
     
     @IBAction func turnOnOff(_ sender: Any) {
         if isBulbTurnedOn {

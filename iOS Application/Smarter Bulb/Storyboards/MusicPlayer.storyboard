@@ -24,26 +24,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="PLAY"/>
                                 <connections>
-                                    <action selector="play:" destination="Aoo-6z-Y9x" eventType="touchUpInside" id="JWH-pf-Utd"/>
+                                    <action selector="playOrPause:" destination="Aoo-6z-Y9x" eventType="touchUpInside" id="JWH-pf-Utd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1f-iS-6iQ">
-                                <rect key="frame" x="153" y="628" width="68" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jw-eq-UBy">
+                                <rect key="frame" x="67" y="623" width="52" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="PAUSE"/>
+                                <state key="normal" title="Other"/>
                                 <connections>
-                                    <action selector="pause:" destination="Aoo-6z-Y9x" eventType="touchUpInside" id="6oP-WT-hyV"/>
+                                    <action selector="showSongLibrary:" destination="Aoo-6z-Y9x" eventType="touchUpInside" id="odY-pF-m5a"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AaH-G2-piG" customClass="UIImageView">
+                                <rect key="frame" x="37" y="167" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MNc-ma-gyh"/>
                     </view>
+                    <connections>
+                        <outlet property="songArt" destination="AaH-G2-piG" id="GjK-6Z-tiR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhK-Mj-CFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="26"/>
+            <point key="canvasLocation" x="138.40000000000001" y="25.862068965517242"/>
         </scene>
     </scenes>
 </document>
