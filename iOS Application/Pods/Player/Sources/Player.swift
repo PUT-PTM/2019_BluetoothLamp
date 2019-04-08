@@ -141,7 +141,9 @@ open class Player: UIViewController {
     /// - Parameter url: URL of the asset.
     open var url: URL? {
         didSet {
-            setup(url: url)
+            if let url = self.url {
+                setup(url: url)
+            }
         }
     }
 
@@ -223,7 +225,9 @@ open class Player: UIViewController {
     open var playbackState: PlaybackState = .stopped {
         didSet {
             if playbackState != oldValue || !playbackEdgeTriggered {
-                self.playerDelegate?.playerPlaybackStateDidChange(self)
+                self.executeClosureOnMainQueueIfNecessary {
+                    self.playerDelegate?.playerPlaybackStateDidChange(self)
+                }
             }
         }
     }
@@ -232,7 +236,9 @@ open class Player: UIViewController {
     open var bufferingState: BufferingState = .unknown {
         didSet {
             if bufferingState != oldValue || !playbackEdgeTriggered {
-                self.playerDelegate?.playerBufferingStateDidChange(self)
+                self.executeClosureOnMainQueueIfNecessary {
+                    self.playerDelegate?.playerBufferingStateDidChange(self)
+                }
             }
         }
     }
@@ -377,9 +383,9 @@ open class Player: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let url = url {
+        if let url = self.url {
             setup(url: url)
-        } else if let asset = asset {
+        } else if let asset = self.asset {
             setupAsset(asset)
         }
 
@@ -499,6 +505,8 @@ extension Player {
                 case .failed:
                     fallthrough
                 case .cancelled:
+                    fallthrough
+                @unknown default:
                     DispatchQueue.main.async {
                         completionHandler?(nil, nil)
                     }
@@ -518,7 +526,7 @@ extension Player {
 
 extension Player {
 
-    fileprivate func setup(url: URL?) {
+    fileprivate func setup(url: URL) {
         guard isViewLoaded else { return }
 
         // ensure everything is reset beforehand
@@ -536,10 +544,8 @@ extension Player {
 
         self.setupPlayerItem(nil)
 
-        if let url = url {
-            let asset = AVURLAsset(url: url, options: .none)
-            self.setupAsset(asset)
-        }
+        let asset = AVURLAsset(url: url, options: .none)
+        self.setupAsset(asset)
     }
 
     fileprivate func setupAsset(_ asset: AVAsset, loadableKeys: [String] = ["tracks", "playable", "duration"]) {
@@ -723,11 +729,15 @@ extension Player {
             }
 
             switch object.status {
-            case .readyToPlay:
-                self?._playerView.player = self?._avplayer
             case .failed:
                 self?.playbackState = PlaybackState.failed
-            default:
+                break
+            case .unknown:
+                fallthrough
+            case .readyToPlay:
+                fallthrough
+            @unknown default:
+                self?._playerView.player = self?._avplayer
                 break
             }
         })
@@ -806,7 +816,9 @@ extension Player {
                     self?.playbackState = .paused
                 case .playing:
                     self?.playbackState = .playing
-                default:
+                case .waitingToPlayAtSpecifiedRate:
+                    fallthrough
+                @unknown default:
                     break
                 }
             })
@@ -866,11 +878,7 @@ public class PlayerView: UIView {
         }
         set {
             self.playerLayer.player = newValue
-            if let _ = self.playerLayer.player {
-                self.playerLayer.isHidden = false
-            } else {
-                self.playerLayer.isHidden = true
-            }
+            self.playerLayer.isHidden = (self.playerLayer.player == nil)
         }
     }
 

@@ -21,21 +21,30 @@
 
 import UIKit
 
-extension UIViewController {
+open class SPStorkCloseView: UIView {
     
-    public var isPresentedAsStork: Bool {
-        return transitioningDelegate is SPStorkTransitioningDelegate
-            && modalPresentationStyle == .custom
-            && presentingViewController != nil
+    var color = UIColor.blue {
+        didSet {
+            self.setNeedsDisplay()
+        }
     }
     
-    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil, showIndicator: Bool = false, complection: (() -> Void)? = nil) {
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        transitionDelegate.customHeight = height
-        transitionDelegate.showIndicator = showIndicator
-        controller.transitioningDelegate = transitionDelegate
-        controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-        self.present(controller, animated: true, completion: complection)
+    init() {
+        super.init(frame: CGRect.zero)
+        self.commonInit()
+    }
+    
+    private func commonInit() {
+        self.backgroundColor = UIColor.clear
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override open func draw(_ rect: CGRect) {
+        super.draw(rect)
+        SPStorkCodeDraw.drawClose(frame: rect, resizing: .aspectFit, color: self.color)
     }
 }
+

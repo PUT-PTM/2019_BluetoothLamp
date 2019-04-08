@@ -16,6 +16,16 @@
 		E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE622306426007E0CBB /* Assets.xcassets */; };
 		E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */; };
 		E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CF322306502007E0CBB /* LCWaveView.swift */; };
+		E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */; };
+		E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */; };
+		E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */; };
+		E1D1F6442253FBAB00EB9E85 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */; };
+		E1D1F6492254DFD700EB9E85 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */; };
+		E1D2EBFC224FDB62006B1F4C /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */; };
+		E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E72055224EE76D0092C04D /* AKPickerView.swift */; };
+		E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF64E224C137400F84707 /* MusicViewController.swift */; };
+		E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF659224C257500F84707 /* UIKitExtensions.swift */; };
+		E1FDF65D224C269000F84707 /* BluetoothExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF65C224C269000F84707 /* BluetoothExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +40,17 @@
 		E14B6CE922306426007E0CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14B6CEB22306426007E0CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14B6CF322306502007E0CBB /* LCWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCWaveView.swift; sourceTree = "<group>"; };
-		E183619D2239A22900AFC04F /* Smarter Bulb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smarter Bulb.entitlements"; sourceTree = "<group>"; };
+		E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkSegue.swift; sourceTree = "<group>"; };
+		E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
+		E1D1F6452254DF8400EB9E85 /* Smarter Bulb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smarter Bulb.entitlements"; sourceTree = "<group>"; };
+		E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
+		E1E72055224EE76D0092C04D /* AKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
+		E1FDF64E224C137400F84707 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E1FDF659224C257500F84707 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		E1FDF65C224C269000F84707 /* BluetoothExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothExtension.swift; sourceTree = "<group>"; };
 		F9BDD9EA30DF335B8DD6D0DE /* Pods_Smarter_Bulb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smarter_Bulb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF08CEB7352B033B2584E2A /* Pods-Smarter Bulb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smarter Bulb.release.xcconfig"; path = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D1F6492254DFD700EB9E85 /* MediaPlayer.framework in Frameworks */,
 				7AE9A6A2E6051F10A6E77144 /* Pods_Smarter_Bulb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +71,7 @@
 		207A21DF5BCA27D79AE8186C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */,
 				F9BDD9EA30DF335B8DD6D0DE /* Pods_Smarter_Bulb.framework */,
 			);
 			name = Frameworks;
@@ -85,18 +107,51 @@
 		E14B6CDE22306424007E0CBB /* Smarter Bulb */ = {
 			isa = PBXGroup;
 			children = (
-				E183619D2239A22900AFC04F /* Smarter Bulb.entitlements */,
-				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
-				E14B6CE122306424007E0CBB /* ViewController.swift */,
-				B121578B22455C6C00DEAEEC /* NewViewController.swift */,
-				B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */,
-				E14B6CE322306424007E0CBB /* Main.storyboard */,
+				E1D1F6452254DF8400EB9E85 /* Smarter Bulb.entitlements */,
+				E1FDF656224C207900F84707 /* View Controllers */,
+				E1FDF658224C211F00F84707 /* Storyboards */,
+				E1FDF65B224C265000F84707 /* Extensions */,
 				E14B6CE622306426007E0CBB /* Assets.xcassets */,
-				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
+				E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */,
+				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E14B6CF322306502007E0CBB /* LCWaveView.swift */,
+				E1E72055224EE76D0092C04D /* AKPickerView.swift */,
 				E14B6CEB22306426007E0CBB /* Info.plist */,
 			);
 			path = "Smarter Bulb";
+			sourceTree = "<group>";
+		};
+		E1FDF656224C207900F84707 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B121578B22455C6C00DEAEEC /* NewViewController.swift */,
+				B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */,
+				E1FDF64E224C137400F84707 /* MusicViewController.swift */,
+				E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */,
+				E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */,
+				E14B6CE122306424007E0CBB /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1FDF658224C211F00F84707 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E14B6CE322306424007E0CBB /* Main.storyboard */,
+				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
+				E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */,
+				E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1FDF65B224C265000F84707 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1FDF659224C257500F84707 /* UIKitExtensions.swift */,
+				E1FDF65C224C269000F84707 /* BluetoothExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +190,9 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
 								enabled = 0;
 							};
 							com.apple.Keychain = {
@@ -169,6 +227,8 @@
 			files = (
 				E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */,
 				E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */,
+				E1D1F6442253FBAB00EB9E85 /* MusicPlayer.storyboard in Resources */,
+				E1D2EBFC224FDB62006B1F4C /* ColorPicker.storyboard in Resources */,
 				E14B6CE522306424007E0CBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +252,7 @@
 				"${BUILT_PRODUCTS_DIR}/IGColorPicker/IGColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/NotchyAlert/NotchyAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
 				"${BUILT_PRODUCTS_DIR}/Slope/Slope.framework",
@@ -208,6 +269,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotchyAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Slope.framework",
@@ -247,10 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */,
+				E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */,
+				E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */,
 				E14B6CE222306424007E0CBB /* ViewController.swift in Sources */,
 				B1D5933E2242C18400D29E60 /* ColorPickerViewController.swift in Sources */,
+				E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */,
+				E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */,
+				E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */,
 				B121578C22455C6C00DEAEEC /* NewViewController.swift in Sources */,
 				E14B6CF422306502007E0CBB /* LCWaveView.swift in Sources */,
+				E1FDF65D224C269000F84707 /* BluetoothExtension.swift in Sources */,
 				E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,6 +4,7 @@ target 'Smarter Bulb' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+
   # Pods for Smarter Bulb
     pod "HapticButton"
     pod "Slope"
@@ -14,6 +15,8 @@ target 'Smarter Bulb' do
     pod 'FaveButton'
     pod 'Cards', :git => 'https://github.com/PaoloCuscela/Cards.git'
     pod 'WhatsNew'
+    pod 'AudioKit', '~> 4.0'
+    pod 'Pastel'
 
     post_install do |installer|
       installer.pods_project.build_configurations.each do |config|
