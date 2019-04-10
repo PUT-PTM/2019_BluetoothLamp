@@ -13,6 +13,7 @@ import SPStorkController
 import Cards
 import Pastel
 import WhatsNew
+import NotchyAlert
 
 class NewViewController: UIViewController {
 
@@ -43,7 +44,7 @@ class NewViewController: UIViewController {
     var isMyPeripheralConected = false
     
     var isBulbTurnedOn = false
-    var currentColor: UIColor!
+    var currentColor: UIColor = .white
     var isAlarmSet = false
     var isMusicModeSet = false
     
@@ -192,6 +193,7 @@ class NewViewController: UIViewController {
         musicController.transitioningDelegate = transitionDelegate
         musicController.modalPresentationStyle = .custom
         musicController.modalPresentationCapturesStatusBarAppearance = true
+        musicController.delegate = self
         
         self.present(musicController, animated: true, completion: nil)
     }
@@ -215,20 +217,18 @@ class NewViewController: UIViewController {
     @IBAction func turnOnOff(_ sender: Any) {
         if isBulbTurnedOn {
             print("Lamp is turned off")
-            writeValue(value: "0")
+            writeValue(value: "0-999-999-99999")
             turnOnOffButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             isBulbTurnedOn = false
-        } else {
+        } else if isMyPeripheralConected {
             print("Lamp is turned on")
-            writeValue(value: "1")
+            writeValue(value: "1-999-999-99999")
             turnOnOffButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             isBulbTurnedOn = true
-        }
-        
-        /*else {
-         notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
-         notchy.presentNotchy(in: self.view, duration: 3)
-         } */
+        } else {
+            var notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
+            notchy.presentNotchy(in: self.view, duration: 3)
+         }
     }
     
     @IBAction func changeBrightness(_ sender: Any) {
@@ -246,15 +246,42 @@ class NewViewController: UIViewController {
         colorPickerController.modalPresentationStyle = .custom
         colorPickerController.modalPresentationCapturesStatusBarAppearance = true
         colorPickerController.delegate = self
-        transitionDelegate.customHeight = 560
+        transitionDelegate.customHeight = 500
         
         self.present(colorPickerController, animated: true, completion: nil)
     }
     
 }
 
-extension NewViewController: PopupDelegate {
-    func pickedColor(newColor: UIColor) {
+extension NewViewController: ColorDelegate {
+    func changeLampColor(newColor: UIColor) {
         pastelView.setColors([newColor, .black])
+        currentColor = newColor
+        
+        let red = String(format: "%03d", Int(newColor.colorComponents!.red*255))
+        let green = String(format: "%03d", Int(newColor.colorComponents!.green*255))
+        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*255))
+        let RGB = "2-\(red)-\(green)-\(blue)99"
+        
+        writeValue(value: RGB)
+        print(RGB)
+    }
+    
+    func changeLampColor(newColor: UIColor, brightness: Double) {
+        pastelView.setColors([newColor, .black])
+        currentColor = newColor
+
+        let red = String(format: "%03d", Int(newColor.colorComponents!.red*CGFloat(brightness)*255))
+        let green = String(format: "%03d", Int(newColor.colorComponents!.green*CGFloat(brightness)*255))
+        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*CGFloat(brightness)*255))
+        let RGB = "2-\(red)-\(green)-\(blue)99"
+        
+        writeValue(value: RGB)
+        print(RGB)
+    }
+    
+    func getCurrentColor() -> UIColor {
+        return currentColor
     }
 }
+

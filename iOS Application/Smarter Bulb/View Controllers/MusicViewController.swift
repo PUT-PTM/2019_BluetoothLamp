@@ -13,6 +13,8 @@ import MediaPlayer
 
 class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     
+    weak var delegate: ColorDelegate?
+    
     @IBOutlet weak var songArt: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songArtist: UILabel!
@@ -46,7 +48,7 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
             AKPlaygroundLoop(every: 0.1) {
                 if self.player.isPlaying {
                     print(self.tracker.amplitude)
-                    //self.changeColor(amp: self.tracker.amplitude)
+                    self.changeColor(amp: self.tracker.amplitude)
                 }
             }
         }
@@ -110,11 +112,8 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     }
     
     func changeColor(amp: Double) {
-        setColor(r: 255, g: 0, b: 0, brightness: amp)
+        delegate?.changeLampColor(newColor: delegate!.getCurrentColor(), brightness: amp)
     }
     
-    func setColor(r: Int, g: Int, b: Int, brightness: Double){
-        view.backgroundColor = UIColor(red: CGFloat(r*brightness/255.0), green: CGFloat(g*brightness/255.0), blue: CGFloat(b*brightness/255.0), alpha: 1.0)
-    }
 }
 

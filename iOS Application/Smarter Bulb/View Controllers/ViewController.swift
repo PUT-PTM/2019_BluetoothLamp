@@ -206,7 +206,6 @@ class ViewController: UIViewController {
         controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom
         controller.modalPresentationCapturesStatusBarAppearance = true
-        controller.delegate = self
         self.present(controller, animated: true, completion: nil)
         
     }
@@ -232,11 +231,6 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: PopupDelegate {
-    func pickedColor(newColor: UIColor) {
-        setBackgroundColor(color: newColor)
-    }
-}
 
 
 extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {

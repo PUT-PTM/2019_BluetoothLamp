@@ -14,7 +14,7 @@ import FaveButton
 
 class ColorPickerViewController: UIViewController, FaveButtonDelegate {
 
-    weak var delegate: PopupDelegate?
+    weak var delegate: ColorDelegate?
     
     @IBOutlet weak var colorPicker: CULColorPickerView!
     @IBOutlet weak var circleColorPalette: ColorPickerView!
@@ -69,7 +69,7 @@ extension ColorPickerViewController: CULColorPickerViewDelegate {
     func colorPickerWillBeginDragging(_ colorPicker: CULColorPickerView) { }
     func colorPickerDidSelectColor(_ colorPicker: CULColorPickerView) { }
     func colorPickerDidEndDagging(_ colorPicker: CULColorPickerView) {
-        delegate?.pickedColor(newColor: colorPicker.selectedColor)
+        delegate?.changeLampColor(newColor: colorPicker.selectedColor)
         hexValue.text = colorPicker.selectedColor.toHexString().uppercased()
         if colorsArray.contains(UIColor(hexString: hexValue.text!)) {
             faveButton.setSelected(selected: true, animated: false)
@@ -85,7 +85,7 @@ extension ColorPickerViewController: ColorPickerViewDelegateFlowLayout, ColorPic
         let currentColor = colorPickerView.colors[indexPath.item]
         hexValue.text = currentColor.toHexString().uppercased()
         colorPicker.updateSelectedColor(currentColor)
-        delegate?.pickedColor(newColor: currentColor)
+        delegate?.changeLampColor(newColor: currentColor)
         if colorsArray.contains(UIColor(hexString: hexValue.text!)) {
             faveButton.setSelected(selected: true, animated: false)
         } else {
@@ -110,6 +110,8 @@ extension ColorPickerViewController: ColorPickerViewDelegateFlowLayout, ColorPic
     }
 }
 
-protocol PopupDelegate: class {
-    func pickedColor(newColor: UIColor)
+protocol ColorDelegate: class {
+    func changeLampColor(newColor: UIColor)
+    func changeLampColor(newColor: UIColor, brightness: Double)
+    func getCurrentColor() -> UIColor
 }
