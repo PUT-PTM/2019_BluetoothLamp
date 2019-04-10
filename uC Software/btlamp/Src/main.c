@@ -43,6 +43,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdlib.h>
+#include <string.h>
+#include "stm32f4xx_hal.h"
+#include "ws2812b.h"
+#include "ws2812b_fx.h"
+
 
 /* USER CODE END Includes */
 
@@ -62,19 +68,81 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+SPI_HandleTypeDef hspi1;
+DMA_HandleTypeDef hdma_spi1_tx;
+
 UART_HandleTypeDef huart6;
+DMA_HandleTypeDef hdma_usart6_rx;
 
 /* USER CODE BEGIN PV */
-char rx_buffer[50], tx_buffer[50];
-int ledState = 1;
+uint8_t rx_buffer[15];
+int grttemp = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART6_UART_Init(void);
+static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+	  int tem = 0, tmp2 = 0;;
+	  char c1[4], c2[4], c3[4];
+	  c1[4] = '\0';
+	  c2[4] = '\0';
+	  c3[4] = '\0';
+	  if(rx_buffer[0] == '0'){
+		  for(int i = 0; i < 16; i++){
+			  WS2812B_SetDiodeRGB(i, 0, 0, 0);
+		  }
+		  WS2812B_SetDiodeRGB(0, 0, 0, 0);
+		  grttemp = 1;
+	  }
+	  if(rx_buffer[0] == '1'){
+		  for(int i = 0; i < 16; i++){
+		  	  WS2812B_SetDiodeRGB(i, 255, 255, 255);
+		  }
+		  WS2812B_SetDiodeRGB(0, 255, 255, 255);
+		  grttemp = 1;
+	  }
+	  if(rx_buffer[0] == '2'){
+		  for(uint8_t j = 2; j < 15; j++){
+			  if(rx_buffer[j] == '-'){
+				  tem++;
+				  tmp2 = 0;
+				  continue;
+			  }
+			  if(tem==0){
+				  c1[tmp2] = rx_buffer[j];
+				  tmp2++;
+			  }
+			  if(tem==1){
+				  c2[tmp2] = rx_buffer[j];
+				  tmp2++;
+			  }
+			  if(tem==2){
+				  c3[tmp2] = rx_buffer[j];
+				  tmp2++;
+				  if(tmp2 == 3) break;
+			  }
+		  }
+		  if(c1[0] == '2'){
+			  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+		  }
+		  int col1 = strtol( c1,NULL, 10);
+		  int col2 = atoi(c2);
+		  int col3 = atoi(c3);
 
+		  for(uint8_t i = 0; i < 16; i++){
+		  	  WS2812B_SetDiodeRGB(i, col1, col2, col3);
+		  }
+
+		  grttemp = 1;
+
+	  }
+	  HAL_UART_Receive_DMA(&huart6, rx_buffer, 15);
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -110,32 +178,46 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART6_UART_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  WS2812B_Init(&hspi1);
+  /*
+  WS2812B_SetDiodeRGB(0, 100, 120, 0);
+  WS2812B_SetDiodeRGB(1, 0, 120, 0);
+  WS2812B_SetDiodeRGB(2, 100, 120, 0);
+  WS2812B_SetDiodeRGB(3, 0, 120, 0);
+  WS2812B_SetDiodeRGB(4, 100, 120, 0);
+  WS2812B_SetDiodeRGB(5, 0, 120, 0);
+  WS2812B_SetDiodeRGB(6, 100, 120, 0);
+  WS2812B_SetDiodeRGB(7, 0, 120, 0);
+  WS2812B_SetDiodeRGB(8, 100, 120, 0);
+  WS2812B_SetDiodeRGB(9, 0, 120, 0);
+  WS2812B_SetDiodeRGB(10, 100, 120, 0);
+  WS2812B_SetDiodeRGB(11, 0, 120, 0);
+  WS2812B_SetDiodeRGB(12, 100, 120, 0);
+  WS2812B_SetDiodeRGB(13, 0, 120, 0);
+  WS2812B_SetDiodeRGB(14, 100, 120, 0);
+  WS2812B_SetDiodeRGB(15, 0, 120, 0);
+  WS2812B_SetDiodeRGB(0, 100, 120, 0);
+  WS2812B_Refresh();
+  WS2812B_Refresh();
+  */
 
+  HAL_UART_Receive_DMA(&huart6, rx_buffer, 15);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_UART_Receive(&huart6, (uint8_t*)rx_buffer, 50, 500);
+	  if(grttemp == 1){
+		  WS2812B_Refresh();
+		  WS2812B_Refresh();
+		  grttemp = 0;
+	  }
 
-	  	  		if(rx_buffer[0] == 'o' && rx_buffer[1] == 'n'){
-
-	  	  			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_SET);
-	  	  			if(ledState != 1)
-	  	  			HAL_UART_Transmit(&huart6, (uint8_t *)tx_buffer, sprintf(tx_buffer, "Led is on\n"), 500);
-	  	  			ledState = 1;
-
-	  	  		}
-	  	  		else if(rx_buffer[0] == 'o' && rx_buffer[1] == 'f' && rx_buffer[2] == 'f'){
-
-	  	  			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
-	  	  			if(ledState != 0)
-	  	  			HAL_UART_Transmit(&huart6, (uint8_t *)tx_buffer, sprintf(tx_buffer, "Led is off\n"), 500);
-	  	  			ledState = 0;
-	  	  		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -163,7 +245,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 4;
-  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLN = 96;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -175,14 +257,52 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
 }
 
 /**
@@ -218,6 +338,24 @@ static void MX_USART6_UART_Init(void)
 
 }
 
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA2_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA2_Stream1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream1_IRQn);
+  /* DMA2_Stream3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
+
+}
+
 /**
   * @brief GPIO Initialization Function
   * @param None
@@ -229,6 +367,7 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
