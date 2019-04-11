@@ -146,3 +146,17 @@ extension UIColor {
         )
     }
 }
+
+extension UIButton {
+    func addBlurEffect() {
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        blur.frame = self.bounds
+        blur.isUserInteractionEnabled = false
+        blur.clipsToBounds = true
+        blur.layer.cornerRadius = 30
+        self.insertSubview(blur, at: 0)
+        if let imageView = self.imageView{
+            self.bringSubviewToFront(imageView)
+        }
+    }
+}

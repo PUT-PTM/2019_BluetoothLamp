@@ -6,8 +6,6 @@ target 'Smarter Bulb' do
 
 
   # Pods for Smarter Bulb
-    pod "HapticButton"
-    pod "Slope"
     pod "CULColorPicker"
     pod "NotchyAlert"
     pod "IGColorPicker"

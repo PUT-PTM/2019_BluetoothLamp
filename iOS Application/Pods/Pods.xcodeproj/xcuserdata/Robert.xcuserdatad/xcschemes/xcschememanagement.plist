@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HapticButton.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>IGColorPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -60,11 +55,6 @@
 			<false/>
 		</dict>
 		<key>SPStorkController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Slope.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

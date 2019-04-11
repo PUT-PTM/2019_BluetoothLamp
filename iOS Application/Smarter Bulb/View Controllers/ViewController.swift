@@ -1,5 +1,5 @@
 //
-//  NewViewController.swift
+//  ViewController.swift
 //  Smarter Bulb
 //
 //  Created by Robert Moryson on 22.03.2019.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HapticButton
 import CoreBluetooth
 import SPStorkController
 import Cards
@@ -18,10 +17,10 @@ import NotchyAlert
 class ViewController: UIViewController {
 
     @IBOutlet weak var informationAboutLamp: UILabel!
-    
-    @IBOutlet weak var turnOnOffButton: HapticButton!
-    @IBOutlet weak var showPaletteButton: HapticButton!
-    @IBOutlet weak var changeBrightnessButton: HapticButton!
+
+    @IBOutlet weak var turnOnOffButton: UIButton!
+    @IBOutlet weak var changeBrightnessButton: UIButton!
+    @IBOutlet weak var showPaletteButton: UIButton!
     
     @IBOutlet weak var alarmButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
@@ -91,19 +90,16 @@ class ViewController: UIViewController {
     }
     
     func initButtons() {
-        
-        turnOnOffButton.mode = .image(image: #imageLiteral(resourceName: "bulb_white"))
-        turnOnOffButton.addBlurView(style: .dark)
+
+        turnOnOffButton.addBlurEffect()
         turnOnOffButton.layer.borderWidth = 1
         turnOnOffButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        showPaletteButton.mode = .image(image: #imageLiteral(resourceName: "palette_white"))
-        showPaletteButton.addBlurView(style: .dark)
+        showPaletteButton.addBlurEffect()
         showPaletteButton.layer.borderWidth = 1
         showPaletteButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        changeBrightnessButton.mode = .image(image: #imageLiteral(resourceName: "sun_white"))
-        changeBrightnessButton.addBlurView(style: .dark)
+        changeBrightnessButton.addBlurEffect()
         changeBrightnessButton.layer.borderWidth = 1
         changeBrightnessButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
@@ -215,6 +211,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func turnOnOff(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.1, animations: { self.turnOnOffButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)}, completion: { _ in UIView.animate(withDuration: 0.1) { self.turnOnOffButton.transform = CGAffineTransform.identity }})
+        
         if isBulbTurnedOn {
             print("Lamp is turned off")
             writeValue(value: "0-999-999-99999")
@@ -232,10 +231,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeBrightness(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.1, animations: { self.changeBrightnessButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)}, completion: { _ in UIView.animate(withDuration: 0.1) { self.changeBrightnessButton.transform = CGAffineTransform.identity }})
+        
         print("Brightness button pressed.")
     }
     
     @IBAction func openColorPalette(_ sender: Any) {
+        
         if colorPickerController == nil {
             let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
             colorPickerController = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as? ColorPickerViewController

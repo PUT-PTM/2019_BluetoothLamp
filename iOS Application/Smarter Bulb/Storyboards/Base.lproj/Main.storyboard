@@ -32,21 +32,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXg-Xk-hdW" userLabel="Turn on/off" customClass="HapticButton" customModule="HapticButton">
-                                <rect key="frame" x="16" y="198" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="turnOnOff:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="AuM-00-GXl"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cON-Nt-ys4" userLabel="Pick color" customClass="HapticButton" customModule="HapticButton">
-                                <rect key="frame" x="259" y="198" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="openColorPalette:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="Kib-yC-mnn"/>
-                                </connections>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-tG-QMW" customClass="CardHighlight" customModule="Cards">
                                 <rect key="frame" x="31" y="652" width="95" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,14 +243,54 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bm-go-oCv" userLabel="Brightness" customClass="HapticButton" customModule="HapticButton">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxr-3q-omS">
+                                <rect key="frame" x="16" y="198" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="bulb_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="turnOnOff:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="NXF-Te-P1F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-Qy-wPv">
                                 <rect key="frame" x="137" y="198" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="sun_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="changeBrightness:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="I6Z-LU-Sxu"/>
+                                    <action selector="changeBrightness:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="9v6-lh-NGg"/>
                                 </connections>
-                            </view>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqc-bZ-rD2">
+                                <rect key="frame" x="259" y="198" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="palette_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openColorPalette:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="eZw-JJ-UIh"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASIC OPTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-yz-S51">
                                 <rect key="frame" x="16" y="196" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -286,7 +311,7 @@
                     <connections>
                         <outlet property="alarmButton" destination="frl-z0-TjK" id="zEI-wM-6OB"/>
                         <outlet property="bookMode" destination="7XL-zq-bxp" id="BOl-tT-Hig"/>
-                        <outlet property="changeBrightnessButton" destination="5bm-go-oCv" id="Kt9-Uj-udy"/>
+                        <outlet property="changeBrightnessButton" destination="dOb-Qy-wPv" id="Wz0-dP-uIN"/>
                         <outlet property="fireMode" destination="Url-Yo-dgb" id="Ahb-mj-Kxv"/>
                         <outlet property="informationAboutLamp" destination="8S5-jC-en1" id="a72-KH-59Z"/>
                         <outlet property="musicButton" destination="kYF-8t-5n2" id="gcH-UJ-qDk"/>
@@ -295,8 +320,8 @@
                         <outlet property="rainbowMode" destination="z8G-tG-QMW" id="f74-EA-0nY"/>
                         <outlet property="relaxMode" destination="5BK-Hc-j48" id="wj2-9x-sbf"/>
                         <outlet property="settingsButton" destination="XvW-FB-8Xz" id="g5e-gr-Nns"/>
-                        <outlet property="showPaletteButton" destination="cON-Nt-ys4" id="8bs-7e-SwC"/>
-                        <outlet property="turnOnOffButton" destination="mXg-Xk-hdW" id="PaA-4V-QEj"/>
+                        <outlet property="showPaletteButton" destination="Qqc-bZ-rD2" id="RrS-fc-tlU"/>
+                        <outlet property="turnOnOffButton" destination="qxr-3q-omS" id="fNs-8A-Js6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beu-a8-f7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,6 +467,7 @@
     <resources>
         <image name="book" width="100" height="100"/>
         <image name="book_n" width="2400" height="2000"/>
+        <image name="bulb_white" width="100" height="100"/>
         <image name="check_mark" width="500" height="500"/>
         <image name="fire" width="100" height="100"/>
         <image name="grad_1" width="2400" height="2000"/>
@@ -450,7 +476,9 @@
         <image name="grad_4" width="2000" height="2400"/>
         <image name="grad_5" width="2400" height="2000"/>
         <image name="nature" width="100" height="100"/>
+        <image name="palette_white" width="100" height="100"/>
         <image name="relax" width="100" height="100"/>
+        <image name="sun_white" width="100" height="100"/>
         <image name="unicorn" width="100" height="100"/>
         <image name="water" width="100" height="100"/>
         <image name="x_icon" width="500" height="500"/>

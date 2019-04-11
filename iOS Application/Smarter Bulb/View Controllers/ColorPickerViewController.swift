@@ -9,7 +9,6 @@
 import UIKit
 import CULColorPicker
 import IGColorPicker
-import HapticButton
 import FaveButton
 
 class ColorPickerViewController: UIViewController, FaveButtonDelegate {
