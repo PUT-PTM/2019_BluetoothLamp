@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-extension NewViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
+extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     
     // Bluetooth
     func centralManagerDidUpdateState(_ central: CBCentralManager) {

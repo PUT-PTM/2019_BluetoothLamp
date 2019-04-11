@@ -109,9 +109,3 @@ extension ColorPickerViewController: ColorPickerViewDelegateFlowLayout, ColorPic
         return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 }
-
-protocol ColorDelegate: class {
-    func changeLampColor(newColor: UIColor)
-    func changeLampColor(newColor: UIColor, brightness: Double)
-    func getCurrentColor() -> UIColor
-}
