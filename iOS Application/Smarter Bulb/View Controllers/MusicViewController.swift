@@ -19,10 +19,12 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songArtist: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var playerSlider: UISlider!
     
     var player: AKPlayer!
     var tracker: AKFrequencyTracker!
     var songProperties: MPMediaItem!
+    var sliderUpdater: CADisplayLink!
     
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         for thisItem in mediaItemCollection.items {
@@ -31,12 +33,22 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
             
             songProperties = thisItem
             
+            do {
+                try AudioKit.stop()
+            } catch {
+                print("error")
+            }
             player = AKPlayer(audioFile: file)
-            player.buffering = .always
+            //player.buffering = .always
             tracker = AKFrequencyTracker(player)
             AudioKit.output = tracker
             
-            try! AudioKit.start()
+            do {
+                try AudioKit.start()
+            } catch {
+                print("error")
+            }
+            
             player.play()
             
             UIApplication.shared.beginReceivingRemoteControlEvents()
@@ -49,8 +61,12 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
                 if self.player.isPlaying {
                     print(self.tracker.amplitude)
                     self.changeColor(amp: self.tracker.amplitude)
+                    self.playerSlider.value = Float(self.player!.currentTime)
                 }
             }
+            
+            playerSlider.maximumValue = Float(player.duration)
+            
         }
         dismiss(animated: true, completion: nil)
     }
@@ -76,27 +92,49 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     override func viewDidLoad() {
         preparePlayer()
         player = AKPlayer()
+        songArt.image = #imageLiteral(resourceName: "no_cover")
+        prepareSlider()
+        
+    }
+    
+    func prepareSlider() {
+        playerSlider.addTarget(self, action: #selector(self.handlePlayheadSliderTouchBegin), for: .touchDown)
+        playerSlider.addTarget(self, action:    #selector(self.handlePlayheadSliderTouchEnd), for: .touchUpInside)
+        playerSlider.addTarget(self, action: #selector(self.handlePlayheadSliderTouchEnd), for: .touchUpOutside)
+        playerSlider.addTarget(self, action: #selector(self.handlePlayheadSliderValueChanged), for: .valueChanged)
+    }
+    @IBAction func handlePlayheadSliderTouchBegin(_ sender: UISlider) {
+        player.pause()
+    }
+    @IBAction func handlePlayheadSliderValueChanged(_ sender: UISlider) {
+        player.startTime = Double(sender.value)
+    }
+    @IBAction func handlePlayheadSliderTouchEnd(_ sender: UISlider) {
+        player.resume()
     }
     
     func preparePlayer() {
+        // Allow the app to play in the background
+        do {
+            try AKSettings.setSession(category: .playback)
+        } catch {
+            print("error")
+        }
+
         AKSettings.playbackWhileMuted = true
         AKSettings.disableAVAudioSessionCategoryManagement = true
-        try! AKSettings.setSession(category: AKSettings.SessionCategory.playback)
-        
+
         MPRemoteCommandCenter.shared().togglePlayPauseCommand.addTarget(self, action: #selector(playOrPause))
-        
     }
     
     @IBAction func playOrPause(_ sender: UIButton) {
 
         if player.isPaused {
-            try! AudioKit.start()
             player.resume()
             playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             
         } else if player.isPlaying {
             player.pause()
-            try! AudioKit.stop()
             playPauseButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
             
         } else {

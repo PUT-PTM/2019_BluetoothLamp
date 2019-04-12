@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var oceanMode: CardHighlight!
     
     lazy var pastelView = PastelView(frame: view.bounds)
+    var brightnessView: UIView!
     var musicController: MusicViewController!
     var colorPickerController: ColorPickerViewController!
     
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
     var isMyPeripheralConected = false
     
     var isBulbTurnedOn = false
-    var currentColor: UIColor = .white
+    var currentColor = UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1)
     var isAlarmSet = false
     var isMusicModeSet = false
     
@@ -54,6 +55,13 @@ class ViewController: UIViewController {
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: true])
         
         initUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    @objc func willEnterForeground() {
+        pastelView.removeFromSuperview()
+        initGradientBackground()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,7 +91,7 @@ class ViewController: UIViewController {
         pastelView.endPastelPoint = .bottomLeft
         pastelView.animationDuration = 2.5
         
-        pastelView.setColors([UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1), .black])
+        pastelView.setColors([currentColor, .black])
         
         pastelView.startAnimation()
         view.insertSubview(pastelView, at: 0)
@@ -234,6 +242,9 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.1, animations: { self.changeBrightnessButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)}, completion: { _ in UIView.animate(withDuration: 0.1) { self.changeBrightnessButton.transform = CGAffineTransform.identity }})
         
+        brightnessView = UIView(frame: UIScreen.main.bounds)
+        brightnessView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3493150685)
+        view.addSubview(brightnessView)
         print("Brightness button pressed.")
     }
     

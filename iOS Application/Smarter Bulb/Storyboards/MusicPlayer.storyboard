@@ -69,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="playPauseButton" destination="wDZ-kl-KlL" id="hlA-Sm-Q1U"/>
+                        <outlet property="playerSlider" destination="c2B-cM-7ZN" id="1LD-tP-Ph4"/>
                         <outlet property="songArt" destination="AaH-G2-piG" id="GjK-6Z-tiR"/>
                         <outlet property="songArtist" destination="41v-3m-e5d" id="g7V-IV-i2R"/>
                         <outlet property="songTitle" destination="svP-lO-UO0" id="eEH-KM-JGj"/>
