@@ -18,6 +18,8 @@
 		E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */; };
 		E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */; };
 		E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */; };
+		E15882982260C5A0006A0959 /* Brightness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15882972260C5A0006A0959 /* Brightness.storyboard */; };
+		E158829A2260C5E4006A0959 /* BrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15882992260C5E4006A0959 /* BrightnessViewController.swift */; };
 		E1D1F6442253FBAB00EB9E85 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */; };
 		E1D2EBFC224FDB62006B1F4C /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */; };
 		E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E72055224EE76D0092C04D /* AKPickerView.swift */; };
@@ -39,6 +41,8 @@
 		E1555DE3224EB2A300C7D3C4 /* SPStorkSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkSegue.swift; sourceTree = "<group>"; };
 		E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		E15882972260C5A0006A0959 /* Brightness.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brightness.storyboard; sourceTree = "<group>"; };
+		E15882992260C5E4006A0959 /* BrightnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
 		E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		E1D1F6452254DF8400EB9E85 /* Smarter Bulb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smarter Bulb.entitlements"; sourceTree = "<group>"; };
 		E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -124,6 +128,7 @@
 				E1FDF64E224C137400F84707 /* MusicViewController.swift */,
 				E1555DE7224EBB0300C7D3C4 /* AlarmViewController.swift */,
 				E1555DE5224EB45000C7D3C4 /* SettingsViewController.swift */,
+				E15882992260C5E4006A0959 /* BrightnessViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
 				E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */,
 				E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */,
+				E15882972260C5A0006A0959 /* Brightness.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14B6CEA22306426007E0CBB /* LaunchScreen.storyboard in Resources */,
+				E15882982260C5A0006A0959 /* Brightness.storyboard in Resources */,
 				E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */,
 				E1D1F6442253FBAB00EB9E85 /* MusicPlayer.storyboard in Resources */,
 				E1D2EBFC224FDB62006B1F4C /* ColorPicker.storyboard in Resources */,
@@ -248,6 +255,7 @@
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
+				"${BUILT_PRODUCTS_DIR}/TactileSlider/TactileSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/WhatsNew/WhatsNew.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -263,6 +271,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TactileSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WhatsNew.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E158829A2260C5E4006A0959 /* BrightnessViewController.swift in Sources */,
 				E1555DE8224EBB0300C7D3C4 /* AlarmViewController.swift in Sources */,
 				E1FDF64F224C137400F84707 /* MusicViewController.swift in Sources */,
 				E1E72056224EE76D0092C04D /* AKPickerView.swift in Sources */,

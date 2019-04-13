@@ -15,6 +15,7 @@ target 'Smarter Bulb' do
     pod 'WhatsNew'
     pod 'AudioKit', '~> 4.0'
     pod 'Pastel'
+    pod 'TactileSlider'
 
     post_install do |installer|
       installer.pods_project.build_configurations.each do |config|

@@ -162,6 +162,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Player/Player.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TactileSlider/TactileSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WhatsNew/WhatsNew.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -174,6 +175,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Player/Player.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TactileSlider/TactileSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WhatsNew/WhatsNew.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

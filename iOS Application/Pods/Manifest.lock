@@ -16,6 +16,7 @@ PODS:
   - Pastel (0.5.1)
   - Player (0.13.0)
   - SPStorkController (1.6)
+  - TactileSlider (1.1.0)
   - WhatsNew (0.4.4)
 
 DEPENDENCIES:
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - NotchyAlert
   - Pastel
   - SPStorkController
+  - TactileSlider
   - WhatsNew
 
 SPEC REPOS:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - Pastel
     - Player
     - SPStorkController
+    - TactileSlider
     - WhatsNew
 
 EXTERNAL SOURCES:
@@ -62,8 +65,9 @@ SPEC CHECKSUMS:
   Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
   Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
   SPStorkController: 54293a8a1ca3c691a09eb6274b6e487b602e975a
+  TactileSlider: 7068735b6d6c265a4dcceea7d6ba7299fd4e4313
   WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: 90468e5bcaa00a8b85d5b6ebe7e5c726e21d19c3
+PODFILE CHECKSUM: 442b1f648be1bbb5101466a47b8a62f1721ee545
 
 COCOAPODS: 1.6.1

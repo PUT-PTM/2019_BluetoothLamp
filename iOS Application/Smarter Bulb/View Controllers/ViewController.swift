@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var oceanMode: CardHighlight!
     
     lazy var pastelView = PastelView(frame: view.bounds)
-    var brightnessView: UIView!
     var musicController: MusicViewController!
     var colorPickerController: ColorPickerViewController!
+    var brightnessController: BrightnessViewController!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -47,8 +47,7 @@ class ViewController: UIViewController {
     var currentColor = UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1)
     var isAlarmSet = false
     var isMusicModeSet = false
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +56,7 @@ class ViewController: UIViewController {
         initUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
     }
     
     @objc func willEnterForeground() {
@@ -216,7 +216,7 @@ class ViewController: UIViewController {
             alarmButton.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.231372549, blue: 0.231372549, alpha: 0.7)
         }
     }
-    
+
     
     @IBAction func turnOnOff(_ sender: Any) {
         
@@ -242,9 +242,12 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.1, animations: { self.changeBrightnessButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)}, completion: { _ in UIView.animate(withDuration: 0.1) { self.changeBrightnessButton.transform = CGAffineTransform.identity }})
         
-        brightnessView = UIView(frame: UIScreen.main.bounds)
-        brightnessView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3493150685)
-        view.addSubview(brightnessView)
+        if brightnessController == nil {
+            let storyboard = UIStoryboard(name: "Brightness", bundle: nil)
+            brightnessController = storyboard.instantiateViewController(withIdentifier: "BrightnessViewController") as? BrightnessViewController
+        }
+        brightnessController.modalPresentationStyle = .overCurrentContext
+        self.present(brightnessController, animated: true, completion: nil)
         print("Brightness button pressed.")
     }
     
