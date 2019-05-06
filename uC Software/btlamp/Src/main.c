@@ -71,12 +71,15 @@
 SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
 
+TIM_HandleTypeDef htim2;
+
 UART_HandleTypeDef huart6;
 DMA_HandleTypeDef hdma_usart6_rx;
 
 /* USER CODE BEGIN PV */
-uint8_t rx_buffer[15];
-int grttemp = 0;
+uint8_t rx_buffer[13];
+ws2812b_color co1;
+int msec_counter = 0, sec_counter = 0, min_counter = 0, min_alarm = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -85,29 +88,62 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART6_UART_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	WS2812BFX_SysTickCallback();	// FX effects software timers
+	if(min_alarm > 0){
+		msec_counter++;
+		if(msec_counter == 1000){
+			msec_counter = 0;
+			sec_counter++;
+		}
+		if(sec_counter == 60){
+			sec_counter = 0;
+			min_counter++;
+		}
+		if(min_counter == min_alarm){
+			WS2812BFX_SetSpeed(0, 12);
+			WS2812BFX_SetColorRGB(0, 255, 0, 0);
+			WS2812BFX_SetColorRGB(1, 0, 0, 255);
+			co1.red = 0;
+			co1.green = 0;
+			co1.blue = 0;
+			WS2812BFX_SetMode(0, FX_MODE_FADE_DUAL);	// Set mode segment 0
+			min_alarm = 0;
+		}
+	}
+}
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
-	  int tem = 0, tmp2 = 0;;
-	  char c1[4], c2[4], c3[4];
+	  int tem = 0, tmp2 = 0;
+	  char c1[4], c2[4], c3[4], alarm[6];
 	  c1[4] = '\0';
 	  c2[4] = '\0';
 	  c3[4] = '\0';
+	  alarm[6] = '\0';
+
 	  if(rx_buffer[0] == '0'){
-		  for(int i = 0; i < 16; i++){
-			  WS2812B_SetDiodeRGB(i, 0, 0, 0);
-		  }
-		  WS2812B_SetDiodeRGB(0, 0, 0, 0);
-		  grttemp = 1;
+		WS2812BFX_SetSpeed(0, 1);
+		WS2812BFX_SetColorRGB(0, co1.red, co1.green, co1.blue);	// Set color 1
+		WS2812BFX_SetColorRGB(1, 0,0,0);	// Set color 1
+		co1.red = 0;
+		co1.green = 0;
+		co1.blue = 0;
+		WS2812BFX_SetMode(0, FX_MODE_FADE);
 	  }
+
 	  if(rx_buffer[0] == '1'){
-		  for(int i = 0; i < 16; i++){
-		  	  WS2812B_SetDiodeRGB(i, 255, 255, 255);
-		  }
-		  WS2812B_SetDiodeRGB(0, 255, 255, 255);
-		  grttemp = 1;
+		WS2812BFX_SetSpeed(0, 1);
+		WS2812BFX_SetColorRGB(0, co1.red, co1.green, co1.blue);	// Set color 1
+		WS2812BFX_SetColorRGB(1, 255,255,255);	// Set color 1
+		co1.red = 255;
+		co1.green = 255;
+		co1.blue = 255;
+		WS2812BFX_SetMode(0, FX_MODE_FADE);
 	  }
+
 	  if(rx_buffer[0] == '2'){
-		  for(uint8_t j = 2; j < 15; j++){
+		  for(uint8_t j = 2; j < 13; j++){
 			  if(rx_buffer[j] == '-'){
 				  tem++;
 				  tmp2 = 0;
@@ -127,19 +163,86 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 				  if(tmp2 == 3) break;
 			  }
 		  }
-		  if(c1[0] == '2'){
-			  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
-		  }
 		  int col1 = strtol( c1,NULL, 10);
 		  int col2 = atoi(c2);
 		  int col3 = atoi(c3);
 
-		  for(uint8_t i = 0; i < 16; i++){
-		  	  WS2812B_SetDiodeRGB(i, col1, col2, col3);
+		  WS2812BFX_SetSpeed(0, 1);
+		  WS2812BFX_SetColorRGB(0, co1.red, co1.green, co1.blue);
+		  WS2812BFX_SetColorRGB(1, col1, col2, col3);
+		  co1.red = col1;
+		  co1.green = col2;
+		  co1.blue = col3;
+		  WS2812BFX_SetMode(0, FX_MODE_FADE);	// Set mode segment 0
+	  }
+	  if(rx_buffer[0] == '3'){
+		  // NATURE
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '0'){
+			  WS2812BFX_SetSpeed(0, 80);
+			  WS2812BFX_SetColorRGB(0, 0, 64, 0);
+			  WS2812BFX_SetColorRGB(1, 128, 255, 0);
+			  co1.red = 0;
+			  co1.green = 0;
+		  	  co1.blue = 0;
+		  	  WS2812BFX_SetMode(0, FX_MODE_FADE_DUAL);	// Set mode segment 0
 		  }
-
-		  grttemp = 1;
-
+		  // CANDLE
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '1'){
+			  WS2812BFX_SetSpeed(0, 20);
+			  WS2812BFX_SetColorRGB(0, 255, 60, 0);
+			  WS2812BFX_SetColorRGB(1, 224, 20, 0);
+			  co1.red = 0;
+			  co1.green = 0;
+			  co1.blue = 0;
+			  WS2812BFX_SetMode(0, FX_MODE_FADE_DUAL);	// Set mode segment 0
+		  }
+		  // FIRE
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '2'){
+			  WS2812BFX_SetSpeed(0, 80);
+ 			  WS2812BFX_SetColorRGB(0, 128, 0, 0);
+			  co1.red = 0;
+		  	  co1.green = 0;
+		  	  co1.blue = 0;
+		  	  WS2812BFX_SetMode(0, FX_MODE_RUNNING_LIGHTS);	// Set mode segment 0
+		  }
+		  // RAINBOW
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '3'){
+			  WS2812BFX_SetSpeed(0, 50);
+			  co1.red = 0;
+			  co1.green = 0;
+			  co1.blue = 0;
+		  	  WS2812BFX_SetMode(0, FX_MODE_RAINBOW);	// Set mode segment 0
+		  }
+		  // ROYAL
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '4'){
+			  WS2812BFX_SetSpeed(0, 30);
+ 			  WS2812BFX_SetColorRGB(0, 180,0,0);
+ 			  WS2812BFX_SetColorRGB(1, 139,0,70);
+			  co1.red = 0;
+			  co1.green = 0;
+			  co1.blue = 0;
+			  WS2812BFX_SetMode(0, FX_MODE_FADE_DUAL);	// Set mode segment 0
+		  }
+		  // OCEAN
+		  if(rx_buffer[1] == '-' && rx_buffer[2] == '5'){
+			  WS2812BFX_SetSpeed(0, 100);
+			  WS2812BFX_SetColorRGB(0, 0, 106, 255);
+			  WS2812BFX_SetColorRGB(1, 0 ,4,214);
+			  co1.red = 0;
+			  co1.green = 0;
+			  co1.blue = 0;
+			  WS2812BFX_SetMode(0, FX_MODE_FADE_DUAL);	// Set mode segment 0
+		  }
+	  }
+	  if(rx_buffer[0] == '5'){
+		  for(uint8_t j = 2; j < 7; j++){
+			  alarm[tem] = rx_buffer[j];
+			  tem++;
+		  }
+		  msec_counter = 0;
+		  sec_counter = 0;
+		  min_counter = 0;
+		  min_alarm = atoi(alarm);
 	  }
 	  HAL_UART_Receive_DMA(&huart6, rx_buffer, 15);
 }
@@ -181,29 +284,20 @@ int main(void)
   MX_DMA_Init();
   MX_USART6_UART_Init();
   MX_SPI1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT(&htim2);
+
   WS2812B_Init(&hspi1);
-  /*
-  WS2812B_SetDiodeRGB(0, 100, 120, 0);
-  WS2812B_SetDiodeRGB(1, 0, 120, 0);
-  WS2812B_SetDiodeRGB(2, 100, 120, 0);
-  WS2812B_SetDiodeRGB(3, 0, 120, 0);
-  WS2812B_SetDiodeRGB(4, 100, 120, 0);
-  WS2812B_SetDiodeRGB(5, 0, 120, 0);
-  WS2812B_SetDiodeRGB(6, 100, 120, 0);
-  WS2812B_SetDiodeRGB(7, 0, 120, 0);
-  WS2812B_SetDiodeRGB(8, 100, 120, 0);
-  WS2812B_SetDiodeRGB(9, 0, 120, 0);
-  WS2812B_SetDiodeRGB(10, 100, 120, 0);
-  WS2812B_SetDiodeRGB(11, 0, 120, 0);
-  WS2812B_SetDiodeRGB(12, 100, 120, 0);
-  WS2812B_SetDiodeRGB(13, 0, 120, 0);
-  WS2812B_SetDiodeRGB(14, 100, 120, 0);
-  WS2812B_SetDiodeRGB(15, 0, 120, 0);
-  WS2812B_SetDiodeRGB(0, 100, 120, 0);
-  WS2812B_Refresh();
-  WS2812B_Refresh();
-  */
+  WS2812BFX_Init(1);
+  co1.red = 0;
+  co1.green = 0;
+  co1.blue = 0;
+  WS2812BFX_Start(0);
+  WS2812BFX_SetSpeed(0, 2);
+  WS2812BFX_SetColorRGB(0,0,0,0);
+  WS2812BFX_SetColorRGB(1, 0,0,0);	// Set color 1
+  WS2812BFX_SetMode(0, FX_MODE_FADE);
 
   HAL_UART_Receive_DMA(&huart6, rx_buffer, 15);
   /* USER CODE END 2 */
@@ -212,11 +306,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(grttemp == 1){
-		  WS2812B_Refresh();
-		  WS2812B_Refresh();
-		  grttemp = 0;
-	  }
+
+	  WS2812BFX_Callback();	// FX effects calllback
 
     /* USER CODE END WHILE */
 
@@ -302,6 +393,50 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 4799;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 9;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 

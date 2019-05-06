@@ -145,7 +145,6 @@ void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 {
 	if(hspi == hspi_ws2812b)
 	{
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
 		if(!ResetSignal)
 		{
 			for(uint8_t k = 0; k < 24; k++) // To 72 impulses of reset
@@ -202,8 +201,6 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
 {
 	if(hspi == hspi_ws2812b)
 	{
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
-
 		if(CurrentLed > WS2812B_LEDS)
 		{
 			HAL_SPI_DMAStop(hspi_ws2812b);
