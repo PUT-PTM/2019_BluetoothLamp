@@ -125,7 +125,8 @@ mode_circus_combustus(void),
 mode_halloween(void),
 mode_bicolor_chase(void),
 mode_tricolor_chase(void),
-mode_icu(void)
+mode_icu(void),
+mode_fade_dual(void)
 ;
 
 void (*mMode[MODE_COUNT])(void) =
@@ -187,7 +188,8 @@ void (*mMode[MODE_COUNT])(void) =
     mode_halloween,
     mode_bicolor_chase,
     mode_tricolor_chase,
-    mode_icu
+    mode_icu,
+	mode_fade_dual
 };
 
 FX_STATUS WS2812BFX_Init(uint16_t Segments)
@@ -1151,7 +1153,10 @@ void mode_rainbow_cycle(void)
 /*
  * Fades the LEDs between two colors
  */
-void mode_fade(void) {
+/*void mode_fade(void) {
+	if(Ws28b12b_Segments[mActualSegment].ModeColor[1] == WS2812B_GetColor(2)){
+
+	}else{
   int lum = Ws28b12b_Segments[mActualSegment].CounterModeStep;
   if(lum > 255) lum = 511 - lum; // lum = 0 -> 255 -> 0
 
@@ -1164,9 +1169,27 @@ void mode_fade(void) {
   Ws28b12b_Segments[mActualSegment].CounterModeStep += 4;
   if(Ws28b12b_Segments[mActualSegment].CounterModeStep > 511) Ws28b12b_Segments[mActualSegment].CounterModeStep = 0;
   Ws28b12b_Segments[mActualSegment].ModeDelay = Ws28b12b_Segments[mActualSegment].Speed;
+	}
 }
+*/
+void mode_fade(void) {
+	if(Ws28b12b_Segments[mActualSegment].ModeColor[1] == WS2812B_GetColor(2)){
 
+	}else{
+  int lum = Ws28b12b_Segments[mActualSegment].CounterModeStep;
+  if(lum > 255) lum = 511 - lum; // lum = 0 -> 255 -> 0
 
+  uint32_t color = color_blend(Ws28b12b_Segments[mActualSegment].ModeColor[0], Ws28b12b_Segments[mActualSegment].ModeColor[1], lum);
+
+  for(uint16_t i=Ws28b12b_Segments[mActualSegment].IdStart; i <= Ws28b12b_Segments[mActualSegment].IdStop; i++) {
+    WS2812B_SetDiodeColor(i, color);
+  }
+
+  Ws28b12b_Segments[mActualSegment].CounterModeStep += 4;
+  if(Ws28b12b_Segments[mActualSegment].CounterModeStep > 511) Ws28b12b_Segments[mActualSegment].CounterModeStep = 0;
+  Ws28b12b_Segments[mActualSegment].ModeDelay = Ws28b12b_Segments[mActualSegment].Speed;
+	}
+}
 /*
  * Runs a single pixel back and forth.
  */
@@ -1982,5 +2005,20 @@ void mode_icu(void)
   WS2812B_SetDiodeColor(Ws28b12b_Segments[mActualSegment].IdStart + dest, Ws28b12b_Segments[mActualSegment].ModeColor[0]);
   WS2812B_SetDiodeColor(Ws28b12b_Segments[mActualSegment].IdStart + dest + SEGMENT_LENGTH/2, Ws28b12b_Segments[mActualSegment].ModeColor[0]);
 
+  Ws28b12b_Segments[mActualSegment].ModeDelay = Ws28b12b_Segments[mActualSegment].Speed;
+}
+
+void mode_fade_dual(void) {
+  int lum = Ws28b12b_Segments[mActualSegment].CounterModeStep;
+  if(lum > 255) lum = 511 - lum; // lum = 0 -> 255 -> 0
+
+  uint32_t color = color_blend(Ws28b12b_Segments[mActualSegment].ModeColor[0], Ws28b12b_Segments[mActualSegment].ModeColor[1], lum);
+
+  for(uint16_t i=Ws28b12b_Segments[mActualSegment].IdStart; i <= Ws28b12b_Segments[mActualSegment].IdStop; i++) {
+    WS2812B_SetDiodeColor(i, color);
+  }
+
+  Ws28b12b_Segments[mActualSegment].CounterModeStep += 4;
+  if(Ws28b12b_Segments[mActualSegment].CounterModeStep > 511) Ws28b12b_Segments[mActualSegment].CounterModeStep = 0;
   Ws28b12b_Segments[mActualSegment].ModeDelay = Ws28b12b_Segments[mActualSegment].Speed;
 }
