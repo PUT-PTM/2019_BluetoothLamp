@@ -57,7 +57,7 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
             updateNowPlayingCenter()
             playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             
-            AKPlaygroundLoop(every: 0.1) {
+            AKPlaygroundLoop(every: 0.2) {
                 if self.player.isPlaying {
                     print(self.tracker.amplitude)
                     self.changeColor(amp: self.tracker.amplitude)

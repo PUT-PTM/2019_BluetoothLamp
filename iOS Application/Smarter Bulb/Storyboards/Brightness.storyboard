@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,13 +13,13 @@
         <!--Brightness View Controller-->
         <scene sceneID="fAe-9e-Y9D">
             <objects>
-                <viewController storyboardIdentifier="BrightnessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRp-8g-9Tv" customClass="BrightnessViewController" customModule="Smarter_Bulb" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cA5-gS-PXh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="BrightnessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRp-8g-9Tv" customClass="BrightnessViewController" customModule="Smarter_Lifx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cA5-gS-PXh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-3K-YsS" customClass="TactileSlider" customModule="TactileSlider">
-                                <rect key="frame" x="129" y="251" width="121" height="353"/>
+                                <rect key="frame" x="127" y="258" width="121" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -37,9 +37,16 @@
                                         <color key="value" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.64723351883561642" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeBrightness:" destination="uRp-8g-9Tv" eventType="valueChanged" id="mBM-I0-c80"/>
+                                </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun_full" translatesAutoresizingMaskIntoConstraints="NO" id="vAq-zY-2Y8">
+                                <rect key="frame" x="140" y="174" width="95" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XZW-PG-W8C"/>
                     </view>
                     <connections>
@@ -48,7 +55,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZw-HV-1kV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="109.82142857142857"/>
+            <point key="canvasLocation" x="120.8" y="109.35960591133005"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun_full" width="480" height="480"/>
+    </resources>
 </document>

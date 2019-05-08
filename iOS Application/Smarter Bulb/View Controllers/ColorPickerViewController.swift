@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import CULColorPicker
+import FlexColorPicker
 import IGColorPicker
 import FaveButton
 
-class ColorPickerViewController: UIViewController, FaveButtonDelegate {
+class ColorPickerViewController: CustomColorPickerViewController, FaveButtonDelegate {
 
-    weak var delegate: ColorDelegate?
+    weak var colorDelegate: ColorDelegate?
     
-    @IBOutlet weak var colorPicker: CULColorPickerView!
     @IBOutlet weak var circleColorPalette: ColorPickerView!
     @IBOutlet weak var hexValue: UILabel!
     @IBOutlet weak var faveButton: FaveButton!
@@ -50,7 +49,7 @@ class ColorPickerViewController: UIViewController, FaveButtonDelegate {
         }
         
         var circleColorPalette: ColorPickerView!
-        circleColorPalette = ColorPickerView(frame: CGRect(x:37, y:396, width: 300, height: 71))
+        circleColorPalette = ColorPickerView(frame: CGRect(x:37, y:433, width: 300, height: 71))
         circleColorPalette.tag = 1
         
         circleColorPalette.colors = colorsArray as! [UIColor]
@@ -64,17 +63,20 @@ class ColorPickerViewController: UIViewController, FaveButtonDelegate {
     }
 }
 
-extension ColorPickerViewController: CULColorPickerViewDelegate {
-    func colorPickerWillBeginDragging(_ colorPicker: CULColorPickerView) { }
-    func colorPickerDidSelectColor(_ colorPicker: CULColorPickerView) { }
-    func colorPickerDidEndDagging(_ colorPicker: CULColorPickerView) {
-        delegate?.changeLampColor(newColor: colorPicker.selectedColor)
+extension ColorPickerViewController: ColorPickerDelegate {
+    
+    func colorPicker(_: ColorPickerController, selectedColor: UIColor, usingControl: ColorControl) {
+        colorDelegate?.changeLampColor(newColor: colorPicker.selectedColor)
         hexValue.text = colorPicker.selectedColor.toHexString().uppercased()
         if colorsArray.contains(UIColor(hexString: hexValue.text!)) {
             faveButton.setSelected(selected: true, animated: false)
         } else {
             faveButton.setSelected(selected: false, animated: false)
         }
+    }
+    
+    func colorPicker(_: ColorPickerController, confirmedColor: UIColor, usingControl: ColorControl) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -83,8 +85,8 @@ extension ColorPickerViewController: ColorPickerViewDelegateFlowLayout, ColorPic
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         let currentColor = colorPickerView.colors[indexPath.item]
         hexValue.text = currentColor.toHexString().uppercased()
-        colorPicker.updateSelectedColor(currentColor)
-        delegate?.changeLampColor(newColor: currentColor)
+        radialHsbPalette?.setSelectedHSBColor(currentColor.hsbColor, isInteractive: true)
+        colorDelegate?.changeLampColor(newColor: currentColor)
         if colorsArray.contains(UIColor(hexString: hexValue.text!)) {
             faveButton.setSelected(selected: true, animated: false)
         } else {

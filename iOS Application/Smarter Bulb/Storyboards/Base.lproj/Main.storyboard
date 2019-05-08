@@ -218,7 +218,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="eMF-Z8-9yN" kind="show" identifier="settingsSegue" customClass="SPStorkSegue" customModule="Smarter_Bulb" customModuleProvider="target" id="wJt-fO-Hz3"/>
+                                    <action selector="showSettingsViewController:" destination="IB2-EQ-uvH" eventType="touchUpInside" id="Ioe-qC-NDd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1g-KJ-cdf" customClass="CardHighlight" customModule="Cards">
@@ -396,7 +396,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="turnOnAlarm:" destination="gss-LS-xUG" eventType="touchUpInside" id="8nd-di-OOC"/>
+                                    <action selector="turnOffAlarm:" destination="gss-LS-xUG" eventType="touchUpInside" id="RuG-t0-Aac"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fil-xX-7yk">
@@ -416,7 +416,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="turnOffAlarm:" destination="gss-LS-xUG" eventType="touchUpInside" id="k9u-qk-msq"/>
+                                    <action selector="turnOnAlarm:" destination="gss-LS-xUG" eventType="touchUpInside" id="gC5-i1-zkp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alarm Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssI-Zh-CtE">
@@ -442,22 +442,29 @@
         <!--Settings View Controller-->
         <scene sceneID="PXe-sd-aIg">
             <objects>
-                <viewController id="eMF-Z8-9yN" customClass="SettingsViewController" customModule="Smarter_Bulb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eMF-Z8-9yN" customClass="SettingsViewController" customModule="Smarter_Bulb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9P2-h4-8wE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-nV-bnl">
-                                <rect key="frame" x="16" y="44" width="145" height="45"/>
+                                <rect key="frame" x="40" y="44" width="145" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2G-IH-yMn">
+                                <rect key="frame" x="64" y="177" width="247" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cJA-Jj-S4t"/>
                     </view>
+                    <connections>
+                        <outlet property="themePicker" destination="y2G-IH-yMn" id="dNk-fF-WVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWG-ox-VmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

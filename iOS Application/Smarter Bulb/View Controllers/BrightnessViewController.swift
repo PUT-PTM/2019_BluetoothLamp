@@ -13,6 +13,8 @@ class BrightnessViewController: UIViewController {
 
     @IBOutlet weak var brightnessSlider: TactileSlider!
     
+    weak var brightnessDelegate: ColorDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
@@ -29,6 +31,10 @@ class BrightnessViewController: UIViewController {
         brightnessSlider.trackBackground = UIColor.gray.withAlphaComponent(0.4)
     }
 
+    @IBAction func changeBrightness(_ sender: TactileSlider) {
+        brightnessDelegate?.changeBrightness(newBrightness: sender.value/100.0)
+    }
+    
     @objc func close() {
         dismiss(animated: true, completion: nil)
     }

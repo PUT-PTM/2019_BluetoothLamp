@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "FlexColorPicker.h"
 
-FOUNDATION_EXPORT double CULColorPickerVersionNumber;
-FOUNDATION_EXPORT const unsigned char CULColorPickerVersionString[];
+FOUNDATION_EXPORT double FlexColorPickerVersionNumber;
+FOUNDATION_EXPORT const unsigned char FlexColorPickerVersionString[];
 

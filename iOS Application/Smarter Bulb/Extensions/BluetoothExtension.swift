@@ -66,7 +66,7 @@ extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        if let servicePeripheral = peripheral.services as [CBService]! { //get the services of the perifereal
+        if let servicePeripheral = peripheral.services as [CBService]? { //get the services of the perifereal
             for service in servicePeripheral {
                 
                 //Then look for the characteristics of the services
@@ -77,7 +77,7 @@ extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        if let characterArray = service.characteristics as [CBCharacteristic]! {
+        if let characterArray = service.characteristics as [CBCharacteristic]? {
             for cc in characterArray {
                 print(cc.uuid.uuidString)
                 if(cc.uuid.uuidString == "FFE1") { //properties: read, write

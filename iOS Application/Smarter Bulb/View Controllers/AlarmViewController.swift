@@ -9,7 +9,8 @@
 import UIKit
 
 class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate {
-
+    weak var alarmDelegate: AlarmDelegate?
+    
     @IBOutlet weak var hoursPicker: AKPickerView!
     @IBOutlet weak var minutesPicker: AKPickerView!
     
@@ -25,6 +26,15 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
     }
     
     @IBAction func turnOnAlarm(_ sender: Any) {
+        
+        let date = Date()
+        let currentMinutes = Calendar.current.component(.minute, from: date)
+        let currentHours = Calendar.current.component(.hour, from: date)
+        
+        let timeToAlarm = (hoursPicker.selectedItem * 60 + minutesPicker.selectedItem) - (currentHours * 60 + currentMinutes)
+        
+        print("\(timeToAlarm) minutes to alarm")
+        alarmDelegate?.setAlarm(time: timeToAlarm)
         
     }
     

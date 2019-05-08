@@ -34,9 +34,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var oceanMode: CardHighlight!
     
     lazy var pastelView = PastelView(frame: view.bounds)
+    lazy var starBG = StarsOverlay(frame: view.bounds)
     var musicController: MusicViewController!
     var colorPickerController: ColorPickerViewController!
     var brightnessController: BrightnessViewController!
+    var settingsController: SettingsViewController!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
     var currentColor = UIColor(red: 48/255, green: 62/255, blue: 103/255, alpha: 1)
     var isAlarmSet = false
     var isMusicModeSet = false
+    var currentTheme = 1 // 1-gradientBG, 2-starBG
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +63,10 @@ class ViewController: UIViewController {
     }
     
     @objc func willEnterForeground() {
-        pastelView.removeFromSuperview()
-        initGradientBackground()
+        if currentTheme == 1 {
+            pastelView.removeFromSuperview()
+            initGradientBackground()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -142,32 +147,32 @@ class ViewController: UIViewController {
     
     @objc func natureModeButtonPressed(sender: UIGestureRecognizer) {
         print("Nature mode tapped")
-        writeValue(value: "2_1")
+        writeValue(value: "3-099-999-99999")
         pastelView.setColors([.black, .green])
     }
     @objc func bookModeButtonPressed(sender: UIGestureRecognizer) {
         print("Book mode tapped")
-        writeValue(value: "2_2")
+        writeValue(value: "3-199-999-99999")
         pastelView.setColors([.black, .yellow])
     }
     @objc func relaxModeButtonPressed(sender: UIGestureRecognizer) {
         print("Relax mode tapped")
-        writeValue(value: "2_3")
+        writeValue(value: "3-299-999-99999")
         pastelView.setPastelGradient(.trueSunset)
     }
     @objc func rainbowModeButtonPressed(sender: UIGestureRecognizer) {
         print("Rainbow mode tapped")
-        writeValue(value: "2_4")
+        writeValue(value: "3-399-999-99999")
         pastelView.setColors([.black, .orange])
     }
     @objc func fireModeButtonPressed(sender: UIGestureRecognizer) {
         print("Fire mode tapped")
-        writeValue(value: "2_5")
+        writeValue(value: "3-499-999-99999")
         pastelView.setPastelGradient(.youngPassion)
     }
     @objc func oceanModeButtonPressed(sender: UIGestureRecognizer) {
         print("Ocean mode tapped")
-        writeValue(value: "2_6")
+        writeValue(value: "3-599-999-99999")
         pastelView.setPastelGradient(.morpheusDen)
     }
         
@@ -188,18 +193,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showMusicViewController(_ sender: Any) {
-        print("Music Mode button pressed.")
-        if musicController == nil {
-            let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
-            musicController = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController
-        }
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        musicController.transitioningDelegate = transitionDelegate
-        musicController.modalPresentationStyle = .custom
-        musicController.modalPresentationCapturesStatusBarAppearance = true
-        musicController.delegate = self
         
-        self.present(musicController, animated: true, completion: nil)
+        if isBulbTurnedOn {
+            if musicController == nil {
+                let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
+                musicController = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController
+            }
+            let transitionDelegate = SPStorkTransitioningDelegate()
+            musicController.transitioningDelegate = transitionDelegate
+            musicController.modalPresentationStyle = .custom
+            musicController.modalPresentationCapturesStatusBarAppearance = true
+            musicController.delegate = self
+            
+            self.present(musicController, animated: true, completion: nil)
+            
+        } else {
+            let notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
+            notchy.presentNotchy(in: self.view, duration: 3)
+        }
+        
+        print("Music Mode button pressed.")
     }
     
     
@@ -242,30 +255,61 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.1, animations: { self.changeBrightnessButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)}, completion: { _ in UIView.animate(withDuration: 0.1) { self.changeBrightnessButton.transform = CGAffineTransform.identity }})
         
-        if brightnessController == nil {
-            let storyboard = UIStoryboard(name: "Brightness", bundle: nil)
-            brightnessController = storyboard.instantiateViewController(withIdentifier: "BrightnessViewController") as? BrightnessViewController
+        if isBulbTurnedOn {
+            if brightnessController == nil {
+                let storyboard = UIStoryboard(name: "Brightness", bundle: nil)
+                brightnessController = storyboard.instantiateViewController(withIdentifier: "BrightnessViewController") as? BrightnessViewController
+            }
+            
+            brightnessController.modalPresentationStyle = .overCurrentContext
+            brightnessController.brightnessDelegate = self
+            
+            self.present(brightnessController, animated: true, completion: nil)
+            
+        } else {
+            let notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
+            notchy.presentNotchy(in: self.view, duration: 3)
         }
-        brightnessController.modalPresentationStyle = .overCurrentContext
-        self.present(brightnessController, animated: true, completion: nil)
+        
         print("Brightness button pressed.")
     }
     
     @IBAction func openColorPalette(_ sender: Any) {
         
-        if colorPickerController == nil {
-            let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
-            colorPickerController = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as? ColorPickerViewController
+        if isBulbTurnedOn {
+            if colorPickerController == nil {
+                let storyboard = UIStoryboard(name: "ColorPicker", bundle: nil)
+                colorPickerController = storyboard.instantiateViewController(withIdentifier: "ColorPickerViewController") as? ColorPickerViewController
+            }
+            
+            let transitionDelegate = SPStorkTransitioningDelegate()
+            colorPickerController.transitioningDelegate = transitionDelegate
+            colorPickerController.modalPresentationStyle = .custom
+            colorPickerController.modalPresentationCapturesStatusBarAppearance = true
+            colorPickerController.colorDelegate = self
+            transitionDelegate.swipeToDismissEnabled = false
+            transitionDelegate.customHeight = 530
+            
+            self.present(colorPickerController, animated: true, completion: nil)
+            
+        } else {
+            let notchy = NotchyAlert(title: "You are not connected", description: nil, image: nil)
+            notchy.presentNotchy(in: self.view, duration: 3)
+        }
+    }
+    
+    @IBAction func showSettingsViewController(_ sender: Any) {
+        if settingsController == nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            settingsController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
         }
         
         let transitionDelegate = SPStorkTransitioningDelegate()
-        colorPickerController.transitioningDelegate = transitionDelegate
-        colorPickerController.modalPresentationStyle = .custom
-        colorPickerController.modalPresentationCapturesStatusBarAppearance = true
-        colorPickerController.delegate = self
-        transitionDelegate.customHeight = 500
+        settingsController.transitioningDelegate = transitionDelegate
+        settingsController.modalPresentationStyle = .custom
+        settingsController.themesDelegate = self
         
-        self.present(colorPickerController, animated: true, completion: nil)
+        self.present(settingsController, animated: true, completion: nil)
     }
     
 }
@@ -273,6 +317,7 @@ class ViewController: UIViewController {
 extension ViewController: ColorDelegate {
     func changeLampColor(newColor: UIColor) {
         pastelView.setColors([newColor, .black])
+        starBG.setup(color: newColor)
         currentColor = newColor
         
         let red = String(format: "%03d", Int(newColor.colorComponents!.red*255))
@@ -287,10 +332,17 @@ extension ViewController: ColorDelegate {
     func changeLampColor(newColor: UIColor, brightness: Double) {
         pastelView.setColors([newColor, .black])
         currentColor = newColor
+        
+        let normalizedBrightnes: CGFloat
+        if brightness > 1 {
+            normalizedBrightnes = 1
+        } else {
+            normalizedBrightnes = CGFloat(brightness)
+        }
 
-        let red = String(format: "%03d", Int(newColor.colorComponents!.red*CGFloat(brightness)*255))
-        let green = String(format: "%03d", Int(newColor.colorComponents!.green*CGFloat(brightness)*255))
-        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*CGFloat(brightness)*255))
+        let red = String(format: "%03d", Int(newColor.colorComponents!.red*CGFloat(normalizedBrightnes)*255))
+        let green = String(format: "%03d", Int(newColor.colorComponents!.green*CGFloat(normalizedBrightnes)*255))
+        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*CGFloat(normalizedBrightnes)*255))
         let RGB = "2-\(red)-\(green)-\(blue)99"
         
         writeValue(value: RGB)
@@ -300,10 +352,54 @@ extension ViewController: ColorDelegate {
     func getCurrentColor() -> UIColor {
         return currentColor
     }
+    
+    func changeBrightness(newBrightness: Float) {
+        print(newBrightness)
+        
+        let red = String(format: "%03d", Int(currentColor.colorComponents!.red*CGFloat(newBrightness)*255))
+        let green = String(format: "%03d", Int(currentColor.colorComponents!.green*CGFloat(newBrightness)*255))
+        let blue = String(format: "%03d", Int(currentColor.colorComponents!.blue*CGFloat(newBrightness)*255))
+        let RGB = "2-\(red)-\(green)-\(blue)99"
+        
+        writeValue(value: RGB)
+    }
+}
+
+extension ViewController: ThemesDelegate {
+    func changeTheme(themeNumber: Int) {
+        if themeNumber == 1 && currentTheme != 1 {
+            currentTheme = 1
+            starBG.removeFromSuperview()
+            initGradientBackground()
+            print("Changed theme to Gradient")
+            
+        } else if themeNumber == 2 && currentTheme != 2 {
+            currentTheme = 2
+            pastelView.removeFromSuperview()
+            view.insertSubview(starBG, at: 0)
+            print("Changed theme to Star")
+        }
+    }
+}
+
+extension ViewController: AlarmDelegate {
+    func setAlarm(time: Int) {
+        // set correct timing
+        writeValue(value: String(time))
+    }
 }
 
 protocol ColorDelegate: class {
     func changeLampColor(newColor: UIColor)
     func changeLampColor(newColor: UIColor, brightness: Double)
     func getCurrentColor() -> UIColor
+    func changeBrightness(newBrightness: Float)
+}
+
+protocol ThemesDelegate: class {
+    func changeTheme(themeNumber: Int)
+}
+
+protocol AlarmDelegate: class {
+    func setAlarm(time: Int)
 }

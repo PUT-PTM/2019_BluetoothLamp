@@ -11,6 +11,7 @@
 		B121578C22455C6C00DEAEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121578B22455C6C00DEAEEC /* ViewController.swift */; };
 		B1D5933E2242C18400D29E60 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */; };
 		E13885C7225FD807001A442D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */; };
+		E13E887522816A0B0006B1EE /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E887422816A0B0006B1EE /* StarsOverlay.swift */; };
 		E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B6CDF22306424007E0CBB /* AppDelegate.swift */; };
 		E14B6CE522306424007E0CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE322306424007E0CBB /* Main.storyboard */; };
 		E14B6CE722306426007E0CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14B6CE622306426007E0CBB /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		82A683DC0A4DCBDD9FEFB4AC /* Pods-Smarter Bulb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smarter Bulb.debug.xcconfig"; path = "Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb.debug.xcconfig"; sourceTree = "<group>"; };
 		B121578B22455C6C00DEAEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1D5933D2242C18400D29E60 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		E13E887422816A0B0006B1EE /* StarsOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
 		E14B6CDC22306424007E0CBB /* Smarter Bulb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smarter Bulb.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14B6CDF22306424007E0CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14B6CE422306424007E0CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +46,6 @@
 		E15882972260C5A0006A0959 /* Brightness.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brightness.storyboard; sourceTree = "<group>"; };
 		E15882992260C5E4006A0959 /* BrightnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
 		E1D1F6432253FBAB00EB9E85 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
-		E1D1F6452254DF8400EB9E85 /* Smarter Bulb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smarter Bulb.entitlements"; sourceTree = "<group>"; };
 		E1D1F6482254DFD700EB9E85 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		E1E72055224EE76D0092C04D /* AKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		E14B6CDE22306424007E0CBB /* Smarter Bulb */ = {
 			isa = PBXGroup;
 			children = (
-				E1D1F6452254DF8400EB9E85 /* Smarter Bulb.entitlements */,
 				E1FDF656224C207900F84707 /* View Controllers */,
 				E1FDF658224C211F00F84707 /* Storyboards */,
 				E1FDF65B224C265000F84707 /* Extensions */,
@@ -116,6 +116,7 @@
 				E14B6CDF22306424007E0CBB /* AppDelegate.swift */,
 				E1E72055224EE76D0092C04D /* AKPickerView.swift */,
 				E14B6CEB22306426007E0CBB /* Info.plist */,
+				E13E887422816A0B0006B1EE /* StarsOverlay.swift */,
 			);
 			path = "Smarter Bulb";
 			sourceTree = "<group>";
@@ -188,6 +189,7 @@
 				TargetAttributes = {
 					E14B6CDB22306424007E0CBB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -246,9 +248,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Smarter Bulb/Pods-Smarter Bulb-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CULColorPicker/CULColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexColorPicker/FlexColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/IGColorPicker/IGColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/NotchyAlert/NotchyAlert.framework",
@@ -262,9 +264,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CULColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotchyAlert.framework",
@@ -316,6 +318,7 @@
 				E1555DE6224EB45000C7D3C4 /* SettingsViewController.swift in Sources */,
 				E1555DE4224EB2A300C7D3C4 /* SPStorkSegue.swift in Sources */,
 				E1FDF65A224C257500F84707 /* UIKitExtensions.swift in Sources */,
+				E13E887522816A0B0006B1EE /* StarsOverlay.swift in Sources */,
 				B121578C22455C6C00DEAEEC /* ViewController.swift in Sources */,
 				E1FDF65D224C269000F84707 /* BluetoothExtension.swift in Sources */,
 				E14B6CE022306424007E0CBB /* AppDelegate.swift in Sources */,
@@ -476,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertmoryson.Smarter-Bulb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -497,7 +500,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertmoryson.Smarter-Bulb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

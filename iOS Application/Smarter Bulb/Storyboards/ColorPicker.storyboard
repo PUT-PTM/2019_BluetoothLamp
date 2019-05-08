@@ -18,11 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJJ-0B-WC9" customClass="CULColorPickerView" customModule="CULColorPicker">
-                                <rect key="frame" x="38" y="144" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5A-1P-jT2">
                                 <rect key="frame" x="38" y="54" width="299" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,7 +55,6 @@
                     </view>
                     <connections>
                         <outlet property="circleColorPalette" destination="B1w-Ny-Nqr" id="dGZ-vq-9Ry"/>
-                        <outlet property="colorPicker" destination="gJJ-0B-WC9" id="mAz-eV-N5S"/>
                         <outlet property="faveButton" destination="Uow-Dl-IeA" id="iVH-d7-Fld"/>
                         <outlet property="hexValue" destination="SPb-g4-4Fp" id="Tig-8f-Q4t"/>
                     </connections>
@@ -77,11 +71,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-mj-3tl" customClass="CULColorPickerView" customModule="CULColorPicker">
-                                <rect key="frame" x="61" y="128" width="254" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#FFFFFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-4d-UHz">
                                 <rect key="frame" x="38" y="92" width="92" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-AK-k6i" customClass="ColorPickerView" customModule="IGColorPicker">
-                                <rect key="frame" x="37" y="396" width="300" height="71"/>
+                                <rect key="frame" x="37" y="433" width="300" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -101,20 +90,42 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-mj-3tl" customClass="RadialPaletteControl" customModule="FlexColorPicker">
+                                <rect key="frame" x="43" y="116" width="288" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYo-Yx-epH" customClass="ColorSliderControl" customModule="FlexColorPicker">
+                                <rect key="frame" x="25" y="396" width="325" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beo-q3-PwD" customClass="FaveButton" customModule="FaveButton">
-                                <rect key="frame" x="293" y="92" width="44" height="44"/>
+                                <rect key="frame" x="287" y="81" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="heart"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-FU-mfh" customClass="ColorPreviewWithHex" customModule="FlexColorPicker">
+                                <rect key="frame" x="273" y="61" width="57.666666666666664" height="62.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10827202349999999" green="0.1083889827" blue="0.1082901582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="77T-At-7uP"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cWi-FU-mfh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="circleColorPalette" destination="L2O-AK-k6i" id="btA-YS-R7z"/>
-                        <outlet property="colorPicker" destination="miZ-mj-3tl" id="kwO-Lh-r3V"/>
+                        <outlet property="customControl1" destination="LYo-Yx-epH" id="Rvj-tZ-Apf"/>
+                        <outlet property="customControl2" destination="cWi-FU-mfh" id="NVl-k8-W6S"/>
                         <outlet property="faveButton" destination="beo-q3-PwD" id="mVM-th-U1r"/>
                         <outlet property="hexValue" destination="6bD-4d-UHz" id="bDk-bZ-T87"/>
+                        <outlet property="radialHsbPalette" destination="miZ-mj-3tl" id="OHh-WB-47O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qos-KK-Cej" userLabel="First Responder" sceneMemberID="firstResponder"/>
