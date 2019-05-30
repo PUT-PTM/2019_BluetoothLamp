@@ -1,4 +1,5 @@
 PODS:
+  - AudioIndicatorBars (0.0.2)
   - AudioKit (4.7):
     - AudioKit/Core (= 4.7)
     - AudioKit/UI (= 4.7)
@@ -20,6 +21,7 @@ PODS:
   - WhatsNew (0.4.4)
 
 DEPENDENCIES:
+  - AudioIndicatorBars (~> 0.0.2)
   - AudioKit (~> 4.0)
   - Cards (from `https://github.com/PaoloCuscela/Cards.git`)
   - FaveButton
@@ -33,6 +35,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AudioIndicatorBars
     - AudioKit
     - FaveButton
     - FlexColorPicker
@@ -55,6 +58,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/PaoloCuscela/Cards.git
 
 SPEC CHECKSUMS:
+  AudioIndicatorBars: 10bf47c8422578dab5046e795a85a0f9b292d57d
   AudioKit: 8b3c883fb6023d1b30764e40372991c9c66aa022
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
@@ -68,6 +72,6 @@ SPEC CHECKSUMS:
   TactileSlider: 7068735b6d6c265a4dcceea7d6ba7299fd4e4313
   WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: 8ada553ab9529a7d51ddaf3e8786a83d44286375
+PODFILE CHECKSUM: f8cd4348c0111c03ba9978d7e8b2b3daf9988e95
 
 COCOAPODS: 1.6.1

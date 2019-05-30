@@ -178,16 +178,6 @@ class ViewController: UIViewController {
         
     @IBAction func showAlarmViewController(_ sender: Any) {
         
-        let welcomMusicScreen = WhatsNewViewController(items: [
-            WhatsNewItem.image(title: "Nice Icons", subtitle: "Completely customize colors, texts and icons.", image: #imageLiteral(resourceName: "nature")),
-            WhatsNewItem.image(title: "Such Easy", subtitle: "Setting this up only takes 2 lines of code, impressive you say?", image: #imageLiteral(resourceName: "fire")),
-            WhatsNewItem.image(title: "Very Sleep", subtitle: "It helps you get more sleep by writing less code.", image: #imageLiteral(resourceName: "unicorn")),
-            WhatsNewItem.text(title: "Text Only", subtitle: "No icons? Just go with plain text."),
-            ])
-        welcomMusicScreen.titleText = "Welcome in Alarm Mode!"
-        welcomMusicScreen.presentationOption = .always
-        welcomMusicScreen.presentIfNeeded(on: self)
-        
         //TODO when sb click continue show prop viewController
         
     }
@@ -329,20 +319,13 @@ extension ViewController: ColorDelegate {
         print(RGB)
     }
     
-    func changeLampColor(newColor: UIColor, brightness: Double) {
+    func changeLampColor(newColor: UIColor, newBrightness: CGFloat) {
         pastelView.setColors([newColor, .black])
         currentColor = newColor
-        
-        let normalizedBrightnes: CGFloat
-        if brightness > 1 {
-            normalizedBrightnes = 1
-        } else {
-            normalizedBrightnes = CGFloat(brightness)
-        }
 
-        let red = String(format: "%03d", Int(newColor.colorComponents!.red*CGFloat(normalizedBrightnes)*255))
-        let green = String(format: "%03d", Int(newColor.colorComponents!.green*CGFloat(normalizedBrightnes)*255))
-        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*CGFloat(normalizedBrightnes)*255))
+        let red = String(format: "%03d", Int(newColor.colorComponents!.red*CGFloat(newBrightness)*255))
+        let green = String(format: "%03d", Int(newColor.colorComponents!.green*CGFloat(newBrightness)*255))
+        let blue = String(format: "%03d", Int(newColor.colorComponents!.blue*CGFloat(newBrightness)*255))
         let RGB = "2-\(red)-\(green)-\(blue)99"
         
         writeValue(value: RGB)
@@ -391,7 +374,7 @@ extension ViewController: AlarmDelegate {
 
 protocol ColorDelegate: class {
     func changeLampColor(newColor: UIColor)
-    func changeLampColor(newColor: UIColor, brightness: Double)
+    func changeLampColor(newColor: UIColor, newBrightness: CGFloat)
     func getCurrentColor() -> UIColor
     func changeBrightness(newBrightness: Float)
 }

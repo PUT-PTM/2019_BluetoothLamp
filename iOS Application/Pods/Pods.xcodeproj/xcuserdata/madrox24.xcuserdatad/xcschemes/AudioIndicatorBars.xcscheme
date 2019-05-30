@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA76E78E44420C52A30C6AC9CF82D14F"
-               BuildableName = "Pods_Smarter_Bulb.framework"
-               BlueprintName = "Pods-Smarter Bulb"
+               BlueprintIdentifier = "1671450DF35E3112E8F0D76EBE555AEB"
+               BuildableName = "AudioIndicatorBars.framework"
+               BlueprintName = "AudioIndicatorBars"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA76E78E44420C52A30C6AC9CF82D14F"
-            BuildableName = "Pods_Smarter_Bulb.framework"
-            BlueprintName = "Pods-Smarter Bulb"
+            BlueprintIdentifier = "1671450DF35E3112E8F0D76EBE555AEB"
+            BuildableName = "AudioIndicatorBars.framework"
+            BlueprintName = "AudioIndicatorBars"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
