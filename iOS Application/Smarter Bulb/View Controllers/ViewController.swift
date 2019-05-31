@@ -298,6 +298,7 @@ class ViewController: UIViewController {
         settingsController.transitioningDelegate = transitionDelegate
         settingsController.modalPresentationStyle = .custom
         settingsController.themesDelegate = self
+        transitionDelegate.customHeight = 430
         
         self.present(settingsController, animated: true, completion: nil)
     }

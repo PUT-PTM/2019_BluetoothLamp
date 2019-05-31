@@ -159,8 +159,8 @@
 		E1FDF658224C211F00F84707 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B12D8315229FECCC00A4CB43 /* MusicPlayer.storyboard */,
 				E14B6CE322306424007E0CBB /* Main.storyboard */,
+				B12D8315229FECCC00A4CB43 /* MusicPlayer.storyboard */,
 				E14B6CE822306426007E0CBB /* LaunchScreen.storyboard */,
 				E1D2EBFB224FDB61006B1F4C /* ColorPicker.storyboard */,
 				E15882972260C5A0006A0959 /* Brightness.storyboard */,
