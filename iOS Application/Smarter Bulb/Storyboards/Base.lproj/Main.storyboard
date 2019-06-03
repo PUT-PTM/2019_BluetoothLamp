@@ -55,7 +55,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Mode for you"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Just magic"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="itemTitleSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
@@ -81,7 +81,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Mode for you"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Dark &amp; light blue"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_4"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconRadius">
                                         <real key="value" value="0.0"/>
@@ -93,16 +93,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Fire"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Royal"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="fire"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="crown"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Mode for you"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Feel like a king"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_3"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconRadius">
@@ -138,7 +138,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Green &amp; Blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Green"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="itemTitleSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
@@ -154,17 +154,17 @@
                                 <rect key="frame" x="249" y="543" width="95" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Relax"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Fire"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="relax"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="fire"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Yellow &amp; Red"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Animated Red"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="grad_2"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconRadius">
                                         <real key="value" value="0.0"/>
@@ -175,16 +175,16 @@
                                 <rect key="frame" x="140" y="543" width="95" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Book"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Candle"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="book"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="candle"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="nil" keyPath="buttonText"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Red &amp; Purple"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="itemTitle" value="Red &amp; Orange"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="itemSubtitle" value=" "/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="book_n"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconRadius">
@@ -518,7 +518,9 @@
         <image name="book" width="100" height="100"/>
         <image name="book_n" width="2400" height="2000"/>
         <image name="bulb_white" width="100" height="100"/>
+        <image name="candle" width="100" height="100"/>
         <image name="check_mark" width="500" height="500"/>
+        <image name="crown" width="90" height="90"/>
         <image name="fire" width="100" height="100"/>
         <image name="grad_1" width="2400" height="2000"/>
         <image name="grad_2" width="2000" height="2400"/>
@@ -528,7 +530,6 @@
         <image name="gradient" width="512" height="512"/>
         <image name="nature" width="100" height="100"/>
         <image name="palette_white" width="100" height="100"/>
-        <image name="relax" width="100" height="100"/>
         <image name="sun_white" width="100" height="100"/>
         <image name="unicorn" width="100" height="100"/>
         <image name="water" width="100" height="100"/>

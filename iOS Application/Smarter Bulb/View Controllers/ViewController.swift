@@ -128,16 +128,16 @@ class ViewController: UIViewController {
         let tapGestureNatureMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(natureModeButtonPressed))
         natureMode.addGestureRecognizer(tapGestureNatureMode)
         
-        let tapGestureBookMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(bookModeButtonPressed))
+        let tapGestureBookMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(candleModeButtonPressed))
         bookMode.addGestureRecognizer(tapGestureBookMode)
         
-        let tapGestureRelaxMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(relaxModeButtonPressed))
+        let tapGestureRelaxMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fireModeButtonPressed))
         relaxMode.addGestureRecognizer(tapGestureRelaxMode)
         
         let tapGestureRainbowMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(rainbowModeButtonPressed))
         rainbowMode.addGestureRecognizer(tapGestureRainbowMode)
         
-        let tapGestureFireMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fireModeButtonPressed))
+        let tapGestureFireMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(royalModeButtonPressed))
         fireMode.addGestureRecognizer(tapGestureFireMode)
         
         let tapGestureOceanMode:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oceanModeButtonPressed))
@@ -150,25 +150,25 @@ class ViewController: UIViewController {
         writeValue(value: "3-099-999-99999")
         pastelView.setColors([.black, .green])
     }
-    @objc func bookModeButtonPressed(sender: UIGestureRecognizer) {
-        print("Book mode tapped")
+    @objc func candleModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Candle mode tapped")
         writeValue(value: "3-199-999-99999")
-        pastelView.setColors([.black, .yellow])
+        pastelView.setPastelGradient(.sunnyMorning)
     }
-    @objc func relaxModeButtonPressed(sender: UIGestureRecognizer) {
-        print("Relax mode tapped")
+    @objc func fireModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Fire mode tapped")
         writeValue(value: "3-299-999-99999")
-        pastelView.setPastelGradient(.trueSunset)
+        pastelView.setColors([.black, .red])
     }
     @objc func rainbowModeButtonPressed(sender: UIGestureRecognizer) {
         print("Rainbow mode tapped")
         writeValue(value: "3-399-999-99999")
         pastelView.setColors([.black, .orange])
     }
-    @objc func fireModeButtonPressed(sender: UIGestureRecognizer) {
-        print("Fire mode tapped")
+    @objc func royalModeButtonPressed(sender: UIGestureRecognizer) {
+        print("Royal mode tapped")
         writeValue(value: "3-499-999-99999")
-        pastelView.setPastelGradient(.youngPassion)
+        pastelView.setColors([.black, .purple])
     }
     @objc func oceanModeButtonPressed(sender: UIGestureRecognizer) {
         print("Ocean mode tapped")
@@ -186,7 +186,7 @@ class ViewController: UIViewController {
         let transitionDelegate = SPStorkTransitioningDelegate()
         alarmController.transitioningDelegate = transitionDelegate
         alarmController.modalPresentationStyle = .custom
-        //alarmController.themesDelegate = self
+        alarmController.alarmDelegate = self
         transitionDelegate.customHeight = 500
         
         self.present(alarmController, animated: true, completion: nil)
@@ -378,8 +378,10 @@ extension ViewController: ThemesDelegate {
 
 extension ViewController: AlarmDelegate {
     func setAlarm(time: Int) {
-        // set correct timing
-        writeValue(value: String(time))
+        let timing = String(format: "%05d", time)
+        print("5-\(timing)9-999999")
+        
+        writeValue(value: "5-\(timing)9-999999")
     }
 }
 

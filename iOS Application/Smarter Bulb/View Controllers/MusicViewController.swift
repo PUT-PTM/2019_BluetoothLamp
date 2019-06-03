@@ -63,7 +63,7 @@ class MusicViewController: UIViewController, MPMediaPickerControllerDelegate {
             playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             playerSlider.maximumValue = Float(player.duration)
             
-            AKPlaygroundLoop(every: 0.2) {
+            AKPlaygroundLoop(every: 0.1) {
                 if self.player.isPlaying {
                     //print(self.tracker.amplitude)
                     //print("\(self.tracker.frequency) Freq")

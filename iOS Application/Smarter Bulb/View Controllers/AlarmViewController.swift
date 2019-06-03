@@ -40,7 +40,7 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
     }
     
     func turnOffAlarm() {
-        
+        alarmDelegate?.setAlarm(time: 0)
     }
     
     @IBAction func applySettings(_ sender: Any) {
