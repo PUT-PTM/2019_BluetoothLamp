@@ -13,6 +13,7 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
     
     @IBOutlet weak var hoursPicker: AKPickerView!
     @IBOutlet weak var minutesPicker: AKPickerView!
+    @IBOutlet weak var alarmSwitcher: UISwitch!
     
     
     let hours = ["00","01","02","03","04","05","06","07","08","09"] + Array(10...23).map({String($0)})
@@ -25,7 +26,7 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
         
     }
     
-    @IBAction func turnOnAlarm(_ sender: Any) {
+    func turnOnAlarm() {
         
         let date = Date()
         let currentMinutes = Calendar.current.component(.minute, from: date)
@@ -38,8 +39,23 @@ class AlarmViewController: UIViewController, AKPickerViewDataSource, AKPickerVie
         
     }
     
-    @IBAction func turnOffAlarm(_ sender: Any) {
+    func turnOffAlarm() {
         
+    }
+    
+    @IBAction func applySettings(_ sender: Any) {
+        
+        if alarmSwitcher.isOn {
+            turnOnAlarm()
+        } else {
+            turnOffAlarm()
+        }
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func dismissSettings(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     func initTimePickers() {

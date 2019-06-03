@@ -53,7 +53,7 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
         ]
         
         // Setup the unselected box layer
-        unselectedBoxLayer.lineCap = CAShapeLayerLineCap.round
+        unselectedBoxLayer.lineCap = .round
         unselectedBoxLayer.rasterizationScale = UIScreen.main.scale
         unselectedBoxLayer.shouldRasterize = true
         unselectedBoxLayer.actions = newActions
@@ -64,7 +64,7 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
         unselectedBoxLayer.fillColor = nil
         
         // Setup the selected box layer.
-        selectedBoxLayer.lineCap = CAShapeLayerLineCap.round
+        selectedBoxLayer.lineCap = .round
         selectedBoxLayer.rasterizationScale = UIScreen.main.scale
         selectedBoxLayer.shouldRasterize = true
         selectedBoxLayer.actions = newActions
@@ -73,8 +73,8 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
         selectedBoxLayer.fillColor = nil
         
         // Setup the checkmark layer.
-        markLayer.lineCap = CAShapeLayerLineCap.round
-        markLayer.lineJoin = CAShapeLayerLineJoin.round
+        markLayer.lineCap = .round
+        markLayer.lineJoin = .round
         markLayer.rasterizationScale = UIScreen.main.scale
         markLayer.shouldRasterize = true
         markLayer.actions = newActions
@@ -107,19 +107,19 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
             markLayer.path = pathGenerator.pathForLongMark(fromState)?.reversing().cgPath
             
             let checkMorphAnimation = animationGenerator.morphAnimation(pathGenerator.pathForMark(fromState)?.reversing(), toPath: pathGenerator.pathForLongMark(fromState)?.reversing())
-            checkMorphAnimation.fillMode = CAMediaTimingFillMode.backwards
+            checkMorphAnimation.fillMode = .backwards
             checkMorphAnimation.duration = checkMorphAnimation.duration / 4.0
-            checkMorphAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+            checkMorphAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
             
             let checkStrokeAnimation = animationGenerator.strokeAnimation(true)
             checkStrokeAnimation.beginTime = CACurrentMediaTime() + checkMorphAnimation.duration
             checkStrokeAnimation.duration = checkStrokeAnimation.duration / 4.0
-            checkStrokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+            checkStrokeAnimation.timingFunction = CAMediaTimingFunction(name: .linear)
             
             let boxStrokeAnimation = animationGenerator.strokeAnimation(true)
             boxStrokeAnimation.beginTime = CACurrentMediaTime() + checkMorphAnimation.duration + checkStrokeAnimation.duration
             boxStrokeAnimation.duration = boxStrokeAnimation.duration / 2.0
-            boxStrokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            boxStrokeAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
             
             let quickOpacityAnimation = animationGenerator.quickOpacityAnimation(true)
             
@@ -152,7 +152,7 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
             
             let boxStrokeAnimation = animationGenerator.strokeAnimation(false)
             boxStrokeAnimation.duration = boxStrokeAnimation.duration / 2.0
-            boxStrokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+            boxStrokeAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
             
             let checkQuickOpacityAnimation = animationGenerator.quickOpacityAnimation(false)
             checkQuickOpacityAnimation.duration = 0.001
@@ -160,13 +160,13 @@ internal class M13CheckboxSpiralController: M13CheckboxController {
             
             let checkStrokeAnimation = animationGenerator.strokeAnimation(false)
             checkStrokeAnimation.duration = checkStrokeAnimation.duration / 4.0
-            checkStrokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-            checkStrokeAnimation.fillMode = CAMediaTimingFillMode.forwards
+            checkStrokeAnimation.timingFunction = CAMediaTimingFunction(name: .linear)
+            checkStrokeAnimation.fillMode = .forwards
             checkStrokeAnimation.beginTime = CACurrentMediaTime() + boxStrokeAnimation.duration
             
             let checkMorphAnimation = animationGenerator.morphAnimation(pathGenerator.pathForLongMark(toState)?.reversing(), toPath: pathGenerator.pathForMark(toState)?.reversing())
             checkMorphAnimation.duration = checkMorphAnimation.duration / 4.0
-            checkMorphAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            checkMorphAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
             checkMorphAnimation.beginTime = CACurrentMediaTime() + boxStrokeAnimation.duration + checkStrokeAnimation.duration
             
             CATransaction.begin()

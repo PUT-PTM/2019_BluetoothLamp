@@ -1,6 +1,6 @@
 //
 //  MusicExtensions.swift
-//  Smarter Lifx
+//  Smarter Bulb
 //
 //  Created by Robert Moryson on 09/05/2019.
 //  Copyright © 2019 Robert Moryson. All rights reserved.

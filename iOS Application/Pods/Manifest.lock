@@ -1,18 +1,18 @@
 PODS:
   - AudioIndicatorBars (0.0.2)
-  - AudioKit (4.7):
-    - AudioKit/Core (= 4.7)
-    - AudioKit/UI (= 4.7)
-  - AudioKit/Core (4.7)
-  - AudioKit/UI (4.7):
+  - AudioKit (4.7.2.b1):
+    - AudioKit/Core (= 4.7.2.b1)
+    - AudioKit/UI (= 4.7.2.b1)
+  - AudioKit/Core (4.7.2.b1)
+  - AudioKit/UI (4.7.2.b1):
     - AudioKit/Core
   - Cards (1.4.0):
     - Player (= 0.13.0)
   - FaveButton (3.2.0)
   - FlexColorPicker (1.2.1)
   - IGColorPicker (0.4.2):
-    - M13Checkbox (~> 3.2.0)
-  - M13Checkbox (3.2.2)
+    - M13Checkbox (~> 3.3.2)
+  - M13Checkbox (3.3.2)
   - NotchyAlert (1.0)
   - Pastel (0.5.1)
   - Player (0.13.0)
@@ -22,11 +22,11 @@ PODS:
 
 DEPENDENCIES:
   - AudioIndicatorBars (~> 0.0.2)
-  - AudioKit (~> 4.0)
+  - AudioKit (= 4.7.2.b1)
   - Cards (from `https://github.com/PaoloCuscela/Cards.git`)
   - FaveButton
   - FlexColorPicker
-  - IGColorPicker
+  - IGColorPicker (from `https://github.com/erdikanik/IGColorPicker`)
   - NotchyAlert
   - Pastel
   - SPStorkController
@@ -34,12 +34,12 @@ DEPENDENCIES:
   - WhatsNew
 
 SPEC REPOS:
+  https://github.com/AudioKit/Specs.git:
+    - AudioKit
   https://github.com/cocoapods/specs.git:
     - AudioIndicatorBars
-    - AudioKit
     - FaveButton
     - FlexColorPicker
-    - IGColorPicker
     - M13Checkbox
     - NotchyAlert
     - Pastel
@@ -51,20 +51,25 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Cards:
     :git: https://github.com/PaoloCuscela/Cards.git
+  IGColorPicker:
+    :git: https://github.com/erdikanik/IGColorPicker
 
 CHECKOUT OPTIONS:
   Cards:
     :commit: 35b10622ce817cb4c8f4d2989a0b67fd0e2ef54a
     :git: https://github.com/PaoloCuscela/Cards.git
+  IGColorPicker:
+    :commit: 0ad524e2647564372c709d2fa836ba9eb18c31d2
+    :git: https://github.com/erdikanik/IGColorPicker
 
 SPEC CHECKSUMS:
   AudioIndicatorBars: 10bf47c8422578dab5046e795a85a0f9b292d57d
-  AudioKit: 8b3c883fb6023d1b30764e40372991c9c66aa022
+  AudioKit: e8d853a9a2f8d011cf56097789c07ec02b1051a8
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   FlexColorPicker: 2c6fe41cb33a650d5934fad75ab0e25df4b5af2f
-  IGColorPicker: c6d43aa386a9fdc8f958f3bd4e5ab85905242c8a
-  M13Checkbox: a8c2491cfbbca10797925fd0b9154a782bf40d89
+  IGColorPicker: 6ac2d1a7d585f31c852f4021888e8812b5264d54
+  M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
   NotchyAlert: 2e5f0acfeff794c673f14538c2a0b01095145d72
   Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
   Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
@@ -72,6 +77,6 @@ SPEC CHECKSUMS:
   TactileSlider: 7068735b6d6c265a4dcceea7d6ba7299fd4e4313
   WhatsNew: ebb4e2a85a0975c7c2705087c0c67939451f8b49
 
-PODFILE CHECKSUM: f8cd4348c0111c03ba9978d7e8b2b3daf9988e95
+PODFILE CHECKSUM: 988e69313aa3ba9f6bbc8cb36292a4285291513a
 
 COCOAPODS: 1.6.1

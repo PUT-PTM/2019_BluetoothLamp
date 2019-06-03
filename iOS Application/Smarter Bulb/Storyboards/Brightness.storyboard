@@ -13,7 +13,7 @@
         <!--Brightness View Controller-->
         <scene sceneID="fAe-9e-Y9D">
             <objects>
-                <viewController storyboardIdentifier="BrightnessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRp-8g-9Tv" customClass="BrightnessViewController" customModule="Smarter_Lifx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrightnessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRp-8g-9Tv" customClass="BrightnessViewController" customModule="Smarter_Bulb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cA5-gS-PXh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                         <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="86"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackBackground">

@@ -21,7 +21,7 @@
         <!--Color Picker View Controller-->
         <scene sceneID="bU0-dZ-iPg">
             <objects>
-                <viewController storyboardIdentifier="ColorPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E8e-h6-vNd" customClass="ColorPickerViewController" customModule="Smarter_Lifx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E8e-h6-vNd" customClass="ColorPickerViewController" customModule="Smarter_Bulb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxM-aS-H34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.10827202349999999" green="0.1083889827" blue="0.1082901582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="77T-At-7uP"/>
                         <variation key="default">
                             <mask key="subviews">

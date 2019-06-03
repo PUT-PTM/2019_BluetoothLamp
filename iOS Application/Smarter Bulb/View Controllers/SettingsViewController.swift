@@ -8,36 +8,22 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    @IBOutlet weak var themePicker: UIPickerView!
+class SettingsViewController: UIViewController {
     
     weak var themesDelegate: ThemesDelegate?
-    let themes = ["Gradient", "Stars"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.themePicker.delegate = self
-        self.themePicker.dataSource = self
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    @IBAction func changeToGradientTheme(_ sender: Any) {
+        themesDelegate?.changeTheme(themeNumber: 1)
+        dismiss(animated: true, completion: nil)
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return themes.count
+    @IBAction func changeToStarsTheme(_ sender: Any) {
+        themesDelegate?.changeTheme(themeNumber: 2)
+        dismiss(animated: true, completion: nil)
     }
     
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        
-        return NSAttributedString(string: themes[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        let themeNumber = themePicker.selectedRow(inComponent: 0) + 1
-        themesDelegate?.changeTheme(themeNumber: themeNumber)
-    }
 }

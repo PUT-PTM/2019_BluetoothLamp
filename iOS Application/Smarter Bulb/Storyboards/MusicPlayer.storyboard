@@ -39,7 +39,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-cM-7ZN" customClass="MusicSlider" customModule="Smarter_Bulb" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-cM-7ZN" customClass="MusicSlider" customModule="Smarter_Bulb">
                                 <rect key="frame" x="35" y="550" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.93485218286514282" green="0.19518071413040161" blue="0.20463734865188599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,7 +143,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list" width="90" height="90"/>
-        <image name="play" width="512" height="512"/>
+        <image name="list" width="480" height="480"/>
+        <image name="play" width="100" height="100"/>
     </resources>
 </document>

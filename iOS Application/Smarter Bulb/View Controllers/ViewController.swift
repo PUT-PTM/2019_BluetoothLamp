@@ -11,7 +11,6 @@ import CoreBluetooth
 import SPStorkController
 import Cards
 import Pastel
-import WhatsNew
 import NotchyAlert
 
 class ViewController: UIViewController {
@@ -39,6 +38,7 @@ class ViewController: UIViewController {
     var colorPickerController: ColorPickerViewController!
     var brightnessController: BrightnessViewController!
     var settingsController: SettingsViewController!
+    var alarmController: AlarmViewController!
     
     var manager: CBCentralManager!
     var myBluetoothPeripheral: CBPeripheral!
@@ -178,8 +178,18 @@ class ViewController: UIViewController {
         
     @IBAction func showAlarmViewController(_ sender: Any) {
         
-        //TODO when sb click continue show prop viewController
+        if alarmController == nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            alarmController = storyboard.instantiateViewController(withIdentifier: "AlarmViewController") as? AlarmViewController
+        }
         
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        alarmController.transitioningDelegate = transitionDelegate
+        alarmController.modalPresentationStyle = .custom
+        //alarmController.themesDelegate = self
+        transitionDelegate.customHeight = 500
+        
+        self.present(alarmController, animated: true, completion: nil)
     }
     
     @IBAction func showMusicViewController(_ sender: Any) {

@@ -12,7 +12,7 @@ import AudioKitUI
 import MediaPlayer
 import AudioIndicatorBars
 
-class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
+class MusicViewController: UIViewController, MPMediaPickerControllerDelegate {
     
     weak var delegate: ColorDelegate?
     
@@ -100,7 +100,7 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
     }
     
     func updateNowPlayingCenter() {
-
+        
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: songProperties.title!,
             MPMediaItemPropertyArtist: songProperties.artist!,
@@ -112,6 +112,7 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
         songTitle.text = songProperties.title
         songArtist.text = songProperties.albumArtist
         songAlbum.text = songProperties.albumTitle
+        
     }
     
     override func viewDidLoad() {
@@ -119,7 +120,7 @@ class MusicViewController: ViewController, MPMediaPickerControllerDelegate {
         
         preparePlayer()
         player = AKPlayer()
-        songArt.image = #imageLiteral(resourceName: "no_cover")
+        songArt.image = #imageLiteral(resourceName: "bg")
         prepareSlider()
         
         let gradientLayer = CAGradientLayer()
